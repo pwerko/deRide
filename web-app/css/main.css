@@ -68,3 +68,31 @@ ul {
 img {
 	border: 0;
 }
+
+.upper-header {
+	float:left;
+	display:inline;
+	height:96px;
+}
+
+.lower-header {
+	float:left;
+	display:inline;
+	height:19px;
+}
+
+.inner-component {
+	float:left;
+	display:inline;
+}
+
+.shadow {
+	box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+#topDestinations span {
+	color: #0097E0;
+	font-weight: bold;
+}
