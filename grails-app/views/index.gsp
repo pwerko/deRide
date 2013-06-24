@@ -83,6 +83,143 @@
 				¡Viaja de forma segura, barata y confiable cuidando el medio ambiente con el nuevo serivicio de <span style="font-weight: bold;">Carpooling en México</span> de Ride.com.mx!
 			</p>
 		</div>
+		<div id="relatedPosts" class="main">
+			<ul class="widget-bottom-list content-widget">
+                <widget:all site="${pageSite}" currentContentId="${contentInstance?.id}" blockPosition="left" idPrefix="ad-merchant-" className="ads" htmlElement="li" taxonomyId="${taxonomyInstance?.id}" />
+            </ul>
+		</div>
+		<!--div class="relatedContentSlider content-widget">
+	        <span class="titleWidget">Blogs Relacionados</span>
+	    	<div class="image-carousel">
+	      		<div class="caroufredsel_wrapper" style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 531px; height: 206px; margin: 0px; overflow: hidden;">
+	      			<ul id="related-article-list" style="text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 4779px; height: 235px;">
+						<li class="relatedContent">
+	    					<a title="Puma Mexico" href="http://www.dscuento.com.mx/puma-mexico/">
+	        					<span class="image">
+	                				<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/04/puma_logo-300x160.gif&amp;w=140&amp;h=140&amp;zc=2">
+	        					</span>
+	    						<div class="description">
+	            					<p>Puma Store Mexico  - Descuentos tienda Ferrari Shoes y Outlet online</p>
+	        					</div>
+	    					</a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Converse México" href="http://www.dscuento.com.mx/converse/">
+						        <span class="image">
+						            <img src="/static/xMoVa17giyRzWIPcIYBxeqd8b41TpU9jbFAipPKnfHu.png">
+						        </span>
+						        <div class="description">
+						            <p>Converse Mexico Tenis Catalogo OFERTAS Mujer Hombre Niño Tiendas All</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Calvin Klein Mexico" href="http://www.dscuento.com.mx/calvin-klein-mexico/">
+						        <span class="image">
+						        	<img src="/static/xMoVa17giyRzWIPcIYBxeqd8b41TpU9jbFAipPKnfHu.png">
+						        </span>
+						        <div class="description">
+						            <p>Calvin Klein Mexico CK Jeans Underwear OFERTAS Relojes Boxers OUTLET</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Christian Audigier México" href="http://www.dscuento.com.mx/christian-audigier/">
+						        <span class="image">
+						        	<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/05/christian-audigier-01.jpg&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Christian Audigier Ed Hardy by - Camisas, Mexico Ropa, DESCUENTOS -70%</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Police Mexico" href="http://www.dscuento.com.mx/police-mexico/">
+						        <span class="image">
+						        	<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/09/Police-descuento.png&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Police Mexico Lentes OFERTAS Gafas de Sol Reloj Anteojos Relojes Moda</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Lacoste Mexico" href="http://www.dscuento.com.mx/lacoste-mexico/">
+						        <span class="image">
+						        	<img src="/static/xMoVa17giyRzWIPcIYBxeqd8b41TpU9jbFAipPKnfHu.png">
+						        </span>
+						        <div class="description">
+						            <p>Lacoste Mexico Lentes Perfumes Reloj - OFERTA online tenis Playeras</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Dolce and Gabbana Mexico" href="http://www.dscuento.com.mx/dolce-gabbana-mexico/">
+						        <span class="image">
+						            <img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/08/DG.png&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Dolce and Gabbana Mexico D&amp;G OUTLET Lentes Perfumes the One Store ONLINE</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Pantalones de Mezclilla" href="http://www.dscuento.com.mx/pantalones-de-mezclilla/">
+						        <span class="image">
+						        	<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://static.dscuento.com.mx/s3/assets/00000134-09fe-c581-0d6f-25d7965be537.jpg&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Pantalones de Mezclilla, para dama y hombre Catalogo OFERTA Online Mex</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Reebok Mexico" href="http://www.dscuento.com.mx/reebok-mexico/">
+						        <span class="image">
+						        	<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/08/Reebok-Descuento.jpg&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Reebok Mexico Tiendas de tenis y ropa  OFERTAS en tienda online outlet</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Adidas Originals Mexico " href="http://www.dscuento.com.mx/adida-originals-mexico/">
+						        <span class="image">
+						            <img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/11/adidas-originals.png&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Adidas Originals Mexico Condesa Perisur. Catalogo y Compra Online</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Wonderbra" href="http://www.dscuento.com.mx/wonderbra/">
+						        <span class="image">
+						        	<img src="/static/xMoVa17giyRzWIPcIYBxeqd8b41TpU9jbFAipPKnfHu.png">
+						        </span>
+						        <div class="description">
+						            <p>Wonderbra Catalogo Mexico 2012 OFERTA lenceria wonder bra OFERTA</p>
+						        </div>
+						    </a>
+						</li>
+						<li class="relatedContent">
+						    <a title="Tenis Supra " href="http://www.dscuento.com.mx/tenis-supra/">
+						        <span class="image">
+						        	<img alt="" src="http://static.dscuento.com.mx/wp-content/themes/dealies/timthumb.php?src=http://www.dscuento.com.mx/wp-content/uploads/2011/09/Suprashoes.png&amp;w=140&amp;h=140&amp;zc=2">
+						        </span>
+						        <div class="description">
+						            <p>Tenis Supra Shoes Mexico 2012 OFERTA ONLINE compra tk, mujer footwear</p>
+						        </div>
+						    </a>
+						</li>
+	      			</ul>
+	      		</div>
+	      		<div class="carousel-clearfix"></div>
+	      		<a class="prev" id="related-article-list_prev" href="#" style="display: block;"><span>prev</span></a>
+	      		<a class="next" id="related-article-list_next" href="#" style="display: block;"><span>next</span></a>
+	    	</div>
+	  	</div-->
 	</body>
 	<footer>
 		<div id="footer">
@@ -94,7 +231,7 @@
 							<ul>
 								<li><a href="http://www.deride.com/sobre-nosotros/">Sobre Nosotros</a></li>
 								<li><a href="http://www.deride.com/tdu/">Términos de Uso</a></li>
-								<li><a href="http://www.deride.com/contacto">Contácto</a></li>
+								<li><a href="http://www.deride.com/contacto">Contacto</a></li>
 								<li><a href="http://www.deride.com/preguntas-frecuentes/">Ayuda</a></li>
 							</ul>
 						</div>

@@ -5,11 +5,10 @@ input, select, textarea {
 	font-family: pt-sans, Arial, sans-serif;
 }
 
+/* BASE LAYOUT */
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
-
-/* BASE LAYOUT */
 
 html {
 	background-color: #fff;
@@ -36,10 +35,6 @@ footer {
 	font-weight: normal;
 }
 
-.ie6 html {
-	height: 100%;
-}
-
 html * {
 	margin: 0;
 }
@@ -48,18 +43,7 @@ body {
 	margin: 0 auto;
 }
 
-/* replace with .no-boxshadow body if you have modernizr available */
-.ie6 body,
-.ie7 body,
-.ie8 body {
-	border-color: #255b17;
-	border-style: solid;
-	border-width: 0 1px;
-}
 
-.ie6 body {
-	height: 100%;
-}
 
 a:link, a:visited, a:hover {
 	text-decoration: none;
@@ -76,6 +60,24 @@ ul {
 
 img {
 	border: 0;
+}
+
+/* CLASSES */
+.ie6 html {
+	height: 100%;
+}
+
+/* replace with .no-boxshadow body if you have modernizr available */
+.ie6 body,
+.ie7 body,
+.ie8 body {
+	border-color: #255b17;
+	border-style: solid;
+	border-width: 0 1px;
+}
+
+.ie6 body {
+	height: 100%;
 }
 
 .left {
@@ -125,11 +127,12 @@ float: left;
 	-webkit-box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* HEADER SECTION*/
 #topDestinations span {
 	color: #0097E0;
 	font-weight: bold;
 }
-
+/* SEO CONTENT SECTION */
 #seoContent {
 	clear: both;
 	-webkit-column-count: 3;
@@ -163,6 +166,10 @@ float: left;
 	font: 11px/18px "pt-sans", Arial, sans-serif;
 }
 
+/* POSTS WIDGET */
+
+
+/* FOOTER SECTION */
 #footer {
 	display: block;
 	min-width: 100%;

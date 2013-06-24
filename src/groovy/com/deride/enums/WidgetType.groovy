@@ -1,0 +1,10 @@
+package com.deride.enums
+
+enum WidgetType {
+	AD_WIDGET,
+	FACEBOOK_LIKE_BOX,
+	SOCIAL_MEDIA_WIDGET,
+	SUBSCRIBE_NOW,
+	CONTENT_RELATED_SLIDER,
+    SHARE_BAR
+}
