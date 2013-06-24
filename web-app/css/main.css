@@ -1,7 +1,8 @@
 /* FONT STACK */
 body,
 input, select, textarea {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+	font-family: pt-sans, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +23,19 @@ html {
 	        box-sizing: border-box;
 }
 
+footer {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+}
+
 .ie6 html {
 	height: 100%;
 }
@@ -31,13 +45,7 @@ html * {
 }
 
 body {
-	background: #ffffff;
 	margin: 0 auto;
-	max-width: 960px;
-	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -54,7 +62,8 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	text-decoration: none;
+	color: #0097E0;
 }
 
 a:hover, a:active {
@@ -67,6 +76,14 @@ ul {
 
 img {
 	border: 0;
+}
+
+.left {
+float: left;
+}
+
+.right {
+	float: right;
 }
 
 .upper-header {
@@ -86,6 +103,22 @@ img {
 	display:inline;
 }
 
+.container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 834px;
+}
+
+.step {
+	height:119px;
+	width: 117px;
+	font-size: 10px;
+	color: white;
+	font-weight: bold;
+	margin: 50px 0 0 15px;
+}
+
 .shadow {
 	box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
@@ -95,4 +128,194 @@ img {
 #topDestinations span {
 	color: #0097E0;
 	font-weight: bold;
+}
+
+#seoContent {
+	clear: both;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 834px;
+}
+
+#seoContent p:first-child {
+	margin-top: 0;
+}
+
+#seoContent p {
+	display: block;
+	text-align: justify;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-moz-margin-before: 1em;
+	-moz-margin-after: 1em;
+	-moz-margin-start: 0px;
+	-moz-margin-end: 0px;
+	color: #7f7f7f;
+	font: 11px/18px "pt-sans", Arial, sans-serif;
+}
+
+#footer {
+	display: block;
+	min-width: 100%;
+	float: left;
+	background: #333;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5a5a5a), color-stop(1px, #404040), color-stop(100%, #333333));
+	background: -webkit-linear-gradient(#5a5a5a,#404040 1px,#333333 100%);
+	background: -moz-linear-gradient(#5a5a5a,#404040 1px,#333333 100%);
+	background: -o-linear-gradient(#5a5a5a,#404040 1px,#333333 100%);
+	background: linear-gradient(#5a5a5a,#404040 1px,#333333 100%);
+	color: #fff;
+	z-index: 9999;
+}
+
+#footer-wrapper {
+	width: 834px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0 auto;
+}
+
+#footer #footer-wrapper #footer-content-wrapper {
+	min-height: 100px;
+	overflow: hidden;
+}
+
+#footer #footer-wrapper #footer-top {
+	border-bottom: 1px solid #2d2d2d;
+}
+
+#footer #footer-wrapper #footer-bottom {
+	border-top: 1px solid #444;
+	font-size: 11px !important;
+	margin-bottom: 20px;
+}
+
+#footer #footer-wrapper .footer-row {
+	width: 100%;
+	float: right;
+	margin-right: 0;
+	display: inline;
+	padding: 10px 0 0 0;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers {
+	font-size: 11px;
+	width: 13%;
+	float: left;
+	margin-right: 2.32558%;
+	display: inline;
+}
+
+#footer #footer-wrapper #footer-bottom a, #footer #footer-wrapper #footer-bottom .generate {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	color: white;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers .footer-title {
+	font-weight: bold;
+	margin: 10px 0;
+	display: block;
+	font-size: 12px;
+	min-height: 20px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers ul {
+	border-top: 1px solid #2d2d2d;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers li {
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #2d2d2d;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers li:last-child {
+    border-bottom: medium none;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers a {
+	padding: 7px 0;
+	display: block;
+	font-size: 11px;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us {
+	margin: 0;
+}
+
+#footer #footer-wrapper #footer-content-wrapper .footer-containers:last-child {
+	float: right;
+	margin-right: 0;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us ul, #footer #footer-wrapper #footer-content-wrapper #footer-follow-us li {
+	border: none;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li {
+	background: transparent;
+	text-transform: capitalize;
+}
+
+#footer-wrapper #footer-content-wrapper #footer-follow-us li {
+	border: none;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us a,
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us .generate {
+	padding-left: 35px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li [class^="icon-share"],
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li [class*=" icon-share"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 25px;
+	height: 30px;
+	background: url("../images/social-images.png");
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li .icon-share-fb {
+    background-position: -125px -5px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li:hover .icon-share-fb {
+	background-position: -125px -42px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li .icon-share-g {
+	background-position: -72px -5px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li:hover .icon-share-g {
+	background-position: -72px -42px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li .icon-share-tw {
+    background-position: -150px -5px;
+}
+
+#footer #footer-wrapper #footer-content-wrapper #footer-follow-us li:hover .icon-share-tw {
+	background-position: -150px -42px;
 }
