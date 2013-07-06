@@ -1,8 +1,8 @@
 dataSource {
-    pooled = true
+    /*pooled = true
     driverClassName = "org.h2.Driver"
     username = "sa"
-    password = ""
+    password = ""*/
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -24,7 +24,7 @@ environments {
         }
     }
     production {
-        dataSource {
+        /*dataSource {
             dbCreate = "update"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
@@ -38,6 +38,6 @@ environments {
                testOnReturn=true
                validationQuery="SELECT 1"
             }
-        }
+        }*/
     }
 }

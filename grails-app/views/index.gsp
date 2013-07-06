@@ -1,35 +1,15 @@
-<!doctype html>
 <html>
 	<head>
 		<title>deRide</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<link rel="stylesheet" type="text/css" href="<g:resource dir='css' file='main.css' />">
-		<link rel="icon" type="image/ico" href="<g:resource dir='images' file='favicon.ico' />">
+		<meta name="layout" content="main"/>
 	</head>
 	<body>
-		<div style="width: 834px;margin-top:11px;margin-left: auto; margin-right: auto;">
-			<div class="upper-header" style="background-image:url(<g:resource dir='images' file='header.png' />); width:20px; border-radius: 10px 0 0 0;" title=""></div>
-			<div class="upper-header" style="background-image:url(<g:resource dir='images' file='header-logo.jpg' />); width:232px;" title=""></div>
-			<div class="upper-header" style="background-image:url(<g:resource dir='images' file='header-05.png' />); width:251px;" title=""></div>
-			<div class="upper-header" style="background-image:url(<g:resource dir='images' file='how-it-works.jpg' />); width:150px;" title=""></div>
-			<div class="upper-header shadow" style="background-image:url(<g:resource dir='images' file='header-log-in.jpg' />); width:181px; border-radius: 0 10px 0 0;" title=""></div>
-		</div>
-		<div id='menuDiv' style="width: 834px;margin-left: auto; margin-right: auto;">
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='menu-bar.jpg' />); width:213px; border-radius: 0 0 0 10px;" title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='inicio-header.png' />); width:35px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='buscar-header.jpg' />); width:52px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='faq-header.jpg' />); width:69px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='autobuses-header.jpg' />); width:52px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='registro-header.jpg' />); width:44px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='menu-bar-16.jpg' />); width:222px; " title=""></div>
-			<div class="lower-header shadow" style="background-image:url(<g:resource dir='images' file='menu-bar-17.png' />); width:147px; border-radius: 0 0 10px 0;" title=""></div>
-		</div>
 		<div id='mainDiv' style="width: 834px;margin-left: auto; margin-right: auto;">
 			<div id="adSense1" class="inner-component" style="background: none; margin-top:5px; margin-left:310px; width: 517px; height: 30px; float: left; clear: both;" title=""></div>
 			<div id="mainSearch" class="inner-component" style="background-image:url(<g:resource dir='images' file='main-search.png' />); width:317px; height:217px;" title=""></div>
 			<div id="lookingForRide" class="inner-component" style="background-size: 406px 119px; background-image:url(<g:resource dir='images' file='looking-for-ride.png' />); width:406px; height:119px;" title="">
 				<span id="lookingStep1" class="inner-component step" style="margin-left: 19px">¿Viajas a alguna ciudad y el transporte es muy caro o ya no hay más lugares?</span>
-				<span id="lookingStep2" class="inner-component step" style="margin-left: 10px; width: 110px;">Entra a deRide.com y busca un viajero con el mismo destino que el tuyo</span>
+				<span id="lookingStep1tep2" class="inner-component step" style="margin-left: 10px; width: 110px;">Entra a deRide.com y busca un viajero con el mismo destino que el tuyo</span>
 				<span id="lookingStep3" class="inner-component step" style="margin-left: 18px;">Aparta un lugar en el coche del viajero y comparte los gastos con él</span>
 			</div>
 			<div id="topDestinations" class="inner-component" style="background: none; width:111px; height:388px; border: 5px; float: right;" title="">
@@ -68,14 +48,14 @@
 			<p><a href="http://www.deride.com.mx/">DeRide.com</a> es la plataforma gratuita de <span style="font-weight: bold;">Carpooling en México</span>, la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  A través de DeRide.com los usuarios de la plataforma tienen la posibilidad de reservar u ofrecer online un lugar para viajar a un destino  en común dentro de la República Mexicana.</p>
 			<p style="font-weight: bold;">¿Cómo funciona deRide.com?</p>
 			<p>
-				¡Es muy fácil! Si viajas en tu automóvil y dispones de uno más lugares libres puedes anunciar de <a href="forma-gratuita/">forma gratuita</a> tu ride en nuestra plataforma. Tan solo indica  la hora y fecha, número de lugares disponibles, <a href="punto-de-partida/">punto de partida</a> y ¡listo”.
+				¡Es muy fácil! Si viajas en tu automóvil y dispones de uno más lugares libres puedes anunciar de <a href="plataforma_gratuita">forma gratuita</a> tu ride en nuestra plataforma. Tan solo indica  la hora y fecha, número de lugares disponibles, <a href="como_usar">punto de partida</a> y ¡listo”.
 				Una vez que te contacten viajeros con el mismo destino y aceptes sus solicitudes estás listo para viajar compartiendo así los costos de transporte. (combustible, casetas, etc..)
 				De igual forma si no dispones de un automóvil o medio de transporte para llegar a tu destino puedes entrar en deRide.com y buscar un Ride de acuerdo al destino y fecha de tu viaje.
 			</p>
 			<p>
-				Aparta tu lugar desde la comodidad de tu casa de forma fácil y rápida. No te olvides de estar pendiente de nuestro <a href="http://www.facebook.com/deRide/" rel="nofollow">Facebook</a> donde además de publicar noticias importantes organizaremos concursos y mucho más.
+				Aparta tu lugar desde la comodidad de tu casa de forma fácil y rápida. No te olvides de estar pendiente de nuestro <a href="https://www.facebook.com/pages/De-Ride/1394847730727624" rel="nofollow">Facebook</a> donde además de publicar noticias importantes organizaremos concursos y mucho más.
 				Además del servicio de <span style="font-weight: bold;">Carpooling en México</span> que deRide.com te ofrece un buscador en las principales líneas de <a href="autobuses/">autobús</a> de México con los precios más bajos y el mayor número de destinos y horarios. Permitiéndote buscar y comparar precios desde un mismo sitio y con una sola búsqueda.
-					Nuestra misión es proporcionarte siempre la forma más barata y conveniente de transporte a tus destinos favoritos. Además del ahorro económico deRide.com es una alternativa que ayuda <a href="medio-ambiente/">al medio ambiente</a> reduciendo el número de vehículos circulando por las carreteras. Al aumentar el número de usuarios en un solo vehículo disminuimos el número de automotores circulando y por consecuencia el consumo de gasolina y la producción de CO2.
+					Nuestra misión es proporcionarte siempre la forma más barata y conveniente de transporte a tus destinos favoritos. Además del ahorro económico deRide.com es una alternativa que ayuda <a href="medio_ambiente/">al medio ambiente</a> reduciendo el número de vehículos circulando por las carreteras. Al aumentar el número de usuarios en un solo vehículo disminuimos el número de automotores circulando y por consecuencia el consumo de gasolina y la producción de CO2.
 			</p>
 			<p>
 				Únete a nuestra red de usuarios de <span style="font-weight: bold;">Carpooling en México</span> y disfruta de los beneficios de viajar de forma barata mientras proteges el medio ambiente.
@@ -83,11 +63,11 @@
 				¡Viaja de forma segura, barata y confiable cuidando el medio ambiente con el nuevo serivicio de <span style="font-weight: bold;">Carpooling en México</span> de Ride.com.mx!
 			</p>
 		</div>
-		<div id="relatedPosts" class="main">
+		<!--div id="relatedPosts" class="main">
 			<ul class="widget-bottom-list content-widget">
                 <widget:all site="${pageSite}" currentContentId="${contentInstance?.id}" blockPosition="left" idPrefix="ad-merchant-" className="ads" htmlElement="li" taxonomyId="${taxonomyInstance?.id}" />
             </ul>
-		</div>
+		</div-->
 		<!--div class="relatedContentSlider content-widget">
 	        <span class="titleWidget">Blogs Relacionados</span>
 	    	<div class="image-carousel">
@@ -221,37 +201,4 @@
 	    	</div>
 	  	</div-->
 	</body>
-	<footer>
-		<div id="footer">
-			<div id="footer-wrapper">
-				<section id="footer-content-wrapper" class="container">
-					<div class="footer-row" id="footer-top">
-						<div class="footer-containers">
-							<span class="footer-title">deRide</span>
-							<ul>
-								<li><a href="http://www.deride.com/sobre-nosotros/">Sobre Nosotros</a></li>
-								<li><a href="http://www.deride.com/tdu/">Términos de Uso</a></li>
-								<li><a href="http://www.deride.com/contacto">Contacto</a></li>
-								<li><a href="http://www.deride.com/preguntas-frecuentes/">Ayuda</a></li>
-							</ul>
-						</div>
-						<div id="footer-follow-us" class="footer-containers">
-							<span class="footer-title">Síguenos!</span>
-							<ul>
-								<li><a href="https://www.facebook.com/deRide" rel="nofollow" class=""><i class="icon-share-fb"></i>facebook</a></li>
-								<li><a href="#" rel="nofollow" class=""><i class="icon-share-g"></i>google</a></li>
-								<li><a href="https://twitter.com/deRide" rel="nofollow" class=""><i class="icon-share-tw"></i>twitter</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer-row" id="footer-bottom">
-						<div class="left">© 2013 deRide. Todos los derechos reservados.</div>
-						<div class="right">
-							<a href="http://www.deride.com/aviso-legal/">Política de privacidad</a>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</footer>
 </html>

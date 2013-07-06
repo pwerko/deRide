@@ -16,7 +16,7 @@ class WidgetTagLib {
 		displayAllWidgets(session, attrs, body)
 	}
 
-	private void displayAllWidgets(session, Site currentSite, attrs, body, specificSearch) {
+	private void displayAllWidgets(session, attrs, body) {
 		log.debug "displayAllWidgets()"
 		def wg
 		switch (attrs?.type) {
