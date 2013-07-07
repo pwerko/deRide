@@ -6,7 +6,20 @@
 	<body>
 		<div id='mainDiv' style="width: 834px;margin-left: auto; margin-right: auto;">
 			<div id="adSense1" class="inner-component" style="background: none; margin-top:5px; margin-left:310px; width: 517px; height: 30px; float: left; clear: both;" title=""></div>
-			<div id="mainSearch" class="inner-component" style="background-image:url(<g:resource dir='images' file='main-search.png' />); width:317px; height:217px;" title=""></div>
+			<div id="mainSearch" class="inner-component" style="background-image:url(<g:resource dir='images' file='main-search.png' />); width:317px; height:217px;" title="">
+				<g:form name="simple_search" action="simpleSearch" controller="search">
+					<div class="from">
+				        <g:field type="text" id="simple_search_start" name="start" placeholder="Origen" class="search-from geo-autocomplete" autocomplete="on" />
+				    </div>
+				    <div class="to">
+				        <g:field type="text" id="simple_search_destination" name="destination" placeholder="Destino" class="search-to geo-autocomplete" autocomplete="on" />
+				    </div>
+				    <div class="date">
+				        <g:field type="text" id="simple_search_date" name="date" placeholder="Fecha" class="search-date geo-autocomplete" autocomplete="off" />
+				    </div>
+				    <g:actionSubmit class="home-button-search" value="Buscar" action="search"/>
+				</g:form>
+			</div>
 			<div id="lookingForRide" class="inner-component" style="background-size: 406px 119px; background-image:url(<g:resource dir='images' file='looking-for-ride.png' />); width:406px; height:119px;" title="">
 				<span id="lookingStep1" class="inner-component step" style="margin-left: 19px">¿Viajas a alguna ciudad y el transporte es muy caro o ya no hay más lugares?</span>
 				<span id="lookingStep1tep2" class="inner-component step" style="margin-left: 10px; width: 110px;">Entra a deRide.com y busca un viajero con el mismo destino que el tuyo</span>
