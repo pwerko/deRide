@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>deRide</title>
+		<title>¡Lánzate deRide a tu Destino! Barato, seguro y fácil</title>
 		<meta name="layout" content="main"/>
 	</head>
 	<body>

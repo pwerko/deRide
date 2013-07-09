@@ -14,6 +14,9 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<meta name="description" content="La mejor alternativa para viajar dentro de M&eacute;xico es deRide ¡Miles de Rides a
+			cientos de destinos cada d&iacute;a! Entra y encuentra un Ride para ti. Carpooling M&eacute;xico"/>
+		<meta name="robots" content="index, nofollow"/>
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-42129467-1']);

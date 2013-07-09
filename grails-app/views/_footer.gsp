@@ -15,7 +15,7 @@
 					<div id="footer-follow-us" class="footer-containers">
 						<span class="footer-title">Síguenos!</span>
 						<ul>
-							<li><a href="https://www.facebook.com/pages/De-Ride/1394847730727624" rel="nofollow" class=""><i class="icon-share-fb"></i>facebook</a></li>
+							<li><a href="https://www.facebook.com/deRideComMx" rel="nofollow" class=""><i class="icon-share-fb"></i>facebook</a></li>
 							<li><a href="https://plus.google.com/u/0/103947006006824943588/posts" rel="nofollow" class=""><i class="icon-share-g"></i>google</a></li>
 							<li><a href="https://twitter.com/de_Ride" rel="nofollow" class=""><i class="icon-share-tw"></i>twitter</a></li>
 						</ul>
