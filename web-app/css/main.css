@@ -115,6 +115,29 @@ float: left;
 	-webkit-box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Google maps autcomplete classes */
+.pac-container {
+	background-color: #EEEEEE;
+	border: none;
+	padding-top: 10px;
+	width: 188px !important;
+	-webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
+	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+.pac-container:after {
+	padding-top: 10px;
+}
+
+.pac-item {
+	font-size: 13px;
+	color: #0097E0;
+}
+
 /* HEADER SECTION*/
 #upperHeader {
 	display: block;
@@ -188,14 +211,23 @@ float: left;
 	clear: both;
 }
 
+.complete-radius {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.upper-radius {
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
 .search-from {
 	background: url("../images/map_blue.png") no-repeat scroll 0 0 #EEEEEE;
 	-webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 	float: left;
 	padding-left: 26px;
 	width: 160px;
@@ -205,17 +237,18 @@ float: left;
 	float: right;
 	margin-top: 20px;
 	margin-left: 90px;
-	color: #AAAAAA;
+	color: #0097E0;
 }
+.search-from::-webkit-input-placeholder {color: #888;}
+.search-from:-moz-placeholder {color: #888;}
+.search-from::-moz-placeholder {color: #888;}
+.search-from:-ms-input-placeholder {color: #888;}
 
 .search-to {
 	background: url("../images/map_blue.png") no-repeat scroll 0 0 #EEEEEE;
 	-webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 	padding-left: 26px;
 	float: left;
 	width: 160px;
@@ -225,8 +258,12 @@ float: left;
 	float: right;
 	margin-top: 20px;
 	margin-left: 90px;
-	color: #AAAAAA;
+	color: #0097E0;
 }
+.search-to::-webkit-input-placeholder {color: #888;}
+.search-to:-moz-placeholder {color: #888;}
+.search-to::-moz-placeholder {color: #888;}
+.search-to:-ms-input-placeholder {color: #888;}
 
 .search-date {
 	background: url("../images/calendar_blue.png") no-repeat scroll 0 0 #EEEEEE;
@@ -245,8 +282,12 @@ float: left;
 	float: right;
 	margin-top: 20px;
 	margin-left: 90px;
-	color: #AAAAAA;
+	color: #0097E0;
 }
+.search-date::-webkit-input-placeholder {color: #888;}
+.search-date:-moz-placeholder {color: #888;}
+.search-date::-moz-placeholder {color: #888;}
+.search-date:-ms-input-placeholder {color: #888;}
 
 .home-button-search {
 	background-color: #0097E0;
@@ -303,7 +344,14 @@ float: left;
 	background-image: linear-gradient(#1866AC,#0097E0);
 }
 
-/* SEO CONTENT SECTION */
+/* CONTENT SECTION */
+.contentContainer {
+	min-height: 655px;
+	width: 834px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #seoContent {
 	clear: both;
 	-webkit-column-count: 3;
@@ -335,6 +383,50 @@ float: left;
 	-moz-margin-end: 0px;
 	color: #7f7f7f;
 	font: 11px/18px "pt-sans", Arial, sans-serif;
+}
+
+#seoContent ol {
+	display: block;
+	font-style:italic;
+	font-family:Georgia, Times, serif;
+	font-size:11px;
+	color:#0097E0;
+	font-weight: bold;
+}
+
+#seoContent h2 {
+	display: block;
+	font-style:italic;
+	font-family:Georgia, Times, serif;
+	font-size:14px;
+	color:#0097E0;
+	font-weight: bold;
+}
+
+#seoContent ol li {
+	margin-bottom: -11px;
+}
+
+#seoContent ol li:last-child {
+	margin-bottom: 0;
+}
+
+#seoContent ol li p{
+	font-style: italic;
+	padding:8px;
+	font: 11px "pt-sans", Arial, sans-serif;
+	color:#7f7f7f;
+	border-left: 1px solid #999;
+}
+
+/* FAQ SECTION */
+#faq {
+	clear: both;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 834px;
 }
 
 /* POSTS WIDGET */

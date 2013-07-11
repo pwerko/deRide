@@ -33,7 +33,13 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
 
 // What URL patterns should be processed by the resources plugin
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
-
+grails.resources.modules = {
+  /*overrides {
+    'jquery-theme' {
+      resource id:'theme', url:'/css/path/to/jquery-ui-1.8.17.custom.css'
+    }
+  }*/
+}
 
 // The default codec used to encode data with ${}
 grails.views.default.codec = "none" // none, html, base64
@@ -43,6 +49,9 @@ grails.converters.encoding = "UTF-8"
 grails.views.gsp.sitemesh.preprocess = true
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
+
+// Set jquery as the default javascript library
+grails.views.javascript.library="jquery"
 
 // Set to false to use the new Grails 1.2 JSONBuilder in the render method
 grails.json.legacy.builder = false

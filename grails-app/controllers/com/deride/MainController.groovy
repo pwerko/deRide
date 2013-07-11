@@ -21,6 +21,10 @@ class MainController {
 
     }
 
+    def ayuda() {
+
+    }
+
     def preguntas_frecuentes() {
 
     }

@@ -9,7 +9,7 @@
 							<li><a href="sobre_nosotros">Sobre Nosotros</a></li>
 							<li><a href="tdu">Términos de Uso</a></li>
 							<li><a href="contacto">Contacto</a></li>
-							<li><a href="preguntas_frecuentes">Ayuda</a></li>
+							<li><a href="ayuda">Ayuda</a></li>
 						</ul>
 					</div>
 					<div id="footer-follow-us" class="footer-containers">
