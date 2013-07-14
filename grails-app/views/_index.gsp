@@ -1,6 +1,6 @@
-<div id="adSense1" class="inner-component" style="background: none; margin-top:5px; margin-left:310px; width: 517px; height: 30px; float: left; clear: both;" title=""></div>
-<div id="mainSearch" class="inner-component" style="background-image:url(<g:resource dir='images' file='main-search.png' />); width:317px; height:217px;" title="">
-	<g:form name="simple_search" action="simpleSearch" controller="search">
+<div id="adSense1" class="menu"></div>
+<div id="mainSearch" class="inner-component" title="">
+	<g:form name="simple_search" controller="search" action="/">
 		<div class="from">
 	        <g:field type="text" id="simple_search_start" name="start" placeholder="Origen" class="search-from complete-radius" autocomplete="off" />
 	    </div>
@@ -13,12 +13,8 @@
 	    <g:actionSubmit class="home-button-search" value="Buscar" action="search"/>
 	</g:form>
 </div>
-<div id="lookingForRide" class="inner-component" style="background-size: 406px 119px; background-image:url(<g:resource dir='images' file='looking-for-ride.png' />); width:406px; height:119px;" title="">
-	<span id="lookingStep1" class="inner-component step" style="margin-left: 19px">¿Viajas a alguna ciudad y el transporte es muy caro o ya no hay más lugares?</span>
-	<span id="lookingStep1tep2" class="inner-component step" style="margin-left: 10px; width: 110px;">Entra a deRide.com y busca un viajero con el mismo destino que el tuyo</span>
-	<span id="lookingStep3" class="inner-component step" style="margin-left: 18px;">Aparta un lugar en el coche del viajero y comparte los gastos con él</span>
-</div>
-<div id="topDestinations" class="inner-component" style="background: none; width:111px; height:388px; border: 5px; float: right;" title="">
+<div id="howItWorks" class="inner-component" title=""></div>
+<div id="topDestinations" class="inner-component" style="" title="">
 	<span style="font-size: 12px;">Guadalajara</span>
 	<span style="font-size: 13px;">México DF</span>
 	<span style="font-size: 14px;">Vallarta</span>
@@ -41,11 +37,5 @@
 	<span style="font-size: 11px;">San Jose Del Cabo</span>
 	<span style="font-size: 12px;">Campeche</span>
 </div>
-<div class="inner-component" style="background-image:url(<g:resource dir='images' file='asking-for-ride.png' />); width:406px; height:122px;" title="">
-	<span id="askingStep1" class="inner-component step" style="margin-left: 19px; width: 110px;">¿Viajas a alguna ciudad y tienes lugares disponibles en tu carro?</span>
-	<span id="askingStep2" class="inner-component step" style="margin-left: 15px; width: 117px; margin-top: 40px;">Registrate en deRide.com y ofrece tus lugares disponibles a viajeros con el mismo destino</span>
-	<span id="askingStep3" class="inner-component step" style="margin-left: 15px; margin-top: 40px; width: 110px;">Otorga los <br/>lugares disponibles en tu carro y comparte los gastos con tus acompañantes</span>
-</div>
-<div id="adSense2" class="inner-component" style="background: none; margin-top:5px; width:310px; height:150px; float: left;" title=""></div>
-<div id="nextRides" class="inner-component" style="background-image:url(<g:resource dir='images' file='next-rides.png' />); margin-top:5px; width:406px; height:146px;" title=""></div>
-<div id="adSense3" class="inner-component" style="background: none; margin-top:5px; margin-left:310px; width: 406px; height: 55px; float: left; clear: both;" title=""></div>
+<!--div id="adSense2" class="mediumRectangle" title=""></div-->
+<!--div id="adSense2" class="leaderboard" title=""></div-->

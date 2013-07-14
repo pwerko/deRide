@@ -1,4 +1,4 @@
-<footer>
+<footer class="clearfix simple">
 	<div id="footer">
 		<div id="footer-wrapper">
 			<section id="footer-content-wrapper" class="container">
@@ -9,7 +9,15 @@
 							<li><a href="sobre_nosotros">Sobre Nosotros</a></li>
 							<li><a href="tdu">Términos de Uso</a></li>
 							<li><a href="contacto">Contacto</a></li>
+						</ul>
+					</div>
+					<div class="footer-containers">
+						<span class="footer-title">&nbsp;</span>
+						<ul>
 							<li><a href="ayuda">Ayuda</a></li>
+							<li><a href="medio_ambiente">Medio Ambiente</a></li>
+							<li><a href="seguridad_y_confianza">Seguridad y Confianza</a></li>
+
 						</ul>
 					</div>
 					<div id="footer-follow-us" class="footer-containers">

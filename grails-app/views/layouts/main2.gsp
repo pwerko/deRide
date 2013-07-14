@@ -11,11 +11,7 @@
 		<title><g:layoutTitle default="deRide"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Denk+One|Croissant+One|Cantora+One|Lily+Script+One|Expletus+Sans:400,700|Telex|Cinzel+Decorative' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main2.css')}" type="text/css">
 		<meta name="robots" content="index, nofollow"/>
 		<meta property="og:url" content="http://www.deride.com.mx/">
 		<meta property="og:locale" content="es_MX">
@@ -24,7 +20,6 @@
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="${resource(dir: 'images', file: 'header-logo.png')}">
 		<g:javascript library="jquery" plugin="jquery"/>
-		<g:javascript library="application"/>
 		<r:require module="jquery-ui"/>
 		<script type="text/javascript">
 		  window.___gcfg = {lang: 'es-419'};
@@ -61,9 +56,8 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-		<g:render template="/header" />
 		<g:layoutBody/>
 		<r:layoutResources />
+		<g:render template="/footer" />
 	</body>
-	<g:render template="/footer" />
 </html>

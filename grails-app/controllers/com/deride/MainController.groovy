@@ -5,6 +5,10 @@ class MainController {
     	render(view: "/index")
     }
 
+    def index2() {
+        render(view: "/index2")
+    }
+
     def sobre_nosotros() {
 
     }
@@ -34,10 +38,6 @@ class MainController {
     }
 
     def autobuses() {
-
-    }
-
-    def buscar() {
 
     }
 
