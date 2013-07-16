@@ -217,7 +217,7 @@ float: left;
 #topDestinations {
 	background: none;
 	width:165px;
-	height:388px;
+	height: auto;
 	border: 5px;
 	float: right;
 	text-align: justify;
@@ -501,6 +501,7 @@ nav#main .right {
 	-moz-column-gap: 20px;
 	column-gap: 20px;
 	margin-bottom: 20px;
+	padding-top: 40px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 834px;

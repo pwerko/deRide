@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Buscar</title>
+		<title>Buscar Rides</title>
 		<meta name="layout" content="main"/>
 	</head>
 	<body>

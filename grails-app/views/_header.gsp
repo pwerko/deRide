@@ -13,7 +13,7 @@
 			<div class="menu-top-container">
 				<ul id="menu-top" class="menu">
 					<li class="menu-item ${params.controller == 'main' && params.action == 'index'?'current':''}"><g:link controller="main" action="index">Inicio</g:link></li>
-					<li class="menu-item ${params.controller == 'search'?'current':''}"><g:link controller="search" action="">Buscar</g:link></li>
+					<li class="menu-item ${params.controller == 'busqueda'?'current':''}"><g:link controller="busqueda">Buscar</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && params.action == 'ayuda'?'current':''}"><g:link controller="main" action="ayuda">Ayuda</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && params.action == 'autobuses'?'current':''}"><g:link controller="main" action="autobuses">Autobuses</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && params.action == 'registrarse'?'current':''}"><g:link controller="main" action="registro" style="color: yellow">Registrarse</g:link></li>

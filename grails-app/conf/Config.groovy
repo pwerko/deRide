@@ -72,31 +72,59 @@ grails.hibernate.cache.queries = true
 environments {
     development {
         grails.logging.jul.usebridge = true
+        log4j = {
+          //Enable Hibernate SQL logging with param values
+          //trace 'org.hibernate.type'
+          appenders {
+            file name: 'grailsfile', file: 'target/grails.log', layout: pattern(conversionPattern: "[%d{ISO8601}]\t%p\t%c{2}\t%m%n")
+            file name: 'rootlog', file: 'target/root.log', layout: pattern(conversionPattern: "[%d{ISO8601}]\t%p\t%c{2}\t%m%n")
+            file name: 'devfile', file: 'target/development.log', layout: pattern(conversionPattern: "[%d{ISO8601}]\t%p\t%c{2}\t%m%n")
+          }
+
+          info additivity: false, grailsfile: 'org.codehaus.groovy.grails, com.orientechnologies'
+          all additivity: false, devfile: [
+            'grails.app.controllers.com.deride',
+            'grails.app.domain.com.deride',
+            'grails.app.services.com.deride',
+            'grails.app.taglib.com.deride',
+            'grails.app.conf.com.deride',
+            'grails.app.filters.com.deride',
+            'grails.app.jobs',
+            'com.deride',
+            'grails.plugin.quartz2',
+            'org.quartz'
+          ]
+        }
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://www.deride.com.mx"
+        // log4j configuration
+        log4j = {
+            // Example of changing the log pattern for the default console
+            // appender:
+            //
+            appenders {
+                console name: 'console', layout: pattern(conversionPattern: "[%d{ISO8601}]\t%p\t%c{2}\t%m%n")
+                appender new org.apache.log4j.DailyRollingFileAppender(
+                  layout:pattern(conversionPattern: '[%d{ISO8601}]\t%p\t%c{2}\t%m%n'),
+                  name:"logfile", fileName:"/home/kavsilxa/tomcat/logs/application.log"
+                )
+            }
+
+            info 'grails.app.controllers.com.deride',
+                  'grails.app.domain.com.deride',
+                  'grails.app.services.com.deride',
+                  'grails.app.taglib.com.deride',
+                  'grails.app.conf.com.deride',
+                  'grails.app.filters.com.deride',
+                  'com.deride',
+                  'grails.app.jobs'
+
+            root {
+              info 'logfile'
+              additivity = true
+            }
+        }
     }
-}
-
-// log4j configuration
-log4j = {
-    // Example of changing the log pattern for the default console
-    // appender:
-    //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
-
-    error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
-           'org.codehaus.groovy.grails.web.pages', //  GSP
-           'org.codehaus.groovy.grails.web.sitemesh', //  layouts
-           'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-           'org.codehaus.groovy.grails.web.mapping', // URL mapping
-           'org.codehaus.groovy.grails.commons', // core / classloading
-           'org.codehaus.groovy.grails.plugins', // plugins
-           'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
-           'org.springframework',
-           'org.hibernate',
-           'net.sf.ehcache.hibernate'
 }
