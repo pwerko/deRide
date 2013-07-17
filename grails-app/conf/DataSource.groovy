@@ -30,7 +30,7 @@ environments {
     production {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://deride.com.mx:3306/kavsilxa_production?characterEncoding=UTF-8&rewriteBatchedStatements=true"
+            url = "jdbc:mysql://localhost:3306/kavsilxa_production?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             properties {
                 minEvictableIdleTimeMillis = 1800000
                 timeBetweenEvictionRunsMillis = 1800000
