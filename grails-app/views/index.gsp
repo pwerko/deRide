@@ -13,6 +13,7 @@
 		<meta name="layout" content="main"/>
 	</head>
 	<body>
+		<g:render template="/header" />
 		<div id='mainDiv' class="contentContainer">
 			<g:render template="/index" />
 			<div id="seoContent">
@@ -36,5 +37,6 @@
 				</p>
 			</div>
 		</div>
+		<g:render template="/footer" />
 	</body>
 </html>

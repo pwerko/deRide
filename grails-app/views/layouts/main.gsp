@@ -61,9 +61,7 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-		<g:render template="/header" />
 		<g:layoutBody/>
 		<r:layoutResources />
 	</body>
-	<g:render template="/footer" />
 </html>

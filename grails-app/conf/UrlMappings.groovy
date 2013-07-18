@@ -1,6 +1,6 @@
 class UrlMappings {
 
-	static excludes = ["/images/*", "/css/*"]
+	static excludes = ["/images/*", "/css/*", "/blog/*"]
 
 	static mappings = {
 		"/$controller/$action?/$id?"{

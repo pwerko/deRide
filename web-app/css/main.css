@@ -11,6 +11,11 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+p, h1, h2, h3, h4, h5, h6, input, textarea, select, button {
+	letter-spacing: inherit;
+	word-spacing: inherit;
+}
+
 html {
 	background-color: #fff;
 	background-image: url("../images/background.png");
@@ -298,7 +303,7 @@ nav#main .right {
 	background: #DFDFDF;
 	margin-top:5px;
 	width: 728px;
-	height: 17px;
+	height: 15px;
 	float: right;
 }
 
@@ -306,6 +311,14 @@ nav#main .right {
 	background: #DFDFDF;
 	margin-top:5px;
 	width: 468px;
+	height: 60px;
+	float: right;
+}
+
+.halfBanner {
+	background: #DFDFDF;
+	margin-top:5px;
+	width: 234px;
 	height: 60px;
 	float: right;
 }
@@ -324,6 +337,14 @@ nav#main .right {
 	width: 336px;
 	height: 280px;
 	float: left;
+}
+
+.verticalBanner {
+	background: #DFDFDF;
+	margin-top:5px;
+	width: 160px;
+	height: 600px;
+	float: right;
 }
 
 /* SEARCH */
@@ -461,11 +482,50 @@ nav#main .right {
 	float: right;
 }
 
-.home-button-search:hover {
+.home-button-publish {
+	background-color: #0097E0;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#0097E0),color-stop(100%,#1866AC));
+	background-image: -webkit-linear-gradient(#0097E0,#1866AC);
+	background-image: -moz-linear-gradient(#0097E0,#1866AC);
+	background-image: -o-linear-gradient(#0097E0,#1866AC);
+	background-image: -ms-linear-gradient(#0097E0,#1866AC);
+	background-image: linear-gradient(#0097E0,#1866AC);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	-webkit-box-shadow: 0 1px 0 #4dd1ff inset,rgba(0,0,0,0.35) 2px 2px 2px;
+	-moz-box-shadow: 0 1px 0 #4dd1ff inset,rgba(0,0,0,0.35) 2px 2px 2px;
+	box-shadow: 0 1px 0 #4dd1ff inset,rgba(0,0,0,0.35) 2px 2px 2px;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #06f;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 0;
+	overflow: hidden;
+	padding: 4px 0px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	vertical-align: middle;
+	width: 150px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.home-button-publish:hover, .home-button-search:hover {
 	box-shadow: 0 0 5px rgba(255,255,255,0.6) inset,0 1px 2px rgba(0,0,0,0.2);
 }
 
-.home-button-search:active {
+.home-button-publish:active, .home-button-search:active {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -482,6 +542,62 @@ nav#main .right {
 	background: url('../images/howitworks.png') no-repeat -30px 0 transparent;
 	width:350px;
 	height:241px;
+}
+
+/* PUBLISH TRIP SECTION*/
+.publishRide {
+	min-height: 60px;
+	width: 213px;
+	background: none repeat scroll 0 0 transparent;
+	margin-top: 5px;
+	margin-left: -28px;
+	float: left;
+}
+
+.publish-center {
+	background: url("../images/glow-publish.png") no-repeat scroll 100% 50% #2CADF7;
+	padding: 18px 0;
+    text-align: center;
+    width: 185px;
+    height: 167px;
+    float: left;
+    -webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-ms-border-radius: 5px 0 0 5px;
+	-o-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+	-webkit-box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
+	box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
+}
+
+.publish-center h2 {
+    color: white;
+    font-size: 17px;
+    margin: 0 0 90px 12px;
+    width: 170px;
+    text-align: center;
+    font-weight: normal;
+    clear: both;
+}
+
+.publish-center .cta-driver {
+    color: white;
+    display: block;
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 5px;
+    width: 180px;
+    text-align: center;
+    clear: both;
+}
+
+
+.publish-right {
+    background: url("../images/right-publish.png") no-repeat scroll 0 0 transparent;
+    width: 28px;
+    float: left;
+    height: 203px;
 }
 
 /* CONTENT SECTION */

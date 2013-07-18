@@ -69,5 +69,14 @@
 	<span style="font-size: 14px;">Celaya</span>
 	<span style="font-size: 12px;">Xalapa</span>
 </div>
-<!--div id="adSense2" class="mediumRectangle" title=""></div-->
+<div class="publishRide">
+	<div class="publish-center">
+        <h2>Viajas a algún<br> lugar?</h2>
+        <span class="cta-driver">
+        	<g:field type="button" name="publicar" class="home-button-publish" value="Publica un viaje"/>
+        </span>
+    </div>
+    <div class="publish-right"></div>
+</div>
+<div id="adSense2" class="banner" style="margin-right: 15px;float: right;" title=""></div>
 <!--div id="adSense2" class="leaderboard" title=""></div-->
