@@ -3,7 +3,7 @@ dataSource {
     driverClassName = "com.mysql.jdbc.Driver"
     dialect = org.hibernate.dialect.MySQL5InnoDBDialect
     username = "kavsilxa_app"
-    password = "aTKvJp98B5"
+    password = "zKqU0MVd5Q"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -22,7 +22,6 @@ environments {
     test {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop','update'
-            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
             url = "jdbc:mysql://localhost:3306/console?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             logSql = false
         }
