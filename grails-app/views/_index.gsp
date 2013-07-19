@@ -1,16 +1,20 @@
 <div id="adSense1" class="menu"></div>
 <div id="mainSearch" class="inner-component" title="">
-	<g:form name="simple_search" controller="busqueda">
+	<g:form name="simple_search" controller="ride" action="buscar">
 		<div class="from">
 	        <g:field type="text" id="simple_search_start" name="start" placeholder="Origen" class="search-from complete-radius" autocomplete="off" />
+	        <g:field id="simple_search_start_lat" type="hidden" name="start_latitude" value="" />
+			<g:field id="simple_search_start_lng" type="hidden" name="start_longitude" value="" />
 	    </div>
 	    <div class="to">
 	        <g:field type="text" id="simple_search_destination" name="destination" placeholder="Destino" class="search-to complete-radius" autocomplete="off" />
+	        <g:field id="simple_search_destination_lat" type="hidden" name="destination_latitude" value="" />
+			<g:field id="simple_search_destination_lon" type="hidden" name="destination_longitude" value="" />
 	    </div>
 	    <div class="date">
 	        <g:field type="text" id="simple_search_date" name="date" placeholder="Fecha" class="search-date" data-bind="date-picker"/>
 	    </div>
-	    <g:actionSubmit class="home-button-search" value="Buscar" action="search"/>
+	    <g:actionSubmit class="home-button-search" value="Buscar"/>
 	</g:form>
 </div>
 <div id="howItWorks" class="inner-component" title=""></div>
@@ -73,10 +77,81 @@
 	<div class="publish-center">
         <h2>Viajas a algún<br> lugar?</h2>
         <span class="cta-driver">
-        	<g:field type="button" name="publicar" class="home-button-publish" value="Publica un viaje"/>
+        	<g:link controller="ride" action="publicar" data-title="Publica un viaje">Publica un viaje</g:link>
         </span>
     </div>
     <div class="publish-right"></div>
 </div>
-<div id="adSense2" class="banner" style="margin-right: 15px;float: right;" title=""></div>
-<!--div id="adSense2" class="leaderboard" title=""></div-->
+<div id="adSense2" class="banner" style="margin-right: 11px;float: right;" title=""></div>
+<div id="latestRides" style="margin-right: 11px;float: right;" class="table" title="">
+	<table summary="2007 Major IT Companies' Profit" id="rounded-corner">
+		<thead>
+			<tr>
+				<th class="rounded-company upperLeft" scope="col">Tipo</th>
+				<th class="rounded-q1" scope="col">Origen</th>
+				<th class="rounded-q2" scope="col">Destino</th>
+				<th class="rounded-q3" scope="col">Fecha</th>
+				<th class="rounded-q4 upperRight" scope="col">Creado</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td class="rounded-foot-left lowerLeft" colspan="4">&nbsp;</td>
+				<td class="rounded-foot-right lowerRight" style="text-align: right;"><em><a href="#" onclick="actualizar_ultimos();">M&aacute;s Viajes...</a></em></td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td><g:link controller="ride" action="detalles" id="1">Oferta</g:link></td>
+				<td>Guadalajara</td>
+				<td>M&eacute;xico D.F.</td>
+				<td>17/07/2013</td>
+				<td>Hace 13 minutos</td>
+			</tr>
+			<tr>
+				<td><g:link controller="ride" action="detalles" id="2">Oferta</g:link></td>
+				<td>Puebla</td>
+				<td>Veracruz</td>
+				<td>25/07/2013</td>
+				<td>Hace 55 minutos</td>
+			</tr>
+			<tr>
+				<td><g:link controller="ride" action="detalles" id="3">Petici&oacute;n</g:link></td>
+				<td>Le&oacute;n</td>
+				<td>Celaya</td>
+				<td>19/07/2013</td>
+				<td>Hace 1 Hora</td>
+			</tr>
+			<tr>
+				<td><g:link controller="ride" action="detalles" id="3">Oferta</g:link></td>
+				<td>Monterrey</td>
+				<td>Saltillo</td>
+				<td>24/07/2013</td>
+				<td>Hace 2 Horas</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="wpr">
+	<a class="social" id="google" href="#" title="">
+		<div class="icon"></div>
+		<div class="shutter_frame">
+			<div class="shutter">
+				<div class="number">0</div>
+				<div class="bar"></div>
+				<div class="text">+1</div>
+			</div>
+		</div>
+	</a>
+	<a class="social" id="facebook" href="#" title="">
+		<div class="icon"></div>
+		<div class="shutter_frame">
+			<div class="shutter">
+				<div class="number">0</div>
+				<div class="bar"></div>
+				<div class="text">Like</div>
+			</div>
+		</div>
+	</a>
+</div>
+<!--div id="adSense3" class="leaderboard" title=""></div-->

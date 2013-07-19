@@ -2,7 +2,7 @@
 	<div id="upperHeader">
 		<div style="width: 834px;margin-left: auto; margin-right: auto;">
 			<div class="upper-header" style="width:20px;" title=""></div>
-			<a href="index" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></a>
+			<g:link controller="main" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></g:link>
 			<div class="upper-header" style="width:251px;" title=""></div>
 			<div class="upper-header" style="background:url(<g:resource dir='images' file='how-it-works.jpg' />) no-repeat 0 9px transparent; width:150px; padding-bottom: 10px;" title=""></div>
 			<div class="upper-header" style="width:150px;" title=""></div-->

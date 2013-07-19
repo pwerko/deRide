@@ -32,10 +32,6 @@ $(document).ready(function() {
 	  	}
 	});
 
-	$('.pac-container').on('click', function(event){
-	  console.log('DIV DISPLAYED: ',event);
-	});
-
 	$('#simple_search_destination').keypress(function(e) {
 	  	if (e.which == 13) {
 	  		e.preventDefault();
@@ -49,8 +45,8 @@ $(document).ready(function() {
 		if (!place || !place.geometry) {
 		    return;
 		}
-		console.log(place.geometry.viewport);
-		console.log(place.geometry.location);
+		$('#simple_search_start_lat').val(place.geometry.location.lat());
+		$('#simple_search_start_lng').val(place.geometry.location.lng());
 		// If the place has a geometry, then present it on a map.
 		/*if (place.geometry.viewport) {
 		    // Use the viewport if it is provided.
@@ -79,7 +75,28 @@ $(document).ready(function() {
 		if (!place || !place.geometry) {
 		    return;
 		}
-		console.log(place.geometry.viewport);
-		console.log(place.geometry.location);
+		$('#simple_search_destination_lat').val(place.geometry.location.lat());
+		$('#simple_search_destination_lon').val(place.geometry.location.lng());
 	});
+
+    $('.social').hover(
+	    function() {
+	        $(this).find('.shutter').stop(true, true).animate({
+			    bottom: '-36px'
+			 },
+			 {
+			 	duration: 300,
+			 	easing: 'easeOutBounce'
+			 });
+	    },
+	    function () {
+		    $(this).find('.shutter').stop(true, true).animate({
+			    bottom: 0
+			 },
+			 {
+			 	duration: 300,
+			 	easing: 'easeOutBounce'
+			 });
+		}
+	);
 });

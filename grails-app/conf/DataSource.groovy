@@ -6,8 +6,8 @@ dataSource {
     password = "zKqU0MVd5Q"
 }
 hibernate {
-    cache.use_second_level_cache = true
-    cache.use_query_cache = true
+    cache.use_second_level_cache = false
+    cache.use_query_cache = false
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
 // environment specific settings
@@ -30,7 +30,7 @@ environments {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost:3306/kavsilxa_production?characterEncoding=UTF-8&rewriteBatchedStatements=true"
-            properties {
+            /*properties {
                 minEvictableIdleTimeMillis = 1800000
                 timeBetweenEvictionRunsMillis = 1800000
                 numTestsPerEvictionRun = 3
@@ -38,7 +38,7 @@ environments {
                 testWhileIdle = true
                 testOnReturn = true
                 validationQuery = "SELECT 1"
-            }
+            }*/
         }
     }
 }
