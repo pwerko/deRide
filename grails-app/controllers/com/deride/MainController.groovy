@@ -2,16 +2,19 @@ package com.deride
 
 class MainController {
     def rideService
+    def blogService
 
     def index() {
         def latestRides = []
+        def latestPosts = []
         try {
             latestRides = rideService.getLatestRides()
+            latestPosts = blogService.getLatestPosts()
         } catch (e) {
-            log.error "Failed to retrieve list of last rides", e
+            log.error "Failed to retrieve list of last rides/posts", e
         }
 
-    	render(view: "/index", model: [rides: latestRides])
+    	render(view: "/index", model: [rides: latestRides, posts: latestPosts])
     }
 
     def index2() {

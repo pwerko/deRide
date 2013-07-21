@@ -1,8 +1,27 @@
 package com.deride
 
+import org.springframework.beans.BeanWrapper
+import org.springframework.beans.PropertyAccessorFactory
+
 class SitemapController {
 
     def sitemap = {
+
+        def data = []
+        for (controller in grailsApplication.controllerClasses) {
+            def controllerInfo = [:]
+            controllerInfo.controller = controller.logicalPropertyName
+            controllerInfo.controllerName = controller.fullName
+            List actions = []
+            BeanWrapper beanWrapper = PropertyAccessorFactory.forBeanPropertyAccess(controller.newInstance())
+            for (pd in beanWrapper.propertyDescriptors) {
+                String closureClassName = controller.getPropertyOrStaticPropertyOrFieldValue(pd.name, Closure)?.class?.name
+                if (closureClassName) actions << pd.name
+            }
+            controllerInfo.actions = actions.sort()
+            data << controllerInfo
+        }
+        println data
         render(contentType: 'text/xml', encoding: 'UTF-8') {
             mkp.yieldUnescaped '<?xml version="1.0" encoding="UTF-8"?>'
             urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",

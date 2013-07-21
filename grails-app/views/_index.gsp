@@ -76,7 +76,7 @@
 <div class="publishRide">
 	<g:link controller="ride" action="publicar">
 		<div class="publish-center">
-	        <h2>Ofrece un lugar en tu coche</h2>
+	        <h2><g:message code="com.deride.ride.offer.label"/></h2>
 	    </div>
 	    <div class="publish-right"><g:img dir="images" file="right-publish.png"/></div>
 	</g:link>
@@ -86,11 +86,14 @@
 	<table summary="Lista de &Uacute;ltimos Rides" id="rounded-corner">
 		<thead>
 			<tr>
-				<th class="upperLeft" scope="col"><g:message code="com.deride.ridetype.label"/></th>
+				<th class="tableTitle" colspan="5" scope="col"><g:message code="com.deride.ride.latest.label"/></th>
+			</tr>
+			<tr>
+				<th class="" scope="col"><g:message code="com.deride.ridetype.label"/></th>
 				<th class="" scope="col"><g:message code="com.deride.ride.origin.label"/></th>
 				<th class="" scope="col"><g:message code="com.deride.ride.destination.label"/></th>
 				<th class="" scope="col"><g:message code="com.deride.ride.date.label"/></th>
-				<th class="upperRight" scope="col"><g:message code="com.deride.ride.date_created.label"/></th>
+				<th class="" scope="col"><g:message code="com.deride.ride.date_created.label"/></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -112,6 +115,7 @@
 		</tbody>
 	</table>
 </div>
+<div id="adSense3" class="verticalBanner" title=""></div>
 <div class="wpr">
 	<a class="social" id="google" href="#" title="">
 		<div class="icon"></div>
@@ -144,4 +148,3 @@
 		</div>
 	</a>
 </div>
-<!--div id="adSense3" class="leaderboard" title=""></div-->

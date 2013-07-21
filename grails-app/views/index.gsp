@@ -3,7 +3,7 @@
 		<title>¡L&aacute;nzate de Ride a tu Destino! Barato, seguro y f&aacute;cil</title>
 		<meta name="description" content="La mejor alternativa para viajar dentro de M&eacute;xico es deRide ¡Miles de Rides a cientos de destinos cada d&iacute;a! Entra y encuentra un Ride para ti. Carpooling M&eacute;xico"/>
 		<meta name="keywords" content="De ride, Carpooling México">
-		<!--[if gte IE 9]>
+ 		<!--[if gte IE 9]>
   			<style type="text/css">
     			.gradient {
        				filter: none;
@@ -11,11 +11,15 @@
   			</style>
 		<![endif]-->
 		<meta name="layout" content="main"/>
+		<g:javascript src="application.js"/>
+		<g:javascript src="jquery.easing-1.3.js"/>
+  		<g:javascript src="jquery.iosslider.min.js"/>
 	</head>
 	<body>
 		<g:render template="/header" />
 		<div id='mainDiv' class="contentContainer">
 			<g:render template="/index" />
+			<g:render template="/slider/slider" />
 			<div id="seoContent">
 				<p>De Ride es la plataforma gratuita de <span style="font-weight: bold;">Carpooling en México</span>, la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  A través de DeRide.com los usuarios de la plataforma tienen la posibilidad de reservar u ofrecer online un lugar para viajar a un destino en común dentro de la República Mexicana.</p>
 				<h2>¿Cómo funciona De Ride?</h2>

@@ -11,6 +11,7 @@ class UrlMappings {
 
 		"/$action" (controller: 'main')
 		"/"(controller: 'main', action: 'index')
+		"/slider" (view: 'slider')
 		"/sitemap"{
             controller = 'sitemap'
             action = 'sitemap'

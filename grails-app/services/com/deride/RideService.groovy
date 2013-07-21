@@ -7,7 +7,7 @@ class RideService {
 
     def getLatestRides() {
     	log.debug "Retrieving the latest 10 rides from the DB"
-    	def rides = Ride.listOrderByDateCreated(max: 10, order: "desc")
+    	def rides = Ride.listOrderByDateCreated(max: 7, order: "desc")
 
     	return rides
     }

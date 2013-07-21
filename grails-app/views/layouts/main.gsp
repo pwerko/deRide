@@ -1,10 +1,5 @@
 <!doctype html>
-<html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
+<html xmlns:fb="http://ogp.me/ns/fb#">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,9 +19,9 @@
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="${resource(dir: 'images', file: 'header-logo.png')}">
 		<g:javascript library="jquery" plugin="jquery"/>
-		<g:javascript library="application"/>
 		<r:require module="jquery-ui"/>
-		<script type="text/javascript">
+		<r:layoutResources />
+		<g:javascript>
 		  window.___gcfg = {lang: 'es-419'};
 
 		  (function() {
@@ -34,8 +29,8 @@
 		    po.src = 'https://apis.google.com/js/plusone.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 		  })();
-		</script>
-		<script type="text/javascript">
+		</g:javascript>
+		<g:javascript>
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-42129467-1']);
 		  _gaq.push(['_trackPageview']);
@@ -46,10 +41,9 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-		</script>
+		</g:javascript>
 		<script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps/api/js?libraries=places&amp;sensor=false&amp;language=es"></script>
 		<g:layoutHead/>
-		<r:layoutResources />
 	</head>
 	<body>
 		<div id="fb-root"></div>
