@@ -1,8 +1,17 @@
 package com.deride
 
 class MainController {
+    def rideService
+
     def index() {
-    	render(view: "/index")
+        def latestRides = []
+        try {
+            latestRides = rideService.getLatestRides()
+        } catch (e) {
+            log.error "Failed to retrieve list of last rides", e
+        }
+
+    	render(view: "/index", model: [rides: latestRides])
     }
 
     def index2() {

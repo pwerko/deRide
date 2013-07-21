@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Denk+One|Croissant+One|Cantora+One|Lily+Script+One|Expletus+Sans:400,700|Telex|Cinzel+Decorative' rel='stylesheet' type='text/css'>
-		<meta name="robots" content="index, nofollow"/>
+		<meta name="robots" content="all,index,follow"/>
 		<meta property="og:url" content="http://www.deride.com.mx/">
 		<meta property="og:locale" content="es_MX">
 		<meta property="og:site_name" content="DeRide.com.mx">
@@ -39,6 +39,7 @@
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-42129467-1']);
 		  _gaq.push(['_trackPageview']);
+		  _gaq.push(['_setDomainName', 'deride.com.mx']);
 
 		  (function() {
 		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

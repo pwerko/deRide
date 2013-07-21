@@ -50,6 +50,12 @@ grails.views.gsp.sitemesh.preprocess = true
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
 
+// defaullt constraint to dateCreated and lastUpdated
+grails.gorm.default.constraints = {
+    'dateCreated'(display: false, nullable: true)
+    'lastUpdated'(display: false, nullable: true)
+}
+
 // Set jquery as the default javascript library
 grails.views.javascript.library="jquery"
 

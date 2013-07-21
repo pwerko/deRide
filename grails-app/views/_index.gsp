@@ -74,24 +74,23 @@
 	<span style="font-size: 12px;">Xalapa</span>
 </div>
 <div class="publishRide">
-	<div class="publish-center">
-        <h2>Viajas a algún<br> lugar?</h2>
-        <span class="cta-driver">
-        	<g:link controller="ride" action="publicar" data-title="Publica un viaje">Publica un viaje</g:link>
-        </span>
-    </div>
-    <div class="publish-right"></div>
+	<g:link controller="ride" action="publicar">
+		<div class="publish-center">
+	        <h2>Ofrece un lugar en tu coche</h2>
+	    </div>
+	    <div class="publish-right"><g:img dir="images" file="right-publish.png"/></div>
+	</g:link>
 </div>
 <div id="adSense2" class="banner" style="margin-right: 11px;float: right;" title=""></div>
-<div id="latestRides" style="margin-right: 11px;float: right;" class="table" title="">
-	<table summary="2007 Major IT Companies' Profit" id="rounded-corner">
+<div id="latestRides" title="">
+	<table summary="Lista de &Uacute;ltimos Rides" id="rounded-corner">
 		<thead>
 			<tr>
-				<th class="rounded-company upperLeft" scope="col">Tipo</th>
-				<th class="rounded-q1" scope="col">Origen</th>
-				<th class="rounded-q2" scope="col">Destino</th>
-				<th class="rounded-q3" scope="col">Fecha</th>
-				<th class="rounded-q4 upperRight" scope="col">Creado</th>
+				<th class="upperLeft" scope="col"><g:message code="com.deride.ridetype.label"/></th>
+				<th class="" scope="col"><g:message code="com.deride.ride.origin.label"/></th>
+				<th class="" scope="col"><g:message code="com.deride.ride.destination.label"/></th>
+				<th class="" scope="col"><g:message code="com.deride.ride.date.label"/></th>
+				<th class="upperRight" scope="col"><g:message code="com.deride.ride.date_created.label"/></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -101,34 +100,15 @@
 			</tr>
 		</tfoot>
 		<tbody>
-			<tr>
-				<td><g:link controller="ride" action="detalles" id="1">Oferta</g:link></td>
-				<td>Guadalajara</td>
-				<td>M&eacute;xico D.F.</td>
-				<td>17/07/2013</td>
-				<td>Hace 13 minutos</td>
-			</tr>
-			<tr>
-				<td><g:link controller="ride" action="detalles" id="2">Oferta</g:link></td>
-				<td>Puebla</td>
-				<td>Veracruz</td>
-				<td>25/07/2013</td>
-				<td>Hace 55 minutos</td>
-			</tr>
-			<tr>
-				<td><g:link controller="ride" action="detalles" id="3">Petici&oacute;n</g:link></td>
-				<td>Le&oacute;n</td>
-				<td>Celaya</td>
-				<td>19/07/2013</td>
-				<td>Hace 1 Hora</td>
-			</tr>
-			<tr>
-				<td><g:link controller="ride" action="detalles" id="3">Oferta</g:link></td>
-				<td>Monterrey</td>
-				<td>Saltillo</td>
-				<td>24/07/2013</td>
-				<td>Hace 2 Horas</td>
-			</tr>
+			<g:each var="ride" in="${rides}">
+				<tr>
+					<td><g:link controller="ride" action="detalles" id="${ride.id}"><g:message code="${ride.type.getCode()}"/></g:link></td>
+					<td style="text-align: left;">${ride.origin}</td>
+					<td style="text-align: left;">${ride.destination}</td>
+					<td><g:formatDate format="dd/MM/yyyy" date="${ride.date}"/></td>
+					<td><g:message code="com.deride.ride.date_created" args="${[ride.dateCreated]}"/></td>
+				</tr>
+			</g:each>
 		</tbody>
 	</table>
 </div>
@@ -144,6 +124,16 @@
 		</div>
 	</a>
 	<a class="social" id="facebook" href="#" title="">
+		<div class="icon"></div>
+		<div class="shutter_frame">
+			<div class="shutter">
+				<div class="number">0</div>
+				<div class="bar"></div>
+				<div class="text">Like</div>
+			</div>
+		</div>
+	</a>
+	<a class="social" id="twitter" href="#" title="">
 		<div class="icon"></div>
 		<div class="shutter_frame">
 			<div class="shutter">

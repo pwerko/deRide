@@ -15,6 +15,8 @@ class Vehiculo implements Serializable {
 	Integer seats = 0
 	ConfortType confort = ConfortType.NORMAL
 	VehicleType type
+    Date dateCreated
+    Date lastUpdated
 
     static belongsTo = [user:Usuario]
 

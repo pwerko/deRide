@@ -20,6 +20,8 @@ class Usuario implements Serializable {
     String password
     Date birthday
     Date lastLogin
+    Date dateCreated
+    Date lastUpdated
     OcupationType ocupation
     MaritalStatus maritalStatus
     Boolean facebookConnect = false

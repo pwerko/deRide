@@ -546,66 +546,47 @@ nav#main .right {
 
 /* PUBLISH TRIP SECTION*/
 .publishRide {
-	min-height: 60px;
-	width: 213px;
+	min-height: 55px;
+	width: 173px;
 	background: none repeat scroll 0 0 transparent;
-	margin-top: 5px;
-	margin-left: -28px;
+	margin-top: 8px;
 	float: left;
 }
 
 .publish-center {
-	background: url("../images/glow-publish.png") no-repeat scroll 100% 50% #33ABE6;
-	padding: 18px 0;
-    text-align: center;
-    width: 185px;
-    height: 167px;
+	background: url("../images/publica-ride.png") no-repeat scroll 100% 50% transparent;
+	background-color: #0097E0;
+	opacity:0.88;
+	filter:alpha(opacity=88); /* For IE8 and earlier */
+	text-align: left;
+    width: 150px;
+    height: 53px;
+    margin-top: 1px;
     float: left;
     -webkit-border-radius: 5px 0 0 5px;
 	-moz-border-radius: 5px 0 0 5px;
 	-ms-border-radius: 5px 0 0 5px;
 	-o-border-radius: 5px 0 0 5px;
 	border-radius: 5px 0 0 5px;
-	-webkit-box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
-	-moz-box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
-	box-shadow: rgba(0,0,0,0.35) 3px 3px 2px;
 }
 
 .publish-center h2 {
     color: white;
-    font-size: 17px;
-    margin: 0 0 90px 12px;
-    width: 170px;
-    text-align: center;
+    font-size: 12px;
+    margin: 10px 0 10px 10px;
+    width: 105px;
     font-weight: normal;
-    clear: both;
+    word-spacing:2px;
+    -webkit-letter-spacing: -1px;
 }
-
-.publish-center .cta-driver {
-    color: white;
-    display: block;
-    font-size: 16px;
-    line-height: 28px;
-    margin-left: 5px;
-    width: 180px;
-    text-align: center;
-    clear: both;
-}
-
-.publish-center .cta-driver a {
-    border-bottom: 1px solid #FFFFFF;
-    font-weight: normal;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    color: #FFF;
-}
-
 
 .publish-right {
-    background: url("../images/right-publish.png") no-repeat scroll 0 0 transparent;
-    width: 28px;
+    margin-left: -1px;
+    width: 24px;
     float: left;
-    height: 203px;
+    height: 55px;
+    opacity:0.88;
+	filter:alpha(opacity=88); /* For IE8 and earlier */
 }
 
 /* CONTENT SECTION */
@@ -680,8 +661,8 @@ nav#main .right {
 
 /* LATEST RIDES */
 .table {
-	min-width: 468px;
-	min-height: 468px;
+	min-width: 400px;
+	min-height: 400px;
 	background: url("../images/lineacuadro.png"); repeat scroll 0 0 #BBBCBB;
 	float: left;
 	margin: 5px;
@@ -697,15 +678,21 @@ nav#main .right {
 #rounded-corner {
     border-collapse: collapse;
     font-size: 12px;
-    margin: 15px auto;
     text-align: left;
-    width: 450px;
+    float: left;
+    min-width: 468px;
+    width: 655px;
+    min-height: 400px;
+    margin: 10px 0;
+    opacity:0.80;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
     -webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	border-spacing: 0px;
 }
 
 #rounded-corner tbody, #rounded-corner thead, #rounded-corner tfoot {
@@ -719,33 +706,51 @@ nav#main .right {
 }
 
 #rounded-corner th {
-    background: none repeat scroll 0 0 #B9C9FE;
-    color: #003399;
+    background: none repeat scroll 0 0 #0097E0;
+    color: #FFF;
     font-size: 13px;
-    font-weight: normal;
+    font-weight: bold;
     padding: 8px;
+    text-align: center;
+    display: table-cell;
 }
 
-#rounded-corner td {
-    background: none repeat scroll 0 0 #E8EDFF;
+#rounded-corner tbody td {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-top: 1px solid #FFFFFF;
+    color: #666699;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 21px;
+    display: table-cell;
+}
+
+#rounded-corner tfoot td {
+    background: none repeat scroll 0 0 #EEEEEE;
     border-top: 1px solid #FFFFFF;
     color: #666699;
     padding: 8px;
+    display: table-cell;
 }
 
-#rounded-corner .upperLeft{
+#rounded-corner .center {
+	text-align: center;
+}
+
+#rounded-corner .upperLeft {
 	border-radius: 10px 0 0 0
 }
 
-#rounded-corner .upperRight{
+#rounded-corner .upperRight {
 	border-radius: 0 10px 0 0
 }
 
-#rounded-corner .lowerRight{
+#rounded-corner .lowerRight {
 	border-radius: 0 0 10px 0
 }
 
-#rounded-corner .lowerLeft{
+#rounded-corner .lowerLeft {
 	border-radius: 0 0 0 10px
 }
 
@@ -760,12 +765,13 @@ em {
 
 /* SOCIAL WIDGET */
 .wpr {
-    width: 185px;
+    width: 85px;
     min-height: 300px;
-    float: left;
-    margin-top: 10px;
     vertical-align: middle;
-    padding-top: 20px
+    position: fixed;
+    left: 0;
+    top: 28%;
+    z-index: 1;
 }
 
 .social {
@@ -777,7 +783,7 @@ em {
     height: 105px;
     margin: 10px auto;
     padding: 5px;
-    width: 90px;
+    width: 50px;
 }
 
 #twitter.social .icon {

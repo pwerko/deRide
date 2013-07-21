@@ -12,6 +12,8 @@ class Ride implements Serializable {
 	String destination
 	Double destinationLat
 	Double destinationLong
+    Date dateCreated
+    Date lastUpdated
 	Date date
 	Double price = 0
 	Integer seats = 0
@@ -28,6 +30,7 @@ class Ride implements Serializable {
 	static hasMany = [users: Usuario]
 
     static constraints = {
+        dateCreated(display: true)
     	creator(nullable: false)
     	type(nullable: false)
     	origin(nullable: false, blank: false)
