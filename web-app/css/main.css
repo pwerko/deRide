@@ -1,10 +1,3 @@
-/* custom font used in header text */
-@font-face {
-	font-family: Norican;
-	font-weight: normal;
-	src: url('norican/Norican-Regular.ttf');
-}
-
 /* FONT STACK */
 body,
 input, select, textarea {
@@ -680,6 +673,7 @@ nav#main .right {
 
 #rounded-corner {
     border-collapse: collapse;
+    border-spacing: 0;
     font-size: 12px;
     text-align: left;
     float: left;
@@ -695,13 +689,15 @@ nav#main .right {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	border-spacing: 0px;
 }
 
 #rounded-corner .tableTitle {
 	border-radius: 10px 10px 0 0;
 	text-align: left;
 	font: 20px/25px Norican;
+	color: #0097E0;
+	background-color: #EEE;
+	-webkit-font-smoothing: antialiased;
 }
 
 #rounded-corner tbody, #rounded-corner thead, #rounded-corner tfoot {
@@ -713,6 +709,16 @@ nav#main .right {
     padding: 0;
     vertical-align: baseline;
 }
+
+#rounded-corner table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
 
 #rounded-corner th {
     background: none repeat scroll 0 0 #0097E0;
@@ -728,10 +734,9 @@ nav#main .right {
     background: none repeat scroll 0 0 #EEEEEE;
     border-top: 1px solid #FFFFFF;
     color: #666699;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
     vertical-align: middle;
-    line-height: 21px;
     display: table-cell;
 }
 
@@ -924,6 +929,7 @@ em {
 	text-align: left;
 	font: 20px/25px Norican;
 	padding: 10px 0 0 10px;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* ios slider details */
@@ -1037,6 +1043,10 @@ em {
 	.iosSlider .slider .item .inner .text2 { top: 85px; }
 
 	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Telex",Helvetica,Arial,sans-serif; }
+}
+
+@media all and (max-width: 640px){ /* max screen size */
+    .wpr { display: none; }
 }
 
 /* FOOTER SECTION */
