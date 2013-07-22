@@ -33,14 +33,15 @@
 		<g:javascript>
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-42129467-1']);
-		  _gaq.push(['_trackPageview']);
 		  _gaq.push(['_setDomainName', 'deride.com.mx']);
+		  _gaq.push(['_trackPageview']);
 
 		  (function() {
 		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
+
 		</g:javascript>
 		<script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps/api/js?libraries=places&amp;sensor=false&amp;language=es"></script>
 		<g:layoutHead/>
