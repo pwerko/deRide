@@ -82,38 +82,41 @@
 	</g:link>
 </div>
 <div id="adSense2" class="banner" style="margin-right: 11px;float: right;" title=""></div>
-<div id="latestRides" title="">
-	<table summary="Lista de &Uacute;ltimos Rides" id="rounded-corner">
-		<thead>
-			<tr>
-				<th class="tableTitle" colspan="5" scope="col"><g:message code="com.deride.ride.latest.label"/></th>
-			</tr>
-			<tr>
-				<th class="" scope="col"><g:message code="com.deride.ridetype.label"/></th>
-				<th class="" scope="col"><g:message code="com.deride.ride.origin.label"/></th>
-				<th class="" scope="col"><g:message code="com.deride.ride.destination.label"/></th>
-				<th class="" scope="col"><g:message code="com.deride.ride.date.label"/></th>
-				<th class="" scope="col"><g:message code="com.deride.ride.date_created.label"/></th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<td class="rounded-foot-left lowerLeft" colspan="4">&nbsp;</td>
-				<td class="rounded-foot-right lowerRight" style="text-align: right;"><em><a href="#" onclick="actualizar_ultimos();">M&aacute;s Viajes...</a></em></td>
-			</tr>
-		</tfoot>
-		<tbody>
-			<g:each var="ride" in="${rides}">
-				<tr>
-					<td><g:link controller="ride" action="detalles" id="${ride.id}"><g:message code="${ride.type.getCode()}"/></g:link></td>
-					<td style="text-align: left;">${ride.origin}</td>
-					<td style="text-align: left;">${ride.destination}</td>
-					<td><g:formatDate format="dd/MM/yyyy" date="${ride.date}"/></td>
-					<td><g:message code="com.deride.ride.date_created" args="${[ride.dateCreated]}"/></td>
-				</tr>
-			</g:each>
-		</tbody>
-	</table>
+<div id="content_left">
+	<div class="box_grey clearfix">
+	    <div id="homepage_box_1" class="homepage_box">
+	    	<h2><g:message code="com.deride.ride.latest.label"/></h2>
+			<div class="box_content_table clearfix" style="margin-bottom:10px;">
+		    	<div id="new_lifts_homepage">
+		    		<table id="homepage__latest_lifts" class="lift_list">
+					    <thead>
+					        <tr>
+					            <th><g:message code="com.deride.ridetype.label"/></th>
+					            <th style="text-align: left;"><g:message code="com.deride.ride.origin.label"/></th>
+					            <th style="text-align: left;"><g:message code="com.deride.ride.destination.label"/></th>
+					            <th><g:message code="com.deride.ride.date.label"/></th>
+					            <th><g:message code="com.deride.ride.date_created.label"/></th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					    	<g:each status="i" var="ride" in="${rides}">
+					    		<tr class="${ (i % 2) == 0 ? 'even' : 'odd'} link_hover">
+					                <td><g:link controller="ride" action="detalles" id="${ride.id}"><g:message code="${ride.type.getCode()}"/></g:link></td>
+					                <td style="text-align: left;">${ride.origin}</td>
+					                <td style="text-align: left;">${ride.destination}</td>
+					                <td><g:formatDate format="dd/MM/yyyy" date="${ride.date}"/></td>
+					                <td style="font-size:0.8em">Hace 18 minutos</td>
+					        	</tr>
+					    	</g:each>
+					    </tbody>
+					</table>
+				</div>
+	    		<ul class="action_bar clearfix" style="float: right;margin-top:10px">
+	        		<li class="noimg"><a href="/searches/latest_lifts" class="button secondary small">más viajes...</a></li>
+	    		</ul>
+			</div>
+		</div>
+    </div>
 </div>
 <div id="adSense3" class="verticalBanner" title=""></div>
 <div class="wpr">

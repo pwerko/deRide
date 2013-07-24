@@ -656,125 +656,89 @@ nav#main .right {
 }
 
 /* LATEST RIDES */
-.table {
-	min-width: 400px;
-	min-height: 400px;
-	background: url("../images/lineacuadro.png"); repeat scroll 0 0 #BBBCBB;
+#content_left {
+	margin: 10px 0;
+	width: 655px;
 	float: left;
-	margin: 5px;
-	-webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	font: 12px 'Telex', arial,helvetica,sans-serif;
+}
+#content_left div.box_grey {
+	background: #EEE;
+	width: 653px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+	opacity: 0.8;
+	filter: alpha(opacity=8);
 }
 
-
-#rounded-corner {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 12px;
-    text-align: left;
-    float: left;
-    min-width: 468px;
-    width: 655px;
-    min-height: 400px;
-    margin: 10px 0;
-    opacity:0.80;
-	filter:alpha(opacity=80); /* For IE8 and earlier */
-    -webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	box-shadow: rgba(0,0,0,0.35) 2px 2px 2px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-
-#rounded-corner .tableTitle {
-	border-radius: 10px 10px 0 0;
-	text-align: left;
-	font: 20px/25px Norican;
+.homepage_box h2 {
 	color: #0097E0;
-	background-color: #EEE;
-	-webkit-font-smoothing: antialiased;
+    font: 20px/25px Norican;
+    padding: 8px 0 0 8px;
 }
 
-#rounded-corner tbody, #rounded-corner thead, #rounded-corner tfoot {
-	background: none repeat scroll 0 0 transparent;
-    border: 0 none;
-    font-size: 100%;
-    margin: 0;
-    outline: 0 none;
-    padding: 0;
-    vertical-align: baseline;
-}
-
-#rounded-corner table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
+div.box_content_table {
+	margin: 0 2px 20px;
 	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
 }
 
-
-#rounded-corner th {
-    background: none repeat scroll 0 0 #0097E0;
-    color: #FFF;
-    font-size: 13px;
-    font-weight: bold;
-    padding: 8px;
-    text-align: center;
-    display: table-cell;
+#homepage__latest_lifts {
+	margin: 10px 0 0;
+	padding: 0;
+	border-spacing: 0;
+	width: 100%;
+	border-collapse: collapse;
 }
 
-#rounded-corner tbody td {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-top: 1px solid #FFFFFF;
-    color: #666699;
-    padding: 8px;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-}
-
-#rounded-corner tfoot td {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-top: 1px solid #FFFFFF;
-    color: #666699;
-    padding: 8px;
-    display: table-cell;
-}
-
-#rounded-corner .center {
+#homepage__latest_lifts tr th {
+	vertical-align: middle;
 	text-align: center;
 }
 
-#rounded-corner .upperLeft {
-	border-radius: 10px 0 0 0
+#homepage__latest_lifts th, #homepage__latest_lifts th a, #homepage__latest_lifts th a:link, #homepage__latest_lifts th a:visited {
+	text-align: left;
+	color: #fff;
+	background: #0097E0;
 }
 
-#rounded-corner .upperRight {
-	border-radius: 0 10px 0 0
+#homepage__latest_lifts th, #homepage__latest_lifts td {
+	border: 0;
+	margin: 0;
+	padding: 3px;
 }
 
-#rounded-corner .lowerRight {
-	border-radius: 0 0 10px 0
+#homepage__latest_lifts tr.even td {
+	background: #FFF;
+	border-bottom: 1px solid #C4C4C4;
+	color: #666699;
+	text-align: center;
 }
 
-#rounded-corner .lowerLeft {
-	border-radius: 0 0 0 10px
+#homepage__latest_lifts tr.odd td {
+	background: #F5F5F5;
+	border-bottom: 1px solid #C4C4C4;
+	color: #666699;
+	text-align: center;
 }
 
-#rounded-corner tbody tr:hover td {
+#homepage__latest_lifts tr:hover td {
     background: none repeat scroll 0 0 #D0DAFD;
 }
 
-em {
-    font-style: italic;
-    font-weight: 400;
+ul.action_bar, ul.toggle_bar {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin: 4px 10px 0;
+	line-height: 12px;
+}
+
+.odd {
+	background-color: #f8f8f8;
+}
+
+.even {
+	background-color: #fff;
 }
 
 /* SOCIAL WIDGET */
@@ -1316,3 +1280,4 @@ em {
 .right {
 	float: right;
 }
+
