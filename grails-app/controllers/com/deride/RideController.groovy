@@ -4,9 +4,10 @@ class RideController {
 
     static defaultAction = "lista"
     static allowedMethods = [lista:'GET',
-                             buscar:['POST', 'GET'],
-                             ultimos:['POST', 'GET'],
-                             publicar: ['POST', 'GET']]
+                             buscar: ['POST', 'GET'],
+                             ultimos: 'GET',
+                             publicar: ['POST', 'GET'],
+                             detalles: 'GET']
 
     def lista() {
     	log.debug "Lista de rides con parametros ${params}"
@@ -22,5 +23,9 @@ class RideController {
 
     def publicar() {
     	log.debug "Publicacion de ride con parametros ${params}"
+    }
+
+    def detalles() {
+        log.debug "Detalles de ride con parametros ${params}"
     }
 }

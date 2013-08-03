@@ -158,12 +158,22 @@ float: left;
 }
 
 /* HEADER SECTION*/
+#header {
+	background-color: #0097E0;
+}
+
 #upperHeader {
 	display: block;
 	width: 100%;
 	min-width: 874px;
-	background-color: #0097E0;
 	clear: both;
+}
+
+#upperHeader .section{
+	width: 834px;
+	height:106px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #lowerHeader {
@@ -217,6 +227,19 @@ float: left;
 	margin-top: 75px;
 	margin-left: 65px;
 	float: right;
+}
+
+#loginInfo {
+	font-size: 12px;
+	float: right;
+}
+#loginInfo span {
+	font-weight: bold;
+}
+
+#loginInfo a {
+	font-size: 10px;
+	color: white;
 }
 
 #topDestinations {
@@ -659,16 +682,22 @@ nav#main .right {
 #content_left {
 	margin: 10px 0;
 	width: 655px;
+	min-height: 305px;
 	float: left;
 	font: 12px 'Telex', arial,helvetica,sans-serif;
 }
 #content_left div.box_grey {
 	background: #EEE;
 	width: 653px;
+	min-height: 305px;
 	border-radius: 10px 10px 10px 10px;
 	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
 	opacity: 0.8;
 	filter: alpha(opacity=8);
+}
+
+#new_lifts_homepage {
+	min-height: 230px;
 }
 
 .homepage_box h2 {
@@ -687,6 +716,7 @@ div.box_content_table {
 	padding: 0;
 	border-spacing: 0;
 	width: 100%;
+	min-height: 230px;
 	border-collapse: collapse;
 }
 

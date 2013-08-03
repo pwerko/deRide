@@ -1,11 +1,28 @@
 <div id="header">
 	<div id="upperHeader">
-		<div style="width: 834px;margin-left: auto; margin-right: auto;">
-			<div class="upper-header" style="width:20px;" title=""></div>
+		<div class="section">
+			<div class="upper-header" style="width:20px;padding-bottom: 10px;" title=""></div>
 			<g:link controller="main" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></g:link>
 			<div class="upper-header" style="width:251px;" title=""></div>
-			<div class="upper-header" style="background:url(<g:resource dir='images' file='how-it-works.jpg' />) no-repeat 0 9px transparent; width:150px; padding-bottom: 10px;" title=""></div>
-			<div class="upper-header" style="width:150px;" title=""></div-->
+			<!--div class="upper-header" style="background:url(<g:resource dir='images' file='how-it-works.jpg' />) no-repeat 0 9px transparent; width:150px; padding-bottom: 10px;" title=""></div-->
+			<div class="upper-header" style="width:300px;" title="">
+				<sec:ifNotGranted roles="ROLE_USER">
+					<div id="loginInfo">
+						<form name="simple_search" method="POST" action="${resource(file: 'j_spring_security_check')}">
+							<g:field type="text" id="login_username" name="j_username" placeholder="Usuario" class="search-from complete-radius" autocomplete="off" />
+							<g:field type="password" id="login_passowrd" name="j_password" placeholder="Contraseña" class="search-from complete-radius" autocomplete="off" />
+							<g:checkBox id="login_remember" name="_spring_security_remember_me" />
+							<g:submitButton name="login" value="Entrar"/>
+							<facebookAuth:connect />
+						<form>
+					</div>
+				</sec:ifNotGranted>
+				<sec:ifAllGranted roles="ROLE_USER">
+					<div id="loginInfo">
+						Bienvenido <span><sec:username/></span> (<g:link uri="/j_spring_security_logout" style="color: white;">Salir</g:link>)
+					</div>
+				</sec:ifAllGranted>
+			</div>
 		</div>
 	</div>
 	<div id="lowerHeader">

@@ -1,5 +1,8 @@
 package com.deride
 
+import grails.plugins.springsecurity.Secured
+
+@Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class MainController {
     def rideService
     def blogService

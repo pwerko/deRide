@@ -2,12 +2,11 @@ package com.deride
 
 import com.deride.enums.*
 
-class Usuario implements Serializable {
+class Usuario extends AppUser implements Serializable {
 
     TitleType titleType
 	String name
 	String lastName
-	String username
 	GenderType gender
 	String email
 	String phone
@@ -17,7 +16,6 @@ class Usuario implements Serializable {
     String zipCode
     String city
     String country
-    String password
     Date birthday
     Date lastLogin
     Date dateCreated
@@ -39,7 +37,7 @@ class Usuario implements Serializable {
         titleType(nullable: true, blank: true)
     	name(nullable: false, blank: false)
     	lastName(nullable: false, blank:false)
-    	username(nullable: false, blank:false, unique:true, size: 5..15)
+    	username(nullable: false, blank:false, unique:true, size: 5..20)
     	gender(nullable: false, blank: false)
     	email(nullable: false, blank: false, email: true)
     	phone(nullable: true, blank: true, phoneNumber: true)

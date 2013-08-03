@@ -2,31 +2,84 @@ package com.deride
 
 import com.deride.enums.*
 import java.util.Calendar
+import grails.util.Environment
 
 class BootStrapService {
 
     def runBootstrapActions() {
-    	createUsuario()
-		createVehiculo()
-		createRides()
+        createAdminUsers()
+        Environment.executeForCurrentEnvironment {
+            development {
+                createUsuarios()
+                createVehiculo()
+                createRides()
+            }
+        }
     }
 
-    def createUsuario() {
-    	new Usuario(
+    def createAdminUsers() {
+        def userRole = SecRole.findByAuthority('ROLE_USER') ?: new SecRole(authority: 'ROLE_USER').save(failOnError: true)
+        def facebookRole = SecRole.findByAuthority('ROLE_FACEBOOK') ?: new SecRole(authority: 'ROLE_FACEBOOK').save(failOnError: true)
+        def adminRole = SecRole.findByAuthority('ROLE_ADMIN') ?: new SecRole(authority: 'ROLE_ADMIN').save(failOnError: true)
+        def operatorRole = SecRole.findByAuthority('ROLE_OPER') ?: new SecRole(authority: 'ROLE_OPER').save(failOnError: true)
+
+        Environment.executeForCurrentEnvironment {
+            development {
+                def adminUser = AppUser.findByUsername('sergio') ?: new AppUser(
+                    username: 'sergio',
+                    password: 'test',
+                    enabled: true).save(failOnError: true)
+
+                if (!adminUser.authorities.contains(adminRole)) {
+                    AppUserSecRole.create adminUser, adminRole
+                    AppUserSecRole.create adminUser, operatorRole
+                }
+            }
+            production {
+                def adminUser = AppUser.findByUsername('admin') ?: new AppUser(
+                    username: 'admin',
+                    password: 'J]wTbUeFAK',
+                    enabled: true).save(failOnError: true)
+
+                if (!adminUser.authorities.contains(adminRole)) {
+                    AppUserSecRole.create adminUser, adminRole
+                }
+
+                def operatorUser = AppUser.findByUsername('operator') ?: new AppUser(
+                    username: 'operator',
+                    password: 'XCSz$W$C(V',
+                    enabled: true).save(failOnError: true)
+
+                if (!operatorUser.authorities.contains(operatorRole)) {
+                    AppUserSecRole.create operatorUser, adminRole
+                    AppUserSecRole.create operatorUser, operatorRole
+                }
+            }
+        }
+    }
+
+    def createUsuarios() {
+    	def user1 = new Usuario(
     		name: "Sergio",
             lastName: "Gonzalez",
             username: "sgonzalez",
+            password: "test",
             gender: GenderType.MALE,
-            email: "pwerko@hotmail.com"
+            email: "pwerko@hotmail.com",
+            enabled: true
     	).save([failOnError: true, validate: true])
+        AppUserSecRole.create user1, SecRole.findByAuthority('ROLE_USER')
 
-        new Usuario(
+        def user2 =  new Usuario(
             name: "Salvador",
             lastName: "Restelli",
             username: "salvador",
+            password: "test",
             gender: GenderType.MALE,
-            email: "salvador.restelli@me.com"
+            email: "salvador.restelli@me.com",
+            enabled: true
         ).save([failOnError: true, validate: true])
+        AppUserSecRole.create user2, SecRole.findByAuthority('ROLE_USER')
     }
 
     def createVehiculo() {

@@ -77,6 +77,7 @@ grails.hibernate.cache.queries = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
+        grails.serverURL = "http://dev.deride.com.mx:8080/${appName}"
         grails.logging.jul.usebridge = true
         log4j = {
           //Enable Hibernate SQL logging with param values
@@ -134,3 +135,22 @@ environments {
         }
     }
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.deride.Usuario'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.deride.AppUserSecRole'
+grails.plugins.springsecurity.authority.className = 'com.deride.SecRole'
+
+
+grails.plugins.springsecurity.facebook.domain.classname='com.deride.UsuarioFacebook'
+grails.plugins.springsecurity.facebook.domain.appUserConnectionPropertyName='user'
+grails.plugins.springsecurity.facebook.appId='538413349540834'
+grails.plugins.springsecurity.facebook.secret='8d1553ae5910ec4d6b11c4b5d878b97f'
+grails.plugins.springsecurity.facebook.permissions='email,user_about_me'
+//grails.plugins.springsecurity.facebook.filter.processUrl = '/j_spring_security_facebook_check' //it's default value
+grails.plugins.springsecurity.facebook.taglib.button.text='Acceder con Facebook'
+grails.plugins.springsecurity.facebook.taglib.language='es_ES'
+grails.plugins.springsecurity.facebook.autoCreate.enabled=true
+grails.plugins.springsecurity.facebook.autoCreate.roles= ['ROLE_USER', 'ROLE_FACEBOOK']
+grails.plugins.springsecurity.facebook.filter.type='redirect'
+grails.plugins.springsecurity.facebook.taglib.button.img='images/facebook-login.png'

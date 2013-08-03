@@ -1,4 +1,19 @@
 $(document).ready(function() {
+	$.ajax({
+		url: 'http://blog.deride.com.mx',
+		async: true,
+		type: 'GET',
+		dataType: 'jsonp',
+		crossDomain: true,
+		timeout: 10000,
+		data: {
+			json: 'get_recent_posts',
+			count: 5,
+			include: 'url,title,excerpt'
+		}
+	}).done(function(data, textStatus, jqXHR) { updateLatestPosts(data); })
+    .fail(function(data, textStatus, jqXHR) { });
+
 	var startField = document.getElementById('simple_search_start');
 	var endField = document.getElementById('simple_search_destination');
 	var options = {
@@ -100,3 +115,13 @@ $(document).ready(function() {
 		}
 	);
 });
+
+function updateLatestPosts(data, textStatus, jqXHR) {
+	$.each(data.posts, function(index, value) {
+		var num = ++index
+		var title = $('div.item' + num + ' div.text' + num);
+		console.log(value);
+		title.html("<span>" + value.title + "</span>");
+	});
+
+}

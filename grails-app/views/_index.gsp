@@ -112,7 +112,9 @@
 					</table>
 				</div>
 	    		<ul class="action_bar clearfix" style="float: right;margin-top:10px">
-	        		<li class="noimg"><a href="/searches/latest_lifts" class="button secondary small">más viajes...</a></li>
+	        		<li class="noimg">
+	        			<g:if test="${rides.size() > 0}"><g:link action="ultimos" controller="ride" class="button secondary small">más viajes...</g:link></g:if>
+	        		</li>
 	    		</ul>
 			</div>
 		</div>

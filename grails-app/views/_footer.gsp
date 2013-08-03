@@ -4,7 +4,7 @@
 			<section id="footer-content-wrapper" class="container">
 				<div class="footer-row" id="footer-top">
 					<div class="footer-containers">
-						<span class="footer-title">deRide</span>
+						<span class="footer-title">De Ride</span>
 						<ul>
 							<li><a href="sobre_nosotros">Sobre Nosotros</a></li>
 							<li><a href="tdu">Términos de Uso</a></li>
@@ -30,7 +30,7 @@
 					</div>
 				</div>
 				<div class="footer-row" id="footer-bottom">
-					<div class="left">© 2013 deRide. Todos los derechos reservados.</div>
+					<div class="left">© 2013 De Ride. Todos los derechos reservados.</div>
 					<div class="right">
 						<a href="aviso_legal">Política de privacidad</a>
 					</div>
