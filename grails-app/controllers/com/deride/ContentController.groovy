@@ -7,6 +7,7 @@ import org.springframework.dao.DataIntegrityViolationException
 class ContentController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    def imageUploadService
 
     def index() {
         redirect(action: "list", params: params)
@@ -22,11 +23,15 @@ class ContentController {
     }
 
     def save() {
+        log.info "Saving new content instance with params ${params}"
         def contentInstance = new Content(params)
         if (!contentInstance.save(flush: true)) {
+            /* Save image */
+            imageUploadService.save(contentInstance, true)
             render(view: "create", model: [contentInstance: contentInstance])
             return
         }
+
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'content.label', default: 'Content'), contentInstance.id])
         redirect(action: "show", id: contentInstance.id)
@@ -55,6 +60,7 @@ class ContentController {
     }
 
     def update(Long id, Long version) {
+        log.info "Updating content instance ${id} with params ${params}"
         def contentInstance = Content.get(id)
         if (!contentInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'content.label', default: 'Content'), id])
@@ -72,8 +78,11 @@ class ContentController {
             }
         }
 
+        /* Populate content instance */
         contentInstance.properties = params
-
+        /* Save image */
+        imageUploadService.save(contentInstance)
+        /* Save content instance */
         if (!contentInstance.save(flush: true)) {
             render(view: "edit", model: [contentInstance: contentInstance])
             return

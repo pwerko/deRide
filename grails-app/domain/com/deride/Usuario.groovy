@@ -36,10 +36,10 @@ class Usuario extends AppUser implements Serializable {
     static constraints = {
         titleType(nullable: true, blank: true)
     	name(nullable: false, blank: false)
-    	lastName(nullable: false, blank:false)
+    	lastName(nullable: true, blank:false)
     	username(nullable: false, blank:false, unique:true, size: 5..20)
-    	gender(nullable: false, blank: false)
-    	email(nullable: false, blank: false, email: true)
+    	gender(nullable: true, blank: false)
+    	email(nullable: false, blank: false, unique:true, email: true)
     	phone(nullable: true, blank: true, phoneNumber: true)
         mobPhone(nullable: true, blank: true, phoneNumber: true)
         street(nullable: true, blank: true)

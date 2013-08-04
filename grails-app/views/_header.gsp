@@ -4,16 +4,23 @@
 			<div class="upper-header" style="width:20px;padding-bottom: 10px;" title=""></div>
 			<g:link controller="main" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></g:link>
 			<div class="upper-header" style="width:251px;" title=""></div>
-			<!--div class="upper-header" style="background:url(<g:resource dir='images' file='how-it-works.jpg' />) no-repeat 0 9px transparent; width:150px; padding-bottom: 10px;" title=""></div-->
 			<div class="upper-header" style="width:300px;" title="">
 				<sec:ifNotGranted roles="ROLE_USER">
 					<div id="loginInfo">
 						<form name="simple_search" method="POST" action="${resource(file: 'j_spring_security_check')}">
-							<g:field type="text" id="login_username" name="j_username" placeholder="Usuario" class="search-from complete-radius" autocomplete="off" />
-							<g:field type="password" id="login_passowrd" name="j_password" placeholder="Contraseña" class="search-from complete-radius" autocomplete="off" />
-							<g:checkBox id="login_remember" name="_spring_security_remember_me" />
-							<g:submitButton name="login" value="Entrar"/>
-							<facebookAuth:connect />
+							<div class="left">
+								<g:field type="text" id="login_username" name="j_username" placeholder="Usuario" class="login_text complete-radius" autocomplete="off" />
+								<g:field type="password" id="login_password" name="j_password" placeholder="Contraseña" class="login_text complete-radius" autocomplete="off" />
+								<g:checkBox id="login_remember" name="_spring_security_remember_me" /><label for="login_remember">Recordarme</label>
+							</div>
+							<div id="submitDiv">
+								<g:submitButton id="loginBtn" class="home-button-search" name="login" value="Entrar"/>
+								<g:link id="registerBtn" class="home-button-search" action="usuario" controller="registrar">Registrar</g:link>
+								<facebookAuth:connect />
+							</div>
+							<div id="registerDiv">
+								<a href="#">¿Olvidaste tu contraseña?</a>
+							</div>
 						<form>
 					</div>
 				</sec:ifNotGranted>

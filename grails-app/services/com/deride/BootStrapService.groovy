@@ -13,6 +13,7 @@ class BootStrapService {
                 createUsuarios()
                 createVehiculo()
                 createRides()
+                createContent()
             }
         }
     }
@@ -25,9 +26,11 @@ class BootStrapService {
 
         Environment.executeForCurrentEnvironment {
             development {
-                def adminUser = AppUser.findByUsername('sergio') ?: new AppUser(
+                def adminUser = Usuario.findByUsername('sergio') ?: new Usuario(
                     username: 'sergio',
+                    name: 'Admin',
                     password: 'test',
+                    email: "sergio@deride.com.mx",
                     enabled: true).save(failOnError: true)
 
                 if (!adminUser.authorities.contains(adminRole)) {
@@ -36,18 +39,22 @@ class BootStrapService {
                 }
             }
             production {
-                def adminUser = AppUser.findByUsername('admin') ?: new AppUser(
+                def adminUser = Usuario.findByUsername('admin') ?: new Usuario(
                     username: 'admin',
+                    name: 'Admin',
                     password: 'J]wTbUeFAK',
+                    email: "admin@deride.com.mx",
                     enabled: true).save(failOnError: true)
 
                 if (!adminUser.authorities.contains(adminRole)) {
                     AppUserSecRole.create adminUser, adminRole
                 }
 
-                def operatorUser = AppUser.findByUsername('operator') ?: new AppUser(
+                def operatorUser = Usuario.findByUsername('operator') ?: new Usuario(
                     username: 'operator',
+                    name: 'Operator',
                     password: 'XCSz$W$C(V',
+                    email: "operator@deride.com.mx",
                     enabled: true).save(failOnError: true)
 
                 if (!operatorUser.authorities.contains(operatorRole)) {
@@ -268,6 +275,23 @@ class BootStrapService {
             price: 35,
             seats: 3,
             luggageSize: LuggageSize.MEDIUM
+        ).save([failOnError: true, validate: true])
+    }
+
+    def createContent() {
+        def content = new Content(
+            introText: 'Viajar es una actividad que a todo mundo le gusta y más cuando se hace con verdaderos expertos en la transportación que te permiten disfrutar del paisaje de la carretera a bordo de una unidad segura y confortable, como es el caso de autobuses Senda, ¿quieres conocerlos mejor? ¡Aquí está la información!',
+            lastEdited: new Date(),
+            author: 'Erik Oropeza',
+            robots: 'INDEX, FOLLOW',
+            title: 'Autobuses Senda',
+            seoTitle: 'Autobuses Senda ¡Las Mejores Ofertas!',
+            metaDescription: 'Autobuses Senda: ¿Viajas al norte del país? Hazlo con Autobuses Senda, sólo ellos te ofrecen viajes gratis y otras promos, mira aquí!',
+            focusKeyword: 'autobuses senda',
+            sitewide: false,
+            slug: 'autobuses-senda',
+            imageAlt: 'Autobuses Senda',
+            status: ContentStatus.PUBLISHED
         ).save([failOnError: true, validate: true])
     }
 }

@@ -1,7 +1,9 @@
 package com.deride
 
 import com.deride.enums.*
+import pl.burningice.plugins.image.ast.DBImageContainer
 
+@DBImageContainer(field = 'image')
 class Content implements Serializable {
 
 	String introText
@@ -16,7 +18,6 @@ class Content implements Serializable {
 	String focusKeyword
 	Boolean sitewide
 	String slug
-	String imageUrl
 	String imageLink
 	String imageAlt
 	ContentStatus status = ContentStatus.DRAFT
@@ -37,13 +38,12 @@ class Content implements Serializable {
 		title(nullable: false)
 		dateCreated(display: true)
 		lastEdited(nullable: true)
-		slug(nullable: false)
+		slug(nullable: false, unique:true)
 		introText(nullable: false)
 		focusKeyword(nullable: true)
 		tags(nullable: true)
 		paragraphs(nullable: true)
-		imageUrl(nullable: false)
-		imageLink(nullable: false)
+		imageLink(nullable: true)
 		seoTitle(nullable: true)
 		metaDescription(nullable: true)
 		imageAlt(nullable: true)
@@ -57,4 +57,3 @@ class Content implements Serializable {
 	}
 
 }
-

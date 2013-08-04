@@ -154,3 +154,14 @@ grails.plugins.springsecurity.facebook.autoCreate.enabled=true
 grails.plugins.springsecurity.facebook.autoCreate.roles= ['ROLE_USER', 'ROLE_FACEBOOK']
 grails.plugins.springsecurity.facebook.filter.type='redirect'
 grails.plugins.springsecurity.facebook.taglib.button.img='images/facebook-login.png'
+
+bi.Content = [
+    prefix: 'image',
+    images: ['large':[scale:[width:400, height:400, type:pl.burningice.plugins.image.engines.scale.ScaleType.APPROXIMATE]],
+             'small':[scale:[width:100, height:100, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
+    constraints:[
+        nullable:true,
+        maxSize:5120,
+        contentType:['image/gif', 'image/png', 'image/jpg']
+    ]
+]

@@ -229,6 +229,7 @@ float: left;
 	float: right;
 }
 
+/* Login section */
 #loginInfo {
 	font-size: 12px;
 	float: right;
@@ -238,10 +239,83 @@ float: left;
 }
 
 #loginInfo a {
-	font-size: 10px;
+	font-size: 12px;
 	color: white;
+	float: right;
+	clear: both;
 }
 
+#login_username{
+	background: url("../images/status_online.png") no-repeat scroll 2px 0 #EEEEEE;
+}
+
+#login_password{
+	background: url("../images/key.png") no-repeat scroll 2px 0 #EEEEEE;
+}
+
+#loginBtn {
+	font-size: 12px;
+	margin: 0;
+	padding: 1px 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#submitDiv a {
+	font-size: 12px;
+	height: 18px;
+	margin: 5px 0;
+	padding: 2px 0 0 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-color: #FF9100;
+    background-image: linear-gradient(#FF9100, #C6750B);
+}
+
+.login_text {
+	float: left;
+	padding-left: 22px;
+	width: 160px;
+	height: 16px;
+	font-size: 12px;
+	border: 1px solid #EEEEEE;
+	margin-top: 5px;
+	color: #0097E0;
+	clear: both;
+}
+.login_text::-webkit-input-placeholder {color: #888;}
+.login_text:-moz-placeholder {color: #888;}
+.login_text::-moz-placeholder {color: #888;}
+.login_text:-ms-input-placeholder {color: #888;}
+
+#registerDiv {
+	float: left;
+	margin-top: 10px;
+}
+
+#loginInfo label {
+	color: #FFF;
+	margin: 4px 0 0 5px;
+	vertical-align: middle;
+	float: left;
+}
+
+#login_remember {
+    vertical-align: middle;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+
+#submitDiv {
+	float: right;
+	width: 100px;
+	margin-top: 5px;
+}
+
+/* Top destinations section */
 #topDestinations {
 	background: none;
 	width:165px;

@@ -38,6 +38,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":webxml:1.4.1"
+        runtime ":resources:1.2.RC2"
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.10.2"
         compile ":jquery-ui:1.8.24"
@@ -45,7 +46,7 @@ grails.project.dependency.resolution = {
         compile ":constraints:0.8.0"
         compile ":spring-security-core:1.2.7.3"
         compile ":spring-security-facebook:0.14.5"
-        runtime ":resources:1.2.RC2"
+        compile ":burning-image:0.5.1"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
