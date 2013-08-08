@@ -14,7 +14,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            dbCreate = "none" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost:3306/kavsilxa?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             logSql = false
         }
@@ -28,7 +28,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "create" // one of 'create', 'create-drop','update'
+            dbCreate = "none" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost:3306/kavsilxa_production?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             /*properties {
                 minEvictableIdleTimeMillis = 1800000

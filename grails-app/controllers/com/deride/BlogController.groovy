@@ -1,5 +1,8 @@
 package com.deride
 
+import grails.plugins.springsecurity.Secured
+
+@Secured(['ROLE_ADMIN'])
 class BlogController {
 
     static defaultAction = "ultimos"

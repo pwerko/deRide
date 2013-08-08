@@ -1,5 +1,8 @@
 package com.deride
 
+import pl.burningice.plugins.image.ast.DBImageContainer
+
+@DBImageContainer(field = 'image')
 class Paragraph implements Serializable{
 
 	static mapping = {
@@ -10,13 +13,17 @@ class Paragraph implements Serializable{
 
 	String headline
 	String text
-	String image
+	String imageAlt
 
 	static belongsTo = Content
 
     static constraints = {
     	headline(nullable: false)
     	text(nullable: false)
-    	image(nullable: true)
+    	imageAlt(nullable: true)
     }
+
+    String toString (){
+		"$headline"
+	}
 }

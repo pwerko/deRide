@@ -41,6 +41,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.RC2"
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.10.2"
+        runtime ":database-migration:1.3.5"
         compile ":jquery-ui:1.8.24"
         compile ":constraintkeys:0.1"
         compile ":constraints:0.8.0"

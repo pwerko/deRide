@@ -17,6 +17,7 @@ class UsuarioController {
         [usuarioInstanceList: Usuario.list(params), usuarioInstanceTotal: Usuario.count()]
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def create() {
         [usuarioInstance: new Usuario(params)]
     }

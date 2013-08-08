@@ -9,7 +9,6 @@ class Content implements Serializable {
 	String introText
 	Date dateCreated
 	Date lastUpdated
-	Date lastEdited
 	String author
 	String robots
 	String title
@@ -37,7 +36,6 @@ class Content implements Serializable {
 		author(nullable: false)
 		title(nullable: false)
 		dateCreated(display: true)
-		lastEdited(nullable: true)
 		slug(nullable: false, unique:true)
 		introText(nullable: false)
 		focusKeyword(nullable: true)

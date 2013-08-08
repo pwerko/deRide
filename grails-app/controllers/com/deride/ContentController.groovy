@@ -37,6 +37,7 @@ class ContentController {
         redirect(action: "show", id: contentInstance.id)
     }
 
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def show(Long id) {
         def contentInstance = Content.get(id)
         if (!contentInstance) {

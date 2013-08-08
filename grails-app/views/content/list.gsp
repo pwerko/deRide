@@ -23,37 +23,33 @@
 			<table>
 				<thead>
 					<tr>
-					
+
 						<g:sortableColumn property="author" title="${message(code: 'content.author.label', default: 'Author')}" />
-					
+
 						<g:sortableColumn property="title" title="${message(code: 'content.title.label', default: 'Title')}" />
-					
+
 						<g:sortableColumn property="dateCreated" title="${message(code: 'content.dateCreated.label', default: 'Date Created')}" />
-					
-						<g:sortableColumn property="lastEdited" title="${message(code: 'content.lastEdited.label', default: 'Last Edited')}" />
-					
+
 						<g:sortableColumn property="slug" title="${message(code: 'content.slug.label', default: 'Slug')}" />
-					
+
 						<g:sortableColumn property="introText" title="${message(code: 'content.introText.label', default: 'Intro Text')}" />
-					
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${contentInstanceList}" status="i" var="contentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${contentInstance.id}">${fieldValue(bean: contentInstance, field: "author")}</g:link></td>
-					
+
 						<td>${fieldValue(bean: contentInstance, field: "title")}</td>
-					
+
 						<td><g:formatDate date="${contentInstance.dateCreated}" /></td>
-					
-						<td><g:formatDate date="${contentInstance.lastEdited}" /></td>
-					
+
 						<td>${fieldValue(bean: contentInstance, field: "slug")}</td>
-					
+
 						<td>${fieldValue(bean: contentInstance, field: "introText")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

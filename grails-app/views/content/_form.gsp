@@ -16,14 +16,6 @@
 	<g:textField name="title" value="${contentInstance?.title}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'lastEdited', 'error')} ">
-	<label for="lastEdited">
-		<g:message code="content.lastEdited.label" default="Last Edited" />
-
-	</label>
-	<g:datePicker name="lastEdited" precision="day"  value="${contentInstance?.lastEdited}" default="none" noSelection="['': '']" />
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'slug', 'error')} ">
 	<label for="slug">
 		<g:message code="content.slug.label" default="Slug" />
@@ -48,22 +40,6 @@
 	<g:textField name="focusKeyword" value="${contentInstance?.focusKeyword}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'tags', 'error')} ">
-	<label for="tags">
-		<g:message code="content.tags.label" default="Tags" />
-
-	</label>
-	<g:select name="tags" from="${com.deride.Tag.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.tags*.id}" class="many-to-many"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'paragraphs', 'error')} ">
-	<label for="paragraphs">
-		<g:message code="content.paragraphs.label" default="Paragraphs" />
-
-	</label>
-	<g:select name="paragraphs" from="${com.deride.Paragraph.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.paragraphs*.id}" class="many-to-many"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'imageLink', 'error')} ">
 	<label for="imageLink">
 		<g:message code="content.imageLink.label" default="Image Link" />
@@ -85,7 +61,7 @@
 		<g:message code="content.metaDescription.label" default="Meta Description" />
 
 	</label>
-	<g:textField name="metaDescription" value="${contentInstance?.metaDescription}"/>
+	<g:textArea name="metaDescription" rows="5" cols="80" value="${contentInstance?.metaDescription}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'imageAlt', 'error')} ">
@@ -128,5 +104,23 @@
 		<g:message code="content.image.label" default="Image" />
 	</label>
 	<g:field name="image" type="file"/>
+</div>
+<div id="paragraphs" class="paragraphs">
+	<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'paragraphs', 'error')} ">
+		<label for="tags">
+			<g:message code="content.paragraphs.label" default="Paragraphs" />
+
+		</label>
+		<g:select style="min-width:500px;" name="tags" from="${com.deride.Paragraph.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.paragraphs*.id}" class="one-to-many"/>
+	</div>
+</div>
+<div id="tags" class="tags">
+	<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'tags', 'error')} ">
+		<label for="tags">
+			<g:message code="content.tags.label" default="Tags" />
+
+		</label>
+		<g:select style="min-width:300px;" name="tags" from="${com.deride.Tag.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.tags*.id}" class="many-to-many"/>
+	</div>
 </div>
 

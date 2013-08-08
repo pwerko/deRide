@@ -271,6 +271,11 @@ float: left;
 	-moz-box-shadow: none;
 	box-shadow: none;
 	background-color: #FF9100;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#FF9100),color-stop(100%,#C6750B));
+	background-image: -webkit-linear-gradient(#FF9100,#C6750B);
+	background-image: -moz-linear-gradient(#FF9100,#C6750B);
+	background-image: -o-linear-gradient(#FF9100,#C6750B);
+	background-image: -ms-linear-gradient(#FF9100,#C6750B);
     background-image: linear-gradient(#FF9100, #C6750B);
 }
 
@@ -689,6 +694,19 @@ nav#main .right {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.paragraphs {
+	margin: 5px 0;
+	border: 1px dotted black;
+	padding: 5px;
+}
+
+.tags {
+	margin: 5px 0;
+	border: 1px dotted black;
+	padding: 5px;
+}
+
 
 #seoContent {
 	clear: both;

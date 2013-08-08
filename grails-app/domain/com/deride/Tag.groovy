@@ -4,13 +4,10 @@ class Tag implements Serializable{
 
 	static mapping = {
 		cache true
-		metaDescription type: "text"
 	 }
 
 	String name
 	String slug
-	String seoTitle
-	String metaDescription
 
 	static hasMany = [contents: Content]
 	static belongsTo = Content
@@ -18,4 +15,9 @@ class Tag implements Serializable{
     static constraints = {
     	name(nullable: false)
     }
+
+    String toString (){
+		"$name"
+	}
+
 }

@@ -8,14 +8,15 @@ class UrlMappings {
             action = 'index'
         }
 
-		"/"(controller: 'main', action: 'index')
+		"/"(controller: "main", action: "index")
 		"/sitemap"{
             controller = 'sitemap'
             action = 'sitemap'
         }
         "/login/$action?"(controller: "login")
 		"/logout/$action?"(controller: "logout")
-		"/$action" (controller: 'main')
+		"/index2"(controller: "main", action: "index2")
+		"/$slug" (controller: "main", action: "processUrl")
 
 		"/$controller/$action?/$id?"{
 			constraints {

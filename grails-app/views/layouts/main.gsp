@@ -11,9 +11,10 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Denk+One|Expletus+Sans:400,700|Telex|Norican' rel='stylesheet' type='text/css'>
-		<meta name="robots" content="all,index,follow"/>
+		<meta name="language" content="es-MX"/>
+		<meta name="robots" content="INDEX,FOLLOW"/>
 		<meta property="og:url" content="http://www.deride.com.mx/">
-		<meta property="og:locale" content="es_MX">
+		<meta property="og:locale" content="es-MX">
 		<meta property="og:site_name" content="DeRide.com.mx">
 		<meta property="og:title" content="Compartir Coche en México">
 		<meta property="og:type" content="website">

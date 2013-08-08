@@ -156,9 +156,18 @@ grails.plugins.springsecurity.facebook.filter.type='redirect'
 grails.plugins.springsecurity.facebook.taglib.button.img='images/facebook-login.png'
 
 bi.Content = [
-    prefix: 'image',
-    images: ['large':[scale:[width:400, height:400, type:pl.burningice.plugins.image.engines.scale.ScaleType.APPROXIMATE]],
-             'small':[scale:[width:100, height:100, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
+    images: ['large':[scale:[width:300, height:300, type:pl.burningice.plugins.image.engines.scale.ScaleType.APPROXIMATE]],
+             'small':[scale:[width:200, height:200, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
+    constraints:[
+        nullable:true,
+        maxSize:5120,
+        contentType:['image/gif', 'image/png', 'image/jpg']
+    ]
+]
+
+bi.Paragraph = [
+    images: ['large':[scale:[width:300, height:300, type:pl.burningice.plugins.image.engines.scale.ScaleType.APPROXIMATE]],
+             'small':[scale:[width:200, height:200, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
     constraints:[
         nullable:true,
         maxSize:5120,

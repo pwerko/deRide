@@ -24,6 +24,21 @@ class MainController {
         render(view: "/index2")
     }
 
+    def processUrl() {
+        def slug = params.slug
+        if(slug) {
+            if(slug == "content" || slug == "usuario" || slug == "paragraph") {
+                redirect(controller: slug, action: "list")
+                return
+            }
+
+            def contentInstance = Content.findBySlug(slug)
+            if(contentInstance) {
+                render(view: "/content/show", model: [contentInstance: contentInstance])
+            } else render(view: "/main/$slug")
+        } else redirect(action: "index")
+    }
+
     def sobre_nosotros() {
 
     }
