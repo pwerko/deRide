@@ -5,6 +5,7 @@
 			<g:link controller="main" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></g:link>
 			<div class="upper-header" style="width:251px;" title=""></div>
 			<div class="upper-header" style="width:300px;" title="">
+				<g:if test="${!hideLogin}">
 				<sec:ifNotGranted roles="ROLE_USER">
 					<div id="loginInfo">
 						<form name="simple_search" method="POST" action="${resource(file: 'j_spring_security_check')}">
@@ -29,6 +30,7 @@
 						Bienvenido <span><sec:username/></span> (<g:link uri="/j_spring_security_logout" style="color: white;">Salir</g:link>)
 					</div>
 				</sec:ifAllGranted>
+				</g:if>
 			</div>
 		</div>
 	</div>

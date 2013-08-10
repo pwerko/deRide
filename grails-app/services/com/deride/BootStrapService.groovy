@@ -66,7 +66,7 @@ class BootStrapService {
     }
 
     def createUsuarios() {
-    	def user1 = new Usuario(
+    	def user1 = Usuario.findByUsername('sgonzalez') ?: new Usuario(
     		name: "Sergio",
             lastName: "Gonzalez",
             username: "sgonzalez",
@@ -77,7 +77,7 @@ class BootStrapService {
     	).save([failOnError: true, validate: true])
         AppUserSecRole.create user1, SecRole.findByAuthority('ROLE_USER')
 
-        def user2 =  new Usuario(
+        def user2 = Usuario.findByUsername('salvador') ?: new Usuario(
             name: "Salvador",
             lastName: "Restelli",
             username: "salvador",
@@ -92,7 +92,7 @@ class BootStrapService {
     def createVehiculo() {
         def usuario = Usuario.findByUsername("sgonzalez")
 
-    	def vehicle = new Vehiculo(
+    	def vehicle = Vehiculo.findByModelo('Leon') ?: new Vehiculo(
             user: usuario,
             fabricante: "Seat",
             modelo: "Leon",
@@ -112,7 +112,7 @@ class BootStrapService {
         def usuario = Usuario.findByUsername("sgonzalez")
         def usuario1 = Usuario.findByUsername("salvador")
 
-    	new Ride(
+    	Vehiculo.findByModelo('Leon') ?: new Ride(
             creator: usuario,
             type: RideType.OFFER,
             origin: "Guadalajara, México",
@@ -279,58 +279,61 @@ class BootStrapService {
     }
 
     def createContent() {
-        def content = new Content(
-            introText: 'Viajar es una actividad que a todo mundo le gusta y más cuando se hace con verdaderos expertos en la transportación que te permiten disfrutar del paisaje de la carretera a bordo de una unidad segura y confortable, como es el caso de autobuses Senda, ¿quieres conocerlos mejor? ¡Aquí está la información!',
-            author: 'Erik Oropeza',
-            robots: 'INDEX, FOLLOW',
-            title: 'Autobuses Senda',
-            seoTitle: 'Autobuses Senda ¡Las Mejores Ofertas!',
-            metaDescription: 'Autobuses Senda: ¿Viajas al norte del país? Hazlo con Autobuses Senda, sólo ellos te ofrecen viajes gratis y otras promos, mira aquí!',
-            focusKeyword: 'autobuses senda',
-            sitewide: false,
-            slug: 'autobuses-senda',
-            imageAlt: 'Autobuses Senda',
-            status: ContentStatus.PUBLISHED
-        )
+        def content = Content.findBySlug('autobuses-senda')
+        if(content) return else {
+            content = new Content(
+                introText: 'Viajar es una actividad que a todo mundo le gusta y más cuando se hace con verdaderos expertos en la transportación que te permiten disfrutar del paisaje de la carretera a bordo de una unidad segura y confortable, como es el caso de autobuses Senda, ¿quieres conocerlos mejor? ¡Aquí está la información!',
+                author: 'Erik Oropeza',
+                robots: 'INDEX,FOLLOW',
+                title: 'Autobuses Senda',
+                seoTitle: 'Autobuses Senda ¡Las Mejores Ofertas!',
+                metaDescription: 'Autobuses Senda: ¿Viajas al norte del país? Hazlo con Autobuses Senda, sólo ellos te ofrecen viajes gratis y otras promos, mira aquí!',
+                focusKeyword: 'autobuses senda',
+                sitewide: false,
+                slug: 'autobuses-senda',
+                imageAlt: 'Autobuses Senda',
+                status: ContentStatus.PUBLISHED
+            )
 
-        def paragraph1 = new Paragraph(
-            headline: 'Una línea terrestre con amplia cobertura',
-            text: 'Autobuses Senda busca conectar las principales ciudades de México y Estados Unidos a través de su red de transporte que incluye destinos en estados como: Aguascalientes, Durango, Chihuahua, Jalisco, Nuevo León, Tamaulipas y Zacatecas. \
-                   En Estados Unidos los estados también son varios como: Alabama, Giorgia, Ilinois, Louisiana, Carolina del Norte y del Sur, Tenesse y hasta Texas, con ellos hasta te puedes ir de shopping al otro lado, ¿verdad que está genial?',
-            imageAlt: 'imagen1'
-        )
-        content.addToParagraphs(paragraph1)
+            def paragraph1 = new Paragraph(
+                headline: 'Una línea terrestre con amplia cobertura',
+                text: 'Autobuses Senda busca conectar las principales ciudades de México y Estados Unidos a través de su red de transporte que incluye destinos en estados como: Aguascalientes, Durango, Chihuahua, Jalisco, Nuevo León, Tamaulipas y Zacatecas. \
+                       En Estados Unidos los estados también son varios como: Alabama, Giorgia, Ilinois, Louisiana, Carolina del Norte y del Sur, Tenesse y hasta Texas, con ellos hasta te puedes ir de shopping al otro lado, ¿verdad que está genial?',
+                imageAlt: 'imagen1'
+            )
+            content.addToParagraphs(paragraph1)
 
-        def paragraph2 = new Paragraph(
-            headline: 'Nuevo León es su especialidad',
-            text: 'Si tienes que viajar al norte del país pero temes que no te ofrezcan un servicio de calidad, entonces, debes saber que la especialidad de autobuses Senda es el estado de Nuevo León, lo conocen a la perfección y te brindan una gran variedad de corridas y  el mejor de los tratos en cualquiera de los puntos más importantes de esta hermoso estado.',
-            imageAlt: 'imagen1'
-        )
-        content.addToParagraphs(paragraph2)
+            def paragraph2 = new Paragraph(
+                headline: 'Nuevo León es su especialidad',
+                text: 'Si tienes que viajar al norte del país pero temes que no te ofrezcan un servicio de calidad, entonces, debes saber que la especialidad de autobuses Senda es el estado de Nuevo León, lo conocen a la perfección y te brindan una gran variedad de corridas y  el mejor de los tratos en cualquiera de los puntos más importantes de esta hermoso estado.',
+                imageAlt: 'imagen1'
+            )
+            content.addToParagraphs(paragraph2)
 
-        def paragraph3 = new Paragraph(
-            headline: '¡Promociones todo el año!',
-            text: 'En esta empresa saben perfectamente que uno de los mayores atractivos que le gusta a cualquier cliente son las promociones y es por eso que constantemente autobuses Senda tiene las mejores para ti, como por ejemplo: paquetes de hotel y transportación al mejor precio, ninguna agencia de viajes te la podrá igualar. \
-                   Además te ofrece el 10% de descuento en la compra de boletos a través de su portal de Internet, es por tiempo limitado, así que tienes que aprovecharla ya mismo.',
-            imageAlt: 'imagen1'
-        )
-        content.addToParagraphs(paragraph3)
+            def paragraph3 = new Paragraph(
+                headline: '¡Promociones todo el año!',
+                text: 'En esta empresa saben perfectamente que uno de los mayores atractivos que le gusta a cualquier cliente son las promociones y es por eso que constantemente autobuses Senda tiene las mejores para ti, como por ejemplo: paquetes de hotel y transportación al mejor precio, ninguna agencia de viajes te la podrá igualar. \
+                       Además te ofrece el 10% de descuento en la compra de boletos a través de su portal de Internet, es por tiempo limitado, así que tienes que aprovecharla ya mismo.',
+                imageAlt: 'imagen1'
+            )
+            content.addToParagraphs(paragraph3)
 
-        def paragraph4 = new Paragraph(
-            headline: '¡Sólo con ellos tendrás viajes gratis!',
-            text: 'Autobuses Senda es la única empresa en el país que tiene su propia tarjeta de lealtad llamada Senda amigo, a través de la cual con cada viaje que realices irás acumulando puntos que los podrás canjear por promociones especiales en establecimientos afiliados o hasta viajes gratis, ¿así o más conveniente?',
-            imageAlt: 'imagen1'
-        )
-        content.addToParagraphs(paragraph4)
+            def paragraph4 = new Paragraph(
+                headline: '¡Sólo con ellos tendrás viajes gratis!',
+                text: 'Autobuses Senda es la única empresa en el país que tiene su propia tarjeta de lealtad llamada Senda amigo, a través de la cual con cada viaje que realices irás acumulando puntos que los podrás canjear por promociones especiales en establecimientos afiliados o hasta viajes gratis, ¿así o más conveniente?',
+                imageAlt: 'imagen1'
+            )
+            content.addToParagraphs(paragraph4)
 
-        def tag = new Tag(
-            name: 'autobuses',
-            slug: 'autobuses'
-        )
+            def tag = new Tag(
+                name: 'autobuses',
+                slug: 'autobuses'
+            )
 
-        content.addToTags(tag)
+            content.addToTags(tag)
 
-        content.save([failOnError: true, validate: true])
+            content.save([failOnError: true, validate: true])
+        }
     }
 
 }

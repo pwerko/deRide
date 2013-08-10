@@ -22,45 +22,41 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list paragraph">
-			
+
 				<g:if test="${paragraphInstance?.headline}">
 				<li class="fieldcontain">
 					<span id="headline-label" class="property-label"><g:message code="paragraph.headline.label" default="Headline" /></span>
-					
+
 						<span class="property-value" aria-labelledby="headline-label"><g:fieldValue bean="${paragraphInstance}" field="headline"/></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${paragraphInstance?.text}">
 				<li class="fieldcontain">
 					<span id="text-label" class="property-label"><g:message code="paragraph.text.label" default="Text" /></span>
-					
+
 						<span class="property-value" aria-labelledby="text-label"><g:fieldValue bean="${paragraphInstance}" field="text"/></span>
-					
+
 				</li>
 				</g:if>
-			
+
 				<g:if test="${paragraphInstance?.imageAlt}">
 				<li class="fieldcontain">
 					<span id="imageAlt-label" class="property-label"><g:message code="paragraph.imageAlt.label" default="Image Alt" /></span>
-					
+
 						<span class="property-value" aria-labelledby="imageAlt-label"><g:fieldValue bean="${paragraphInstance}" field="imageAlt"/></span>
-					
+
 				</li>
 				</g:if>
-			
-				<g:if test="${paragraphInstance?.biImage}">
+
+				<bi:hasImage bean="${paragraphInstance}">
 				<li class="fieldcontain">
-					<span id="biImage-label" class="property-label"><g:message code="paragraph.biImage.label" default="Bi Image" /></span>
-					
-						<g:each in="${paragraphInstance.biImage}" var="b">
-						<span class="property-value" aria-labelledby="biImage-label"><g:link controller="image" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
+					<span id="image-label" class="property-label"><g:message code="paragraph.image.label" default="Image" /></span>
+			    	<span class="property-value" aria-labelledby="image-label"><bi:img size="large" bean="${paragraphInstance}" /></span>
+			    </li>
+				</bi:hasImage>
+
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

@@ -32,6 +32,8 @@
 
 						<g:sortableColumn property="slug" title="${message(code: 'content.slug.label', default: 'Slug')}" />
 
+						<g:sortableColumn property="focusKeyword" title="${message(code: 'content.focusKeyword.label', default: 'Focus Keyword')}" />
+
 						<g:sortableColumn property="introText" title="${message(code: 'content.introText.label', default: 'Intro Text')}" />
 
 					</tr>
@@ -46,7 +48,9 @@
 
 						<td><g:formatDate date="${contentInstance.dateCreated}" /></td>
 
-						<td>${fieldValue(bean: contentInstance, field: "slug")}</td>
+						<td><a href="../${contentInstance.slug}" target="_blank">${fieldValue(bean: contentInstance, field: "slug")}</a></td>
+
+						<td>${fieldValue(bean: contentInstance, field: "focusKeyword")}</td>
 
 						<td>${fieldValue(bean: contentInstance, field: "introText")}</td>
 

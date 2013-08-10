@@ -21,7 +21,7 @@
 		<g:message code="content.slug.label" default="Slug" />
 
 	</label>
-	<g:textField name="slug" value="${contentInstance?.slug}"/>
+	<g:textField name="slug" value="${contentInstance?.slug}" disabled="disabled"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'introText', 'error')} ">
@@ -29,7 +29,7 @@
 		<g:message code="content.introText.label" default="Intro Text" />
 
 	</label>
-	<g:textField name="introText" value="${contentInstance?.introText}"/>
+	<g:textArea name="introText" rows="5" cols="80" value="${contentInstance?.introText}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'focusKeyword', 'error')} ">
@@ -77,7 +77,7 @@
 		<g:message code="content.robots.label" default="Robots" />
 
 	</label>
-	<g:textField name="robots" value="${contentInstance?.robots}"/>
+	<g:select name="robots" from="${["FOLLOW","INDEX", "NOARCHIVE","NOFOLLOW","NOINDEX","NONE","NOODP","NOSNIPPET","NOYDIR","INDEX,FOLLOW","INDEX,NOFOLLOW","NOINDEX,NOFOLLOW","NOINDEX,FOLLOW"]}" required="" value="${contentInstance?.robots}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'sitewide', 'error')} ">
@@ -107,20 +107,24 @@
 </div>
 <div id="paragraphs" class="paragraphs">
 	<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'paragraphs', 'error')} ">
-		<label for="tags">
+		<label for="paragraphs">
 			<g:message code="content.paragraphs.label" default="Paragraphs" />
-
 		</label>
-		<g:select style="min-width:500px;" name="tags" from="${com.deride.Paragraph.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.paragraphs*.id}" class="one-to-many"/>
+		<g:select style="min-width:500px;" name="paragraphs" from="${com.deride.Paragraph.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.paragraphs*.id}" class="one-to-many"/>
 	</div>
 </div>
 <div id="tags" class="tags">
 	<div class="fieldcontain ${hasErrors(bean: contentInstance, field: 'tags', 'error')} ">
 		<label for="tags">
 			<g:message code="content.tags.label" default="Tags" />
-
 		</label>
 		<g:select style="min-width:300px;" name="tags" from="${com.deride.Tag.list()}" multiple="multiple" optionKey="id" size="5" value="${contentInstance?.tags*.id}" class="many-to-many"/>
+	</div>
+	<div>
+		<label for="newTags">
+			<g:message code="content.add.tag.label" default="Add tags" />
+		</label>
+		<g:textField name="newTags" value=""/>
 	</div>
 </div>
 

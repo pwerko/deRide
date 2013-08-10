@@ -23,29 +23,25 @@
 			<table>
 				<thead>
 					<tr>
-					
+
 						<g:sortableColumn property="headline" title="${message(code: 'paragraph.headline.label', default: 'Headline')}" />
-					
+
 						<g:sortableColumn property="text" title="${message(code: 'paragraph.text.label', default: 'Text')}" />
-					
+
 						<g:sortableColumn property="imageAlt" title="${message(code: 'paragraph.imageAlt.label', default: 'Image Alt')}" />
-					
-						<th><g:message code="paragraph.biImage.label" default="Bi Image" /></th>
-					
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${paragraphInstanceList}" status="i" var="paragraphInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${paragraphInstance.id}">${fieldValue(bean: paragraphInstance, field: "headline")}</g:link></td>
-					
+
 						<td>${fieldValue(bean: paragraphInstance, field: "text")}</td>
-					
+
 						<td>${fieldValue(bean: paragraphInstance, field: "imageAlt")}</td>
-					
-						<td>${fieldValue(bean: paragraphInstance, field: "biImage")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

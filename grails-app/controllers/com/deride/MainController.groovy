@@ -21,7 +21,13 @@ class MainController {
     }
 
     def index2() {
-        render(view: "/index2")
+        def content
+        try {
+            content = Content.get(1);
+            render(view: "/index2", model: [content: content])
+        } catch(e) {
+            log.error "Failed get content instance", e
+        }
     }
 
     def processUrl() {
@@ -34,7 +40,7 @@ class MainController {
 
             def contentInstance = Content.findBySlug(slug)
             if(contentInstance) {
-                render(view: "/content/show", model: [contentInstance: contentInstance])
+                render(view: "/content/display", model: [content: contentInstance])
             } else render(view: "/main/$slug")
         } else redirect(action: "index")
     }

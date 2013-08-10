@@ -2,6 +2,7 @@ package com.deride
 
 import com.deride.enums.*
 import pl.burningice.plugins.image.ast.DBImageContainer
+import java.text.Normalizer
 
 @DBImageContainer(field = 'image')
 class Content implements Serializable {
@@ -54,4 +55,21 @@ class Content implements Serializable {
 		"Content ${id} with title '${title}'"
 	}
 
+	static String generateSlug(String name) {
+
+		// lower case
+		String slug = name.toLowerCase()
+
+		// replace spaces
+		slug = slug.replaceAll("\\s+", " ")
+		slug = slug.replaceAll(" ", "-")
+
+		// replace special characters
+		slug = slug.replaceAll("[+.^°:,'´`¡!|&]", "")
+
+		// normalize accents
+		slug = Normalizer.normalize(slug, Normalizer.Form.NFD).replaceAll("\\p{IsM}", "")
+
+		return slug
+	}
 }

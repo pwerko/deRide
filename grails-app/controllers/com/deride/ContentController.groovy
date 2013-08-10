@@ -25,13 +25,18 @@ class ContentController {
     def save() {
         log.info "Saving new content instance with params ${params}"
         def contentInstance = new Content(params)
+        contentInstance.slug = Content.generateSlug(contentInstance.title)
         if (!contentInstance.save(flush: true)) {
-            /* Save image */
-            imageUploadService.save(contentInstance, true)
+
             render(view: "create", model: [contentInstance: contentInstance])
             return
         }
 
+        def file = request.getFile('image')
+        if (!file.empty) {
+            /* Save image */
+            imageUploadService.save(contentInstance, true)
+        }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'content.label', default: 'Content'), contentInstance.id])
         redirect(action: "show", id: contentInstance.id)
@@ -81,8 +86,25 @@ class ContentController {
 
         /* Populate content instance */
         contentInstance.properties = params
-        /* Save image */
-        imageUploadService.save(contentInstance)
+        def file = request.getFile('image')
+        if (!file.empty) {
+            /* Save image */
+            imageUploadService.save(contentInstance)
+        }
+        /* Check for new tags */
+        if(params.newTags) {
+            def tags = params.newTags.split(',')
+            tags.each { tag ->
+                def tagInstance = new Tag(name: tag.trim(), slug: Tag.generateSlug(tag.trim()))
+                if (!tagInstance.save()) {
+                    flash.message = message(code: 'content.tag.invalid.message', default: "Problems saving Tag ${tag}")
+                    render(view: "edit", model: [contentInstance: contentInstance])
+                    return
+                }
+                contentInstance.addToTags(tagInstance)
+            }
+        }
+
         /* Save content instance */
         if (!contentInstance.save(flush: true)) {
             render(view: "edit", model: [contentInstance: contentInstance])

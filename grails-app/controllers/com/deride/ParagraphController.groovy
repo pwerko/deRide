@@ -7,6 +7,7 @@ import org.springframework.dao.DataIntegrityViolationException
 class ParagraphController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    def imageUploadService
 
     def index() {
         redirect(action: "list", params: params)
@@ -22,10 +23,17 @@ class ParagraphController {
     }
 
     def save() {
+        log.info "Saving new paragraph instance with params ${params}"
         def paragraphInstance = new Paragraph(params)
         if (!paragraphInstance.save(flush: true)) {
             render(view: "create", model: [paragraphInstance: paragraphInstance])
             return
+        }
+
+        def file = request.getFile('image')
+        if (!file.empty) {
+            /* Save image */
+            imageUploadService.save(paragraphInstance, true)
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'paragraph.label', default: 'Paragraph'), paragraphInstance.id])
@@ -55,6 +63,7 @@ class ParagraphController {
     }
 
     def update(Long id, Long version) {
+        log.info "Updating paragraph instance ${id} with params ${params}"
         def paragraphInstance = Paragraph.get(id)
         if (!paragraphInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'paragraph.label', default: 'Paragraph'), id])
@@ -72,8 +81,14 @@ class ParagraphController {
             }
         }
 
+        /* Populate paragraph instance */
         paragraphInstance.properties = params
-
+        def file = request.getFile('image')
+        if (!file.empty) {
+            /* Save image */
+            imageUploadService.save(paragraphInstance)
+        }
+        /* Save content instance */
         if (!paragraphInstance.save(flush: true)) {
             render(view: "edit", model: [paragraphInstance: paragraphInstance])
             return

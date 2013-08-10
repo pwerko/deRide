@@ -77,6 +77,9 @@ grails.hibernate.cache.queries = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
+        grails.plugin.databasemigration.updateOnStart = true
+        grails.plugin.databasemigration.dropOnStart = true
+        grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
         grails.serverURL = "http://dev.deride.com.mx:8080/${appName}"
         grails.logging.jul.usebridge = true
         log4j = {
@@ -104,6 +107,8 @@ environments {
         }
     }
     production {
+        grails.plugin.databasemigration.updateOnStart = true
+        grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://www.deride.com.mx"
         // log4j configuration
@@ -141,7 +146,6 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.deride.Usuar
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.deride.AppUserSecRole'
 grails.plugins.springsecurity.authority.className = 'com.deride.SecRole'
 
-
 grails.plugins.springsecurity.facebook.domain.classname='com.deride.UsuarioFacebook'
 grails.plugins.springsecurity.facebook.domain.appUserConnectionPropertyName='user'
 grails.plugins.springsecurity.facebook.appId='538413349540834'
@@ -160,7 +164,6 @@ bi.Content = [
              'small':[scale:[width:200, height:200, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
     constraints:[
         nullable:true,
-        maxSize:5120,
         contentType:['image/gif', 'image/png', 'image/jpg']
     ]
 ]
@@ -170,7 +173,6 @@ bi.Paragraph = [
              'small':[scale:[width:200, height:200, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
     constraints:[
         nullable:true,
-        maxSize:5120,
         contentType:['image/gif', 'image/png', 'image/jpg']
     ]
 ]
