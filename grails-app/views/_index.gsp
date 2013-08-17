@@ -78,7 +78,7 @@
 		<div class="publish-center">
 	        <h2><g:message code="com.deride.ride.offer.label"/></h2>
 	    </div>
-	    <div class="publish-right"><g:img dir="images" file="right-publish.png"/></div>
+	    <div class="publish-right"><g:img alt="right-arrow" dir="images" file="right-publish.png"/></div>
 	</g:link>
 </div>
 <div id="adSense2" class="banner" style="margin-right: 11px;float: right;" title=""></div>
@@ -113,7 +113,7 @@
 				</div>
 	    		<ul class="action_bar clearfix" style="float: right;margin-top:10px">
 	        		<li class="noimg">
-	        			<g:if test="${rides.size() > 0}"><g:link action="ultimos" controller="ride" class="button secondary small">más viajes...</g:link></g:if>
+	        			<g:if test="${rides.size() > 0}"><g:link action="ultimos" controller="ride" class="button secondary small" style="border: none;">más viajes...</g:link></g:if>
 	        		</li>
 	    		</ul>
 			</div>

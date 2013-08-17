@@ -21,7 +21,8 @@
 			<g:render template="/index" />
 			<g:render template="/slider/slider" />
 			<div id="seoContent">
-				<p>De Ride es la plataforma gratuita de <span style="font-weight: bold;">Carpooling en México</span>, la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  A través de DeRide.com los usuarios de la plataforma tienen la posibilidad de reservar u ofrecer online un lugar para viajar a un destino en común dentro de la República Mexicana.</p>
+				<h1>De Ride</h1><span style="display: inline;"> es la nueva plataforma gratuita de</span>
+				<p>  <span style="font-weight: bold;">Carpooling en México</span>, la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  la nueva forma de transporte que ha tenido tanto éxito en diferentes países del mundo.  A través de DeRide.com los usuarios de la plataforma tienen la posibilidad de reservar u ofrecer online un lugar para viajar a un destino en común dentro de la República Mexicana.</p>
 				<h2>¿Cómo funciona De Ride?</h2>
 				<p>
 					¡Es muy fácil! Si viajas en tu automóvil y dispones de uno más lugares libres puedes anunciar <a href="plataforma_gratuita">forma gratuita</a> tu Ride en nuestra plataforma. Tan solo indica  la hora y fecha, número de lugares disponibles, <a href="como_usar">punto de partida</a> y ¡listo!.

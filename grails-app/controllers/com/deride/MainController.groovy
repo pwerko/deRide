@@ -36,13 +36,15 @@ class MainController {
             if(slug == "content" || slug == "usuario" || slug == "paragraph") {
                 redirect(controller: slug, action: "list")
                 return
+            } else if(slug == "j_spring_security_facebook_redirect") {
+                return
             }
 
             def contentInstance = Content.findBySlug(slug)
             if(contentInstance) {
                 render(view: "/content/display", model: [content: contentInstance])
             } else render(view: "/main/$slug")
-        } else redirect(action: "index")
+        }
     }
 
     def sobre_nosotros() {

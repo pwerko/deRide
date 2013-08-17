@@ -16,7 +16,11 @@ class UrlMappings {
         "/login/$action?"(controller: "login")
 		"/logout/$action?"(controller: "logout")
 		"/index2"(controller: "main", action: "index2")
-		"/$slug" (controller: "main", action: "processUrl")
+		"/$slug" (controller: "main", action: "processUrl") {
+			constraints {
+				slug (validator: { !['j_spring_security_facebook_redirect', 'j_spring_security_check'].contains(it) })
+			}
+		}
 
 		"/$controller/$action?/$id?"{
 			constraints {

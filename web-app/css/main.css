@@ -162,6 +162,11 @@ float: left;
 	background-color: #0097E0;
 }
 
+#logo {
+	background: url('../images/logo.png') no-repeat scroll -45px 0 transparent;
+	height: 105px;
+}
+
 #upperHeader {
 	display: block;
 	width: 100%;
@@ -233,6 +238,8 @@ float: left;
 #loginInfo {
 	font-size: 12px;
 	float: right;
+	width: 250px;
+	color: white;
 }
 #loginInfo span {
 	font-weight: bold;
@@ -240,53 +247,88 @@ float: left;
 
 #loginInfo a {
 	font-size: 12px;
-	color: white;
 	float: right;
 	clear: both;
+	color: white;
 }
 
 #login_username{
-	background: url("../images/status_online.png") no-repeat scroll 2px 0 #EEEEEE;
+	background: #EEEEEE;
 }
 
 #login_password{
-	background: url("../images/key.png") no-repeat scroll 2px 0 #EEEEEE;
+	background: #EEEEEE;
 }
 
-#loginBtn {
-	font-size: 12px;
-	margin: 0;
-	padding: 1px 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+.button.button-large, .button-group.button-large .button {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
 }
 
-#submitDiv a {
+.button-primary {
+  background-color: #21759B;
+  background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+  border-color: #21759B #21759B #1E6A8D;
+  box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button, .button-primary, .button-secondary {
+    -moz-box-sizing: border-box;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.button-primary.hover, .button-primary:hover, .button-primary.focus, .button-primary:focus {
+    background-color: #278AB7;
+    background-image: linear-gradient(to bottom, #2E9FD2, #21759B);
+    border-color: #1B607F;
+    box-shadow: 0 1px 0 rgba(120, 200, 230, 0.6) inset;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.button-primary.active, .button-primary:active {
+    background-color: #2E9FD2;
+    background-image: linear-gradient(to bottom, #21759B, #2E9FD2);
+    border-color: #1B607F;
+    box-shadow: 0 1px 0 rgba(120, 200, 230, 0.6) inset;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+#facebookBtn {
 	font-size: 12px;
-	height: 18px;
-	margin: 5px 0;
-	padding: 2px 0 0 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	background-color: #FF9100;
-	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#FF9100),color-stop(100%,#C6750B));
-	background-image: -webkit-linear-gradient(#FF9100,#C6750B);
-	background-image: -moz-linear-gradient(#FF9100,#C6750B);
-	background-image: -o-linear-gradient(#FF9100,#C6750B);
-	background-image: -ms-linear-gradient(#FF9100,#C6750B);
-    background-image: linear-gradient(#FF9100, #C6750B);
+	line-height: 24px;
+	width: 45px;
+}
+
+.centered-text {
+	color: #FFF;
+	text-align: center;
 }
 
 .login_text {
 	float: left;
-	padding-left: 22px;
-	width: 160px;
+	padding-left: 5px;
+	width: 130px;
 	height: 16px;
 	font-size: 12px;
 	border: 1px solid #EEEEEE;
 	margin-top: 5px;
+	margin-right: 5px;
 	color: #0097E0;
 	clear: both;
 }
@@ -316,10 +358,193 @@ float: left;
 
 #submitDiv {
 	float: right;
-	width: 100px;
+	width: 90px;
 	margin-top: 5px;
 }
 
+#submitDiv .button {
+    display: block;
+    font-size: 1em;
+    width: 90px;
+}
+
+#submitDiv .button-facebook {
+    background-color: #445D92;
+    background-image: linear-gradient(to bottom, #6480B7 0px, #445D92 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #364B76;
+    box-shadow: 0 1px 1px #8BA3CD inset;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1em;
+    position: relative;
+    text-shadow: none;
+    filter: none !important;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+}
+
+#submitDiv .button-facebook:hover {
+    background-color: #6480B7;
+    background-image: linear-gradient(to bottom, #445D92 0px, #6480B7 100%);
+}
+
+#submitDiv .button-facebook:active {
+    background-color: #374D7B;
+    background-image: linear-gradient(to bottom, #5871A3 0px, #374D7B 100%);
+    background-repeat: repeat-x;
+    box-shadow: none;
+    color: #DAE3F5;
+}
+
+#submitDiv .button-facebook .icon-wrap:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#submitDiv .button-facebook .icon-wrap .icon-fb {
+    vertical-align: middle;
+}
+
+#submitDiv .button-facebook .icon-wrap {
+    border-right: 1px solid #8BA3CD;
+    bottom: 0;
+    box-shadow: -1px 0 0 0 #364B76 inset;
+    height: 100%;
+    left: 0;
+    padding: 0 4px 0 6px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#submitDiv .icon-fb {
+    background-image: url("../images/icon-fb.png");
+    height: 21px;
+    width: 10px;
+}
+
+#submitDiv .icon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#submitDiv .text {
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 40px;
+    padding-left: 38px;
+}
+
+.forgetPass {
+	font-size: 12px;
+	color: #fff;
+	float: none;
+	clear: none;
+}
+
+.menu-separator {
+  background: url("../images/login-line.png") repeat-x scroll 0 50% transparent;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.menu-separator span {
+    background: none repeat scroll 0 0 #0097E0;
+    font-family: "Telex","Comic Sans MS",arial,sans-serif;
+    font-size: 12px;
+    color: white;
+    padding: 0 8px;
+}
+
+.facebook-button-small {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #4962A2;
+	border-bottom-right-radius: 3px;
+	border-color: #7588B8 -moz-use-text-color #0C0C0C;
+	border-image: none;
+	border-left: 0 none;
+	border-right: 0 none;
+	border-style: solid none;
+	border-top-right-radius: 3px;
+	border-width: 1px 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	margin-left: 26px;
+	padding: 0 10px 2px;
+	position: relative;
+	text-align: center;
+}
+
+.facebook-button {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #4962A2;
+	border-bottom-right-radius: 3px;
+	border-color: #7588B8 -moz-use-text-color #0C0C0C;
+	border-image: none;
+	border-left: 0 none;
+	border-right: 0 none;
+	border-style: solid none;
+	border-top-right-radius: 3px;
+	border-width: 1px 0;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	font-size: 24px;
+	line-height: 40px;
+	margin-left: 44px;
+	padding: 0 10px 2px;
+	position: relative;
+	text-align: center;
+}
+
+.facebook-button-small .facebook-button-cap {
+  background-color: #4962A2;
+  border-bottom: 1px solid #0C0C0C;
+  border-bottom-left-radius: 3px;
+  border-right: 1px solid #233A8D;
+  border-top: 1px solid #7588B8;
+  border-top-left-radius: 3px;
+  display: block;
+  height: 100%;
+  left: -26px;
+  position: absolute;
+  top: -1px;
+  width: 26px;
+}
+
+.facebook-button-small .facebook-button-cap:before {
+  bottom: -2px;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 1;
+  position: absolute;
+  right: 1px;
+}
+
+.facebook-button .facebook-button-cap:before {
+  bottom: 2px;
+  color: #FFFFFF;
+  font-size: 40px;
+  line-height: 1;
+  position: absolute;
+  right: 9px;
+}
 /* Top destinations section */
 #topDestinations {
 	background: none;
@@ -566,7 +791,6 @@ nav#main .right {
 	border: 1px solid #06f;
 	display: block;
 	font-size: 14px;
-	font-weight: bold;
 	line-height: 14px;
 	margin: 0;
 	overflow: hidden;
@@ -722,13 +946,26 @@ nav#main .right {
 	width: 834px;
 }
 
-#seoContent p:first-child {
+#seoContent p:first-child, #seoContent span {
 	margin-top: 0;
+	display: inline;
+	clear: none;
+	color: #7f7f7f;
+	font-size: 12px;
+	line-height: 1.5em;
 }
 
 #seoContent p {
 	display: block;
 	text-align: justify;
+	color: #7f7f7f;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+#seoContent h1 {
+	display: inline;
+	clear: none;
 	color: #7f7f7f;
 	font-size: 12px;
 	line-height: 1.5em;
@@ -1401,4 +1638,3 @@ ul.action_bar, ul.toggle_bar {
 .right {
 	float: right;
 }
-

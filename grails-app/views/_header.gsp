@@ -1,12 +1,10 @@
 <div id="header">
 	<div id="upperHeader">
 		<div class="section">
-			<div class="upper-header" style="width:20px;padding-bottom: 10px;" title=""></div>
-			<g:link controller="main" style="color: black;"><div class="upper-header gradient logo" style="width:263px;" title=""><span class="slogan">La Mejor Forma Para Viajar En México</span></div></g:link>
-			<div class="upper-header" style="width:251px;" title=""></div>
+			<div id="logo" class="upper-header" style="width:534px;" title=""><g:link controller="main" style="color: black;"/></div>
 			<div class="upper-header" style="width:300px;" title="">
 				<g:if test="${!hideLogin}">
-				<sec:ifNotGranted roles="ROLE_USER">
+				<sec:ifNotLoggedIn>
 					<div id="loginInfo">
 						<form name="simple_search" method="POST" action="${resource(file: 'j_spring_security_check')}">
 							<div class="left">
@@ -15,21 +13,26 @@
 								<g:checkBox id="login_remember" name="_spring_security_remember_me" /><label for="login_remember">Recordarme</label>
 							</div>
 							<div id="submitDiv">
-								<g:submitButton id="loginBtn" class="home-button-search" name="login" value="Entrar"/>
-								<g:link id="registerBtn" class="home-button-search" action="usuario" controller="registrar">Registrar</g:link>
-								<facebookAuth:connect />
+								<g:submitButton name="login" class="button button-primary button-large" style="" value="Entrar"/>
+								<p class="menu-separator"><span>o</span></p>
+								<a id="login-button-login-fb" class="button button-facebook js-facebook-login" href="j_spring_security_facebook_redirect">
+							        <div class="icon-wrap">
+							          <i class="icon icon-fb"></i>
+							        </div>
+							    	<em class="text">Entrar</em>
+							    </a>
 							</div>
 							<div id="registerDiv">
-								<a href="#">¿Olvidaste tu contraseña?</a>
+								<g:link class="forgetPass" controller="usuario" action="recuperar">¿Olvidaste tu contraseña?</g:link>
 							</div>
 						<form>
 					</div>
-				</sec:ifNotGranted>
-				<sec:ifAllGranted roles="ROLE_USER">
+				</sec:ifNotLoggedIn>
+				<sec:ifLoggedIn>
 					<div id="loginInfo">
 						Bienvenido <span><sec:username/></span> (<g:link uri="/j_spring_security_logout" style="color: white;">Salir</g:link>)
 					</div>
-				</sec:ifAllGranted>
+				</sec:ifLoggedIn>
 				</g:if>
 			</div>
 		</div>
@@ -42,7 +45,7 @@
 					<li class="menu-item ${params.controller == 'busqueda'?'current':''}"><g:link controller="busqueda">Buscar</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && params.action == 'ayuda'?'current':''}"><g:link controller="main" action="ayuda">Ayuda</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && params.action == 'autobuses'?'current':''}"><g:link controller="main" action="autobuses">Autobuses</g:link></li>
-					<li class="menu-item ${params.controller == 'main' && params.action == 'registrarse'?'current':''}"><g:link controller="main" action="registro" style="color: yellow">Registrarse</g:link></li>
+					<li class="menu-item ${params.controller == 'usuario' && params.action == 'registrar'?'current':''}"><g:link controller="usuario" action="registrar" style="color: yellow">Registrarse</g:link></li>
 				</ul>
 			</div>
 			<div class="right">
