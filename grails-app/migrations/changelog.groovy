@@ -633,4 +633,6 @@ databaseChangeLog = {
 	}
 
 	include file: 'changelog1.0.groovy'
+
+	include file: 'changelog2.0.groovy'
 }

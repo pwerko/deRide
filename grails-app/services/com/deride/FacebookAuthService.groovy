@@ -10,12 +10,13 @@ class FacebookAuthService {
     Usuario createAppUser(UsuarioFacebook user, FacebookAuthToken token) {
     	log.info "Creando Usuario para UsuarioFacebook user $user"
 
+        Integer i = Math.random() * 10
     	Usuario appUser = Usuario.newInstance()
     	appUser.name = "User"
         appUser.lastName = "$token.uid"
         appUser.username = "facebook_$token.uid"
         appUser.gender = GenderType.MALE
-        appUser.email = "test@hotmail.com"
+        appUser.email = "test${i}@hotmail.com"
     	appUser.password = token.accessToken?.accessToken
         appUser.enabled = true
         appUser.accountExpired = false

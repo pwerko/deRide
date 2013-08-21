@@ -1,7 +1,9 @@
 package com.deride
 
+import pl.burningice.plugins.image.ast.DBImageContainer
 import com.deride.enums.*
 
+@DBImageContainer(field = 'image')
 class Usuario extends AppUser implements Serializable {
 
     TitleType titleType
@@ -37,7 +39,7 @@ class Usuario extends AppUser implements Serializable {
         titleType(nullable: true, blank: true)
     	name(nullable: false, blank: false)
     	lastName(nullable: true, blank:false)
-    	username(nullable: false, blank:false, unique:true, size: 5..20)
+    	username(nullable: false, blank:false, unique:true, size: 5..25)
     	gender(nullable: true, blank: false)
     	email(nullable: false, blank: false, unique:true, email: true)
     	phone(nullable: true, blank: true, phoneNumber: true)

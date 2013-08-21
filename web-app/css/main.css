@@ -545,6 +545,209 @@ float: left;
   position: absolute;
   right: 9px;
 }
+
+/* User info display section */
+.nav.pull-right {
+	right: 0;
+	margin 0;
+	z-index: 5;
+	float: right;
+	margin-top: 28px;
+}
+
+.nav li.user-profile {
+	width: 203px;
+}
+
+.nav>li {
+	display: block;
+	float: left;
+	line-height: 20px,
+}
+
+.dropdown {
+	position: relative;
+}
+
+.nav li.user-profile div.welcomeText {
+	display: block;
+	margin-left: 10px;
+	margin-top: 3px;
+	float: left;
+	width: 110px;
+	height: 63px;
+}
+
+.nav li.user-profile div.welcomeText .welcome {
+	width: 100%;
+	vertical-align: bottom;
+	display: inline-block;
+	color: white;
+}
+
+.nav li.user-profile div.welcomeText .username {
+	display: inline-block;
+	color: #004B70;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+}
+
+.nav li.user-profile .dropdown-toggle {
+	margin-top: -5px;
+	padding-right: 8px;
+	padding-bottom: 0;
+}
+
+.nav>li>a {
+	float: none;
+	padding: 10px 10px 11px;
+	line-height: 19px;
+	color: #999999;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	display: block;
+}
+
+.nav img {
+	height: auto;
+	vertical-align: middle;
+}
+
+.dropdown.user-profile .caret {
+	background: url("../images/caret.png") no-repeat scroll 0 0 transparent;
+	border: 0 none;
+	display: inline-block;
+	height: 12px;
+	margin: 25px 0 25px 8px;
+	padding: 0;
+	width: 13px;
+}
+
+.caret {
+	vertical-align: top;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #000000;
+	opacity: 0.3;
+}
+
+.nav.pull-right .dropdown-menu, .nav .dropdown-menu.pull-right {
+	left: auto;
+	right: 0;
+}
+
+.dropdown-menu {
+	background-color: #F1F1F1;
+	color: white;
+	top: 115%;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
+	margin-right: 10px;
+	margin-top: 1px;
+	position: absolute;
+	z-index: 1000;
+	float: left;
+	min-width: 110px;
+	padding: 4px 0;
+	margin: 0;
+	list-style: none;
+	border-color: rgba(0,0,0,0.2);
+	border-width: 1px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+.dropdown-menu .up-arrow {
+	position: absolute;
+	border-bottom: 10px solid #F1F1F1;
+	top: -8px;
+	left: 65%;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}
+
+.dropdown-menu a {
+	padding: 3px 7px;
+	font-weight: regular;
+	font-size: 12px;
+	color: #828282;
+	display: block;
+	clear: both;
+	white-space: nowrap;
+	font-weight: normal;
+}
+
+.dropdown-menu a>span {
+	background-image: url('../images/icon_menu.png');
+	background-color: transparent;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.dropdown-menu a span.icon-item-myprofile {
+	background-position: 0 -28px;
+}
+
+.dropdown-menu a span.icon-item-travel {
+	background-position: 0 -58px;
+}
+
+.dropdown-menu a span.icon-item-alerts {
+	background-position: 0 -88px;
+}
+
+.dropdown-menu a span.icon-item-opinions {
+	background-position: 0 -118px;
+}
+
+.dropdown-menu a span.icon-item-logout {
+	background-position: 0px 2px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.menu-item-logout:hover {
+	background-color:#0097E0;
+	color: white;
+}
+
+.dropdown-menu a:hover span.icon-item-myprofile,
+.dropdown-menu a.menu-item-logout:hover span.icon-item-myprofile {
+	background-position:-30px -28px;
+}
+
+.dropdown-menu a:hover span.icon-item-travel,
+.dropdown-menu a.menu-item-logout:hover span.icon-item-travel {
+	background-position:-30px -58px;
+}
+.dropdown-menu a:hover span.icon-item-alerts,
+.dropdown-menu a.menu-item-logout:hover span.icon-item-alerts {
+	background-position:-30px -88px;
+}
+.dropdown-menu a:hover span.icon-item-opinions,
+.dropdown-menu a.menu-item-logout:hover span.icon-item-opinions {
+	background-position:-30px -118px;
+}
+.dropdown-menu a:hover span.icon-item-logout,
+.dropdown-menu a.menu-item-logout:hover span.icon-item-logout{
+	background-position:-30px 2px;
+}
+.dropdown-menu:after {
+	border-bottom:10px solid transparent;
+}
+
+.dropdown-menu:before {
+	border-bottom:10px solid transparent;
+}
+
 /* Top destinations section */
 #topDestinations {
 	background: none;

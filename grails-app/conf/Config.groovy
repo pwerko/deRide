@@ -176,3 +176,12 @@ bi.Paragraph = [
         contentType:['image/gif', 'image/png', 'image/jpg']
     ]
 ]
+
+bi.Usuario = [
+    images: ['large':[scale:[width:300, height:300, type:pl.burningice.plugins.image.engines.scale.ScaleType.APPROXIMATE]],
+             'small':[scale:[width:50, height:50, type:pl.burningice.plugins.image.engines.scale.ScaleType.ACCURATE]]],
+    constraints:[
+        nullable:true,
+        contentType:['image/gif', 'image/png', 'image/jpg']
+    ]
+]

@@ -6,6 +6,7 @@ import grails.plugins.springsecurity.Secured
 class MainController {
     def rideService
     def blogService
+    def springSecurityService
 
     def index() {
         def latestRides = []
@@ -16,7 +17,8 @@ class MainController {
         } catch (e) {
             log.error "Failed to retrieve list of last rides/posts", e
         }
-
+        //def currentUser = springSecurityService.currentUser
+        //println currentUser?.properties
     	render(view: "/index", model: [rides: latestRides, posts: latestPosts])
     }
 
@@ -35,8 +37,6 @@ class MainController {
         if(slug) {
             if(slug == "content" || slug == "usuario" || slug == "paragraph") {
                 redirect(controller: slug, action: "list")
-                return
-            } else if(slug == "j_spring_security_facebook_redirect") {
                 return
             }
 

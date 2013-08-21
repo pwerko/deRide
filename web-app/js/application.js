@@ -114,6 +114,17 @@ $(document).ready(function() {
 			 });
 		}
 	);
+
+	$(document).mouseup(function (e)
+	{
+	    var container = $('.dropdown-toggle');
+
+	    if (!container.is(e.target) // if the target of the click isn't the container...
+	        && container.has(e.target).length === 0) // ... nor a descendant of the container
+	    {
+	        toggleUserMenu();
+	    }
+	});
 });
 
 function updateLatestPosts(data, textStatus, jqXHR) {
@@ -124,4 +135,8 @@ function updateLatestPosts(data, textStatus, jqXHR) {
 		title.html("<span>" + value.title + "</span>");
 	});
 
+}
+
+function toggleUserMenu() {
+	$('.dropdown-menu').fadeToggle('slow');
 }
