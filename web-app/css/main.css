@@ -3,6 +3,7 @@ body,
 input, select, textarea {
 	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
 	font-family: 'Telex', pt-sans, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* BASE LAYOUT */
@@ -447,6 +448,11 @@ float: left;
 	color: #fff;
 	float: none;
 	clear: none;
+	text-decoration: none;
+}
+
+.forgetPass:hover {
+	text-decoration: underline;
 }
 
 .menu-separator {
@@ -785,7 +791,7 @@ nav#main li {
 nav#main li a {
 	color: #fff;
 	text-decoration: none;
-	padding: 6px 10px;
+	padding: 5px 10px;
 	display: block;
 	border: 1px solid transparent;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.76);

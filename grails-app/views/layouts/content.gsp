@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'content.css')}" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Telex|Norican' rel='stylesheet' type='text/css'>
 		<meta name="language" content="es-MX"/>
 		<meta property="og:url" content="http://www.deride.com.mx/">
 		<meta property="og:locale" content="es-MX">

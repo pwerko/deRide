@@ -4,7 +4,7 @@
     var disqus_shortname = 'deride'; // required: replace example with your forum shortname
     var disqus_identifier = '${content.id}'
     var disqus_title = '${content.title}'
-    var disqus_url = '${"http://www.deride.com/" + content.slug + "/"}';
+    var disqus_url = '${"http://" + request.getServerName() + "/" + content.slug + "/"}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

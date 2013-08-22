@@ -12,6 +12,11 @@
   			</style>
 		<![endif]-->
 		<meta name="layout" content="content"/>
+		<g:javascript>
+			function toggleUserMenu() {
+				$('.dropdown-menu').fadeToggle('slow');
+			}
+		</g:javascript>
 	</head>
 	<body>
 		<g:render template="/header"/>
@@ -19,6 +24,7 @@
 			<div id="content-wrapper" class="clearfix row">
 				<div id="mainDiv" class="content-right twelve columns">
 					<g:render template="/content/display" bean="${content}"/>
+					<g:render template="/disqus"/>
 				</div>
 			</div>
 		</div>
