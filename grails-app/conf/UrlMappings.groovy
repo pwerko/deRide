@@ -28,6 +28,7 @@ class UrlMappings {
 			}
 		}
 
+		"401"(controller: "login",  "auth")
 		"403"(view: "/errors/403")
 		"404"(view:'/errors//404')
 		"500"(view:'/errors/500')

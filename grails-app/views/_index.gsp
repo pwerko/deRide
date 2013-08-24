@@ -12,7 +12,8 @@
 			<g:field id="simple_search_destination_lon" type="hidden" name="destination_longitude" value="" />
 	    </div>
 	    <div class="date">
-	        <g:field type="text" id="simple_search_date" name="date" placeholder="Fecha" class="search-date" data-bind="date-picker"/>
+	        <g:field type="text" id="simple_search_date" name="varbal_date" placeholder="Fecha" class="search-date" data-bind="date-picker"/>
+	        <g:field id="search_date" type="hidden" name="date" value="" />
 	    </div>
 	    <g:actionSubmit class="home-button-search" value="Buscar"/>
 	</g:form>
@@ -105,7 +106,7 @@
 					                <td style="text-align: left;">${ride.origin}</td>
 					                <td style="text-align: left;">${ride.destination}</td>
 					                <td><g:formatDate format="dd/MM/yyyy" date="${ride.date}"/></td>
-					                <td style="font-size:0.8em">Hace 18 minutos</td>
+					                <td style="font-size:0.8em"><prettytime:display date="${ride.dateCreated}" capitalize="true"/></td>
 					        	</tr>
 					    	</g:each>
 					    </tbody>

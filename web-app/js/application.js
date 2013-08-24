@@ -20,12 +20,18 @@ $(document).ready(function() {
 	  types: ['(cities)'],
 	  componentRestrictions: {country: 'mx'}
 	};
-	$.datepicker.setDefaults( $.datepicker.regional[ 'mx' ] );
 	autocompleteStart = new google.maps.places.Autocomplete(startField, options);
 	autocompleteEnd = new google.maps.places.Autocomplete(endField, options);
-
 	$('#simple_search_date').datepicker({
-		changeYear: true
+		dateFormat: 'dd-MM-yy',
+		altFormat: 'yy-mm-dd',
+		altField: "#search_date",
+		defaultDate: null,
+		duration: "slow",
+		firstDay: 1,
+		hideIfNoPrevNext: true,
+		minDate: 0,
+		showAnim: "fadeIn"
 	});
 
 	$('#simple_search_start').change(function(e) {
@@ -49,9 +55,12 @@ $(document).ready(function() {
 
 	$('#simple_search_destination').keypress(function(e) {
 	  	if (e.which == 13) {
+	  		$('#simple_search_destination').addClass('complete-radius').removeClass('upper-radius');
 	  		e.preventDefault();
 	    	google.maps.event.trigger(autocompleteEnd, 'place_changed');
 	    	return false;
+	  	} else {
+	  		$('#simple_search_destination').addClass('upper-radius').removeClass('complete-radius');
 	  	}
 	});
 

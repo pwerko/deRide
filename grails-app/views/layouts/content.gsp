@@ -18,8 +18,10 @@
 		<meta property="og:title" content="Compartir Coche en México">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="${resource(dir: 'images', file: 'header-logo.png')}">
-		<g:javascript library="jquery" plugin="jquery"/>
-		<r:require module="jquery-ui"/>
+		<g:javascript src="jquery/jquery-1.10.2.min.js"/>
+		<g:javascript src="jquery/ui/jquery-ui-1.10.3.custom.min.js"/>
+		<g:javascript src="jquery/ui/i18n/jquery.ui.datepicker-es.min.js"/>
+		<link rel="stylesheet" href="${resource(dir: 'js/jquery/ui/css/deride-theme', file: 'jquery-ui-1.10.3.custom.min.css')}" type="text/css">
 		<r:layoutResources />
 		<g:javascript>
 		  window.___gcfg = {lang: 'es-419'};
