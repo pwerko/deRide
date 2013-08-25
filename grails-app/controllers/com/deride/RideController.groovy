@@ -12,23 +12,23 @@ class RideController {
                              publicar: ['POST', 'GET'],
                              detalles: 'GET']
 
-    def lista() {
+    def lista = {
     	log.debug "Lista de rides con parametros ${params}"
     }
 
-    def ultimos() {
+    def ultimos = {
     	log.debug "Lista de ultimos rides con parametros ${params}"
     }
 
-    def buscar() {
+    def buscar = {
     	log.debug "Busqueda de ride con parametros ${params}"
  	}
 
-    def publicar() {
+    def publicar = {
     	log.debug "Publicacion de ride con parametros ${params}"
     }
 
-    def detalles() {
+    def detalles = {
         log.debug "Detalles de ride con parametros ${params}"
     }
 }

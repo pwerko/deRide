@@ -6,6 +6,7 @@
 		<meta name="layout" content="main"/>
 	</head>
 	<body>
+		<g:render template="/header" />
 		<div class="contentContainer">
 			<div id="seoContent" style="padding-top: 20px;">
 				<h2 style="text-align: justify;">¿Tienes alg&uacute;n problema para encontrar un Ride o publicar un viaje?</h2>
@@ -42,6 +43,7 @@
 				<p>Si tienes m&aacute;s dudas entra a nuestra secci&oacute;n de <a href="preguntas_frecuentes">preguntas frecuentes</a>.</p>
 			</div>
 		</div>
+		<g:render template="/footer" />
 	</body>
 </html>
 

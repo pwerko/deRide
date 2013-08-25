@@ -22,12 +22,12 @@ class UsuarioController {
     }
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
-    def recuperar() {
+    def recuperar = {
 
     }
 
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
-    def registrar() {
+    def registrar = {
 
     }
 

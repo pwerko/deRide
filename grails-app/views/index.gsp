@@ -32,7 +32,7 @@
 				</p>
 				<h2 style="text-align: justify;">"Comparte con tus amigos ésta experiencia y dale un aventón a tus próximas vacaciones."</h2>
 				<p>
-					Además del servicio de <span style="font-weight: bold;">Carpooling en México</span>, De Ride te ofrece un <a href="autobuses">buscador de autobuses</a> que reúne las principales líneas de autobús de México con los precios más bajos y el mayor número de destinos y horarios, permitiéndote buscar y comparar precios desde un mismo sitio y con una sola búsqueda.
+					Además del servicio de <span style="font-weight: bold;">Carpooling en México</span>, De Ride te ofrece un <g:link controller="autobuses" action="buscar">buscador de autobuses</g:link> que reúne las principales líneas de autobús de México con los precios más bajos y el mayor número de destinos y horarios, permitiéndote buscar y comparar precios desde un mismo sitio y con una sola búsqueda.
 					Nuestra misión es proporcionarte siempre la forma más barata y conveniente de transporte a tus destinos favoritos. Además del ahorro económico de Ride es una alternativa que ayuda al <a href="medio_ambiente">medio ambiente</a> reduciendo el número de vehículos circulando por las carreteras. Al aumentar el número de usuarios en un solo vehículo disminuimos el número de automotores circulando y por consecuencia el consumo de gasolina y la producción de CO2.
 				</p>
 				<p>

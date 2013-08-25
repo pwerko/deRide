@@ -1190,6 +1190,7 @@ nav#main .right {
 	font-size:11px;
 	color:#0097E0;
 	font-weight: bold;
+	margin: 15px 0;
 }
 
 #seoContent h2 {
@@ -1203,7 +1204,7 @@ nav#main .right {
 }
 
 #seoContent ol li {
-	margin-bottom: -11px;
+	margin-top: 2px;
 }
 
 #seoContent ol li:last-child {
@@ -1211,10 +1212,10 @@ nav#main .right {
 }
 
 #seoContent ol li p{
-	font-style: italic;
 	padding:8px;
-	font: 11px "pt-sans", Arial, sans-serif;
 	color:#7f7f7f;
+	font-family: 'Telex';
+	font-weight: normal;
 	border-left: 1px solid #999;
 }
 

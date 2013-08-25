@@ -4,6 +4,7 @@
 		<meta name="layout" content="main"/>
 	</head>
 	<body>
+		<g:render template="/header" />
 		<div class="contentContainer">
 			<div id="faq">
 				<h1>Preguntas Frecuentes</h1>
@@ -42,6 +43,7 @@
 				</ul>
 			</div>
 		</div>
+		<g:render template="/footer" />
 	</body>
 </html>
 

@@ -6,10 +6,11 @@
 		<meta name="layout" content="main"/>
 	</head>
 	<body>
+		<g:render template="/header" />
 		<div class="contentContainer">
 			<div id="seoContent" style="padding-top: 20px;">
 				<p>
-					¿No encontraste un Ride para la fecha o destino que buscabas? ¡¡No te preocupes!! Con nuestro Buscador de Autobuses puedes buscar con un solo clic en las principales l&iacute;neas de autob&uacute;s de M&eacute;xico. Tan solo selecciona la fecha y destino de tu viaje y nuestro buscador consultar&aacute; para ti todas las posibilidades mostr&aacute;ndote promociones, precios y una forma f&aacute;cil y din&aacute;mica.
+					¿No encontraste un Ride para la fecha o destino que buscabas? ¡¡No te preocupes!! Con nuestro buscador de autobuses puedes buscar con un solo clic en las principales l&iacute;neas de autob&uacute;s de M&eacute;xico. Tan solo selecciona la fecha y destino de tu viaje y nuestro buscador consultar&aacute; para ti todas las posibilidades mostr&aacute;ndote promociones, precios y una forma f&aacute;cil y din&aacute;mica.
 				</p>
 				<p>
 					Olv&iacute;date de estar buscando de una p&aacute;gina en otra qu&eacute; l&iacute;nea de autob&uacute;s viaja a tu destino y cual no, cuales son los horarios y precios de cada una, etc... En nuestro buscador con un solo clic obtienes autom&aacute;ticamente una lista de precios, horarios y promociones dividido por l&iacute;neas de autob&uacute;s. De forma que tu &uacute;nica tarea sea comparar, elegir y comprar.
@@ -35,6 +36,9 @@
 				</p>
 			</div>
 		</div>
+		<g:render template="/footer" />
 	</body>
 </html>
+
+
 

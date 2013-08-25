@@ -1,8 +1,10 @@
 package com.deride
 
+import grails.plugins.springsecurity.Secured
 import org.springframework.beans.BeanWrapper
 import org.springframework.beans.PropertyAccessorFactory
 
+@Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class SitemapController {
 
     def sitemap = {
@@ -10,30 +12,35 @@ class SitemapController {
         def data = []
         for (controller in grailsApplication.controllerClasses) {
             def controllerInfo = [:]
-            controllerInfo.controller = controller.logicalPropertyName
-            controllerInfo.controllerName = controller.fullName
-            List actions = []
-            BeanWrapper beanWrapper = PropertyAccessorFactory.forBeanPropertyAccess(controller.newInstance())
-            for (pd in beanWrapper.propertyDescriptors) {
-                String closureClassName = controller.getPropertyOrStaticPropertyOrFieldValue(pd.name, Closure)?.class?.name
-                if (closureClassName) actions << pd.name
+            if (['autobuses','main','ride','usuario'].contains(controller.logicalPropertyName)) {
+                controllerInfo.controller = controller.logicalPropertyName
+                List actions = []
+                BeanWrapper beanWrapper = PropertyAccessorFactory.forBeanPropertyAccess(controller.newInstance())
+                for (pd in beanWrapper.propertyDescriptors) {
+                    String closureClassName = controller.getPropertyOrStaticPropertyOrFieldValue(pd.name, Closure)?.class?.name
+                    if (closureClassName) actions << pd.name
+                }
+                controllerInfo.actions = actions.sort()
+                data << controllerInfo
             }
-            controllerInfo.actions = actions.sort()
-            data << controllerInfo
         }
-        println data
+
         render(contentType: 'text/xml', encoding: 'UTF-8') {
             mkp.yieldUnescaped '<?xml version="1.0" encoding="UTF-8"?>'
             urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
                     'xmlns:xsi': "http://www.w3.org/2001/XMLSchema-instance",
                     'xsi:schemaLocation': "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd") {
-                url {
-                    loc(g.createLink(absolute: true, controller: 'main', action: 'index'))
-                    changefreq('hourly')
-                    priority(1.0)
+                data.each { instance ->
+                    instance.actions.each { action ->
+                        url {
+                            loc(g.createLink(absolute: true, controller: instance.controller == 'main'? action : instance.controller, action: instance.controller == 'main' ? '' : action))
+                            changefreq('hourly')
+                            priority(1.0)
+                        }
+                    }
                 }
-                url {
-                    loc(g.createLink(absolute: true, controller: 'main', action: 'autobuses'))
+                /*url {
+                    loc(g.createLink(absolute: true, controller: 'main', action: 'index'))
                     changefreq('hourly')
                     priority(1.0)
                 }
@@ -44,11 +51,6 @@ class SitemapController {
                 }
                 url {
                     loc(g.createLink(absolute: true, controller: 'main', action: 'ayuda'))
-                    changefreq('hourly')
-                    priority(1.0)
-                }
-                url {
-                    loc(g.createLink(absolute: true, controller: 'main', action: 'buscar'))
                     changefreq('hourly')
                     priority(1.0)
                 }
@@ -96,15 +98,15 @@ class SitemapController {
                     loc(g.createLink(absolute: true, controller: 'main', action: 'tdu'))
                     changefreq('hourly')
                     priority(1.0)
-                }
-                //more static pages here
-                //add some dynamic entries
-                /*SomeDomain.list().each {domain->
-                url {
-                    loc(g.createLink(absolute: true, controller: 'some', action: 'view', id: domain.id))
-                    changefreq('hourly')
-                    priority(0.8)
                 }*/
+
+                Content.list().each {content ->
+                    url {
+                        loc(g.createLink(absolute: true, controller: content.slug))
+                        changefreq('hourly')
+                        priority(0.8)
+                    }
+                }
             }
        }
    }

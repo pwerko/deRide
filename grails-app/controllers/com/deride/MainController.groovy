@@ -43,59 +43,51 @@ class MainController {
             def contentInstance = Content.findBySlug(slug)
             if(contentInstance) {
                 render(view: "/content/display", model: [content: contentInstance])
-            } else render(view: "/main/$slug")
+            } else {
+                def action = slug
+                render(view: "/main/$action", model: [action: action])
+            }
         }
     }
 
-    def sobre_nosotros() {
+    def aviso_legal = {
 
     }
 
-    def aviso_legal() {
+    def ayuda = {
 
     }
 
-    def tdu() {
+    def como_usar = {
 
     }
 
-    def contacto() {
+    def contacto = {
 
     }
 
-    def ayuda() {
+    def medio_ambiente = {
 
     }
 
-    def preguntas_frecuentes() {
+    def plataforma_gratuita = {
 
     }
 
-    def como_usar() {
+    def preguntas_frecuentes = {
 
     }
 
-    def autobuses() {
+    def seguridad_y_confianza = {
 
     }
 
-    def iniciar_sesion() {
+    def sobre_nosotros = {
 
     }
 
-    def publicar_viaje() {
+    def tdu = {
 
     }
 
-    def seguridad_y_confianza() {
-
-    }
-
-    def medio_ambiente() {
-
-    }
-
-    def plataforma_gratuita() {
-
-    }
 }

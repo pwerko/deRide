@@ -6,17 +6,17 @@
 					<div class="footer-containers">
 						<span class="footer-title">De Ride</span>
 						<ul>
-							<li><a href="sobre_nosotros">Sobre Nosotros</a></li>
-							<li><a href="tdu">Términos de Uso</a></li>
-							<li><a href="contacto">Contacto</a></li>
+							<li><g:link controller="sobre_nosotros">Sobre Nosotros</g:link></li>
+							<li><g:link controller="tdu">Términos de Uso</g:link></li>
+							<li><g:link controller="contacto">Contacto</g:link></li>
 						</ul>
 					</div>
 					<div class="footer-containers">
 						<span class="footer-title">&nbsp;</span>
 						<ul>
-							<li><a href="ayuda">Ayuda</a></li>
-							<li><a href="medio_ambiente">Medio Ambiente</a></li>
-							<li><a href="seguridad_y_confianza">Seguridad y Confianza</a></li>
+							<li><g:link controller="ayuda">Ayuda</g:link></li>
+							<li><g:link controller="medio_ambiente">Medio Ambiente</g:link></li>
+							<li><g:link controller="seguridad_y_confianza">Seguridad y Confianza</g:link></li>
 
 						</ul>
 					</div>
@@ -32,7 +32,7 @@
 				<div class="footer-row" id="footer-bottom">
 					<div class="left">© 2013 De Ride. Todos los derechos reservados.</div>
 					<div class="right">
-						<a href="aviso_legal">Política de privacidad</a>
+						<g:link controller="aviso_legal">Política de privacidad</g:link>
 					</div>
 				</div>
 			</section>

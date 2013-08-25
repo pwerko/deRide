@@ -83,10 +83,10 @@
 			<div class="menu-top-container">
 				<ul id="menu-top" class="menu">
 					<li class="menu-item ${params.controller == 'main' && params.action == 'index'?'current':''}"><g:link controller="main" action="index">Inicio</g:link></li>
-					<li class="menu-item ${params.controller == 'busqueda'?'current':''}"><g:link controller="busqueda">Buscar</g:link></li>
-					<li class="menu-item ${params.controller == 'main' && params.action == 'ayuda'?'current':''}"><g:link controller="main" action="ayuda">Ayuda</g:link></li>
-					<li class="menu-item ${params.controller == 'main' && params.action == 'autobuses'?'current':''}"><g:link controller="main" action="autobuses">Autobuses</g:link></li>
-					<li class="menu-item ${params.controller == 'usuario' && params.action == 'registrar'?'current':''}"><g:link controller="usuario" action="registrar" style="color: yellow">Registrarse</g:link></li>
+					<li class="menu-item ${params.controller == 'ride'&& params.action == 'buscar'?'current':''}"><g:link controller="ride" action="buscar">Buscar</g:link></li>
+					<li class="menu-item ${params.controller == 'main' && action == 'ayuda'?'current':''}"><g:link controller="ayuda">Ayuda</g:link></li>
+					<li class="menu-item ${params.controller == 'autobuses' && params.action == 'buscar'?'current':''}"><g:link controller="autobuses">Autobuses</g:link></li>
+					<li class="menu-item ${params.controller == 'usuario' && params.action == 'registrar'?'current':''}"><g:link controller="usuario" action="registrar" style="color: #FF9100;text-shadow:none;">Registrarse</g:link></li>
 				</ul>
 			</div>
 			<div class="right">
