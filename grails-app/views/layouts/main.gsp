@@ -13,6 +13,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Denk+One|Expletus+Sans:400,700|Telex|Norican' rel='stylesheet' type='text/css'>
 		<meta name="language" content="es-MX"/>
 		<meta name="robots" content="INDEX,FOLLOW"/>
@@ -25,6 +26,7 @@
 		<g:javascript src="jquery/jquery-1.10.2.min.js"/>
 		<g:javascript src="jquery/ui/jquery-ui-1.10.3.custom.min.js"/>
 		<g:javascript src="jquery/ui/i18n/jquery.ui.datepicker-es.min.js"/>
+		<g:javascript src="login.js"/>
 		<link rel="stylesheet" href="${resource(dir: 'js/jquery/ui/css/deride-theme', file: 'jquery-ui-1.10.3.custom.min.css')}" type="text/css">
 		<r:layoutResources />
 		<g:javascript>
@@ -63,6 +65,16 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
+		<div class="sign-up-overlay register" style="display: none;">
+			<div class="sign-up module">
+			  	<g:link controller="main" action="index" class="deride-logo"></g:link>
+			  	<g:render template="/login/signup"/>
+				<g:render template="/login/register"/>
+				<g:render template="/login/done"/>
+				<g:render template="/login/login"/>
+				<g:render template="/login/recover"/>
+			</div>
+		</div>
 		<g:layoutBody/>
 		<r:layoutResources />
 	</body>

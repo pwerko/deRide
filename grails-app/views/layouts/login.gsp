@@ -12,9 +12,12 @@
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Denk+One|Expletus+Sans:400,700|Telex|Norican' rel='stylesheet' type='text/css'>
 		<meta name="language" content="es-MX"/>
 		<meta name="robots" content="NOINDEX,NOFOLLOW"/>
+		<g:javascript src="jquery/jquery-1.10.2.min.js"/>
+		<g:javascript src="login.js"/>
 		<r:layoutResources />
 	</head>
 	<body>

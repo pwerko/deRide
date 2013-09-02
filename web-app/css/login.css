@@ -1,0 +1,794 @@
+.sign-up-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    z-index: 999999;
+}
+.sign-up-overlay:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em;
+    vertical-align: middle;
+}
+.sign-up-overlay .sign-up {
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+    white-space: normal;
+    width: 320px;
+}
+.sign-up.module {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.sign-up.module .button {
+    font-size: 0.875em;
+}
+.sign-up.module section {
+    background-color: #F3F2F1;
+}
+.sign-up.module section.register {
+    margin-top: -107px;
+}
+.layout-signup .sign-up {
+    padding-top: 0;
+}
+.layout-signup .content {
+    border-top: 0 none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.layout-signup fieldset li {
+    margin-bottom: 1em;
+}
+.layout-signup .page-signup .signup-select, .layout-signup .page-signup section.register {
+    display: block !important;
+}
+.layout-signup .page-signup .signup-select .content {
+    padding-bottom: 0;
+}
+.layout-signup .page-signup .signup-select .primary {
+    display: none;
+}
+.layout-signup .page-signup section.register .content {
+    padding-top: 0;
+}
+.layout-signup .page-login section.login {
+    display: block !important;
+}
+.layout-signup .page-password-reset section.password-reset {
+    display: block !important;
+}
+.layout-signup .page-password-reset .back-link {
+    display: none;
+}
+.layout-signup .page-password-change section.password-change {
+    display: block !important;
+}
+.layout-signup .page-password-change .wrap {
+    position: relative;
+}
+.layout-signup .page-password-change .sign-up {
+    background-color: #F7F7F7;
+    padding-bottom: 9.25em;
+}
+@media screen and (max-width: 767px) {
+    .layout-signup .page-password-change .sign-up {
+        padding-bottom: 0;
+    }
+}
+.layout-signup .page-password-change .premium-promo-banner {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.sign-up {
+    background: none repeat scroll 0 0 #F4F3F0;
+    color: #828282;
+    min-width: 320px;
+    position: relative;
+}
+.sign-up a {
+    color: #1E1E1E;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+}
+
+.sign-up .js-link:hover {
+    text-decoration: underline;
+}
+
+.sign-up a:focus {
+    outline: 0 none;
+}
+
+.sign-up .title {
+    color: #1E1E1E;
+    display: block;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.25;
+}
+.sign-up .button {
+    display: block;
+    font-size: 1em;
+    width: 99%;
+}
+@media screen and (max-width: 767px) {
+    .sign-up .button {
+        font-size: 0.875em;
+    }
+}
+.sign-up .deride-logo {
+    background: url("../images/login-logo.png") no-repeat scroll 0 0 / cover transparent;
+    display: block;
+    height: 72px;
+    margin: 16px auto;
+    width: 261px;
+    /*background-color: #0097E0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/login-logo.png"), linear-gradient(to bottom, #2A95C5, #21759B);
+    border-color: #21759B #21759B #1E6A8D;
+    box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;*/
+}
+.sign-up .deride-logo:focus {
+    outline: 0 none;
+}
+.sign-up .line-thru {
+    display: block;
+    font-size: 0.875em;
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.sign-up .line-thru:before {
+    background-color: #F7F7F7;
+    content: "";
+    height: 10px;
+    left: 50%;
+    margin: -5px 0 0 -20px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    z-index: -1;
+}
+.sign-up .line-thru:after {
+    border-bottom: 1px solid #B1B1B1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    z-index: -2;
+}
+.sign-up .primary, .sign-up .secondary {
+    display: block;
+    margin: 0 0 1em;
+    text-align: center;
+}
+.sign-up .primary {
+    font-size: 0.8em;
+}
+.sign-up .primary.redeem-heading {
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+}
+.sign-up .secondary, .sign-up .checkbox, .sign-up .notice {
+    font-size: 0.75em;
+}
+.sign-up .content {
+    background-color: #F7F7F7;
+    border-top: 1px solid #DFDFDF;
+    padding: 1.9em;
+}
+.sign-up .content > *:last-child {
+    margin-bottom: 0;
+}
+.sign-up h3 {
+    display: none;
+}
+.sign-up fieldset li {
+    display: block;
+    margin: 0 0 0.625em 0;
+    text-align: left;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.sign-up fieldset li:last-child {
+    margin-bottom: 1em;
+}
+.sign-up fieldset li .secondary {
+    margin: 0;
+}
+.sign-up section {
+    display: none;
+}
+.sign-up section.show {
+    display: block;
+}
+.sign-up section.register {
+    border-radius: 5px 5px 0 0;
+}
+.sign-up section.register .controls-dob {
+    margin-bottom: 1em;
+}
+.sign-up section.register .controls-dob .controls {
+    display: inline-block;
+    vertical-align: top;
+    width: 65px;
+}
+.sign-up section.register .controls-dob .controls-month {
+    width: 115px;
+}
+.sign-up section.register .controls-dob .controls-day {
+    width: 52px;
+}
+.sign-up section.register .controls-dob .dob {
+    text-transform: capitalize;
+}
+.sign-up section.register .register-dob {
+    line-height: 0;
+    text-align: justify;
+}
+.sign-up section.register .register-dob:after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 100%;
+}
+.sign-up section.sign-up-done .done-check {
+    background: url("../images/reg-success-checkmark.png") no-repeat scroll center center / cover transparent;
+    content: "";
+    display: block;
+    height: 138px;
+    margin: 2em auto;
+    width: 149px;
+}
+.sign-up section.login .text {
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sign-up section.signup-select .text {
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sign-up section.login .text.fb-username {
+    font-style: italic;
+}
+.sign-up section.password-reset .msg {
+    display: none;
+}
+.sign-up .terms-endcap {
+    -moz-border-radius: 0px 0px  5px 5px;
+    -webkit-border-radius: 0px 0px  5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid #E1E1E1;
+    padding: 12px 1.9em;
+}
+.sign-up .terms-endcap #li-terms-notick {
+    text-align: center;
+}
+.sign-up .terms-endcap label.has-error {
+    clear: both;
+    margin-top: 9px;
+    text-align: center;
+}
+.sign-up .terms-endcap fieldset li, .sign-up .terms-endcap fieldset p {
+    margin-bottom: 0;
+}
+.sign-up .alert a {
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+}
+.layout-landing-signup .sign-up {
+    display: block;
+    margin: 0 auto 1em;
+    overflow: auto;
+}
+.layout-landing-signup .is-mobile .sign-up {
+    display: none !important;
+}
+.sign-up-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    z-index: 999999;
+}
+.sign-up-overlay:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em;
+    vertical-align: middle;
+}
+.sign-up-overlay .sign-up {
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+    white-space: normal;
+    width: 320px;
+}
+
+.sign-up.module {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.sign-up.module .button {
+    font-size: 0.875em;
+}
+.sign-up.module section {
+    background-color: #F3F2F1;
+}
+.sign-up.module section.register {
+    margin-top: -107px;
+}
+.layout-signup .sign-up {
+    padding-top: 0;
+}
+.layout-signup .content {
+    border-top: 0 none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.layout-signup fieldset li {
+    margin-bottom: 1em;
+}
+.layout-signup .page-signup .signup-select, .layout-signup .page-signup section.register {
+    display: block !important;
+}
+.layout-signup .page-signup .signup-select .content {
+    padding-bottom: 0;
+}
+.layout-signup .page-signup .signup-select .primary {
+    display: none;
+}
+.layout-signup .page-signup section.register .content {
+    padding-top: 0;
+}
+.layout-signup .page-login section.login {
+    display: block !important;
+}
+.layout-signup .page-password-reset section.password-reset {
+    display: block !important;
+}
+.layout-signup .page-password-reset .back-link {
+    display: none;
+}
+.layout-signup .page-password-change section.password-change {
+    display: block !important;
+}
+.layout-signup .page-password-change .wrap {
+    position: relative;
+}
+.layout-signup .page-password-change .sign-up {
+    background-color: #F7F7F7;
+    padding-bottom: 9.25em;
+}
+@media screen and (max-width: 767px) {
+    .layout-signup .page-password-change .sign-up {
+        padding-bottom: 0;
+    }
+}
+.layout-signup .page-password-change .premium-promo-banner {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .layout-signup .page-password-change .premium-promo-banner {
+        position: static;
+    }
+}
+
+.register form {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    border-radius: 0 0 5px 5px;
+}
+.register label {
+    color: #828282;
+    display: block;
+    font-family: "ProximaNova-Regular",Helvetica,Arial,sans-serif;
+    font-size: 0.9375em;
+    text-align: left;
+}
+.register:-moz-placeholder {
+    color: #AAAAAA;
+}
+.register::-moz-placeholder {
+    color: #AAAAAA;
+}
+.register [placeholder]:-moz-placeholder {
+    color: #828282;
+    transition: color 0.5s ease 0.1s;
+}
+.register [placeholder]::-moz-placeholder {
+    color: #828282;
+    transition: color 0.5s ease 0.1s;
+}
+.register [placeholder]:focus:-moz-placeholder {
+    color: #CFCFCF;
+    transition: color 0.5s ease 0.1s;
+}
+.register [placeholder]:focus::-moz-placeholder {
+    color: #CFCFCF;
+    transition: color 0.5s ease 0.1s;
+}
+.register span.placeholder {
+    border: medium none !important;
+    color: #828282;
+    height: auto !important;
+    width: 100% !important;
+}
+.register input {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    color: #1E1E1E;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+    font-size: 0.9375em;
+    line-height: normal;
+    margin: 0;
+    outline: 0 none;
+}
+.register input[type="text"], .register input[type="email"], .register input[type="password"], .register input[type="number"] {
+    border-radius: 2px 2px 2px 2px;
+    padding: 1em 0.75em 0.6875em;
+    width: 100%;
+}
+
+.register input::-webkit-outer-spin-button,
+.register input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.register input[type="checkbox"], .register input[type="radio"] {
+    background: none repeat scroll 0 center transparent;
+    border: 0 none;
+    margin: 0.25em 0.5em 0 0;
+    padding: 0;
+}
+.register .checkbox, .register .radio {
+    padding-left: 1.5em;
+}
+.register .checkbox.control-inline, .register .radio.control-inline {
+    display: inline-block;
+}
+.register .checkbox.control-inline + .checkbox.control-inline, .register .radio.control-inline + .radio.control-inline {
+    margin-left: 1em;
+}
+.register .checkbox input[type="checkbox"], .register .radio input[type="radio"] {
+    float: left;
+    margin-left: -1.5em;
+}
+
+.button em, .button div {
+    margin: 0;
+    padding: 0.65em;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.register fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.content ol, .content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.signup-select ol, .signup-select ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.register label {
+    color: #828282;
+    display: block;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+    font-size: .9375em;
+    text-align: left;
+}
+
+.register select {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 2px 2px 2px 2px;
+    color: #828282;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+    font-size: 0.9375em;
+    height: 3.085em;
+    margin: 0;
+    outline: 0 none;
+    padding: 0.625em;
+    width: 100%;
+}
+.register button {
+    outline: 0 none;
+}
+.register label.has-error {
+    color: #F03C45;
+}
+.register input.has-error {
+    border-color: #F03C45;
+}
+.register select.has-error {
+    border-color: #F03C45;
+}
+.register input.has-error, .register select.has-error {
+    margin-bottom: 0.25em;
+}
+.register .controls.inline {
+    display: inline-block;
+}
+
+.register .button {
+    height: 41px;
+    background-color: #C8C8C8;
+    background-image: linear-gradient(to bottom, #EFEFEF 0px, #C8C8C8 100%);
+    background-repeat: repeat-x;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.6) inset;
+    color: #333333;
+    display: inline-block;
+    filter: none !important;
+    font-family: "Telex",Helvetica,Arial,sans-serif;
+    font-size: 1.375em;
+    margin: 0 0 1em;
+    padding: 0.6em 1.875em 0.5625em;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.register .button:hover {
+    background-color: #CCCCCC;
+    background-image: linear-gradient(to bottom, #F5F5F5 0px, #CCCCCC 100%);
+    background-repeat: repeat-x;
+    cursor: pointer;
+    text-decoration: none;
+}
+.register .button:active {
+    background-color: #CCCCCC;
+    background-image: linear-gradient(to bottom, #EEEEEE 0px, #CCCCCC 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.register .button-highlight {
+    background-color: #88BD32;
+    background-image: linear-gradient(to bottom, #ACD341 0px, #88BD32 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #7EA613;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 #72942A;
+}
+
+.register .button-primary {
+  background-color: #21759B;
+  background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+  border-color: #21759B #21759B #1E6A8D;
+  box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.register .button-primary.hover, .register .button-primary:hover, .register  .button-primary.focus, .register  .button-primary:focus {
+  background-color: #278AB7;
+  background-image: linear-gradient(to bottom, #2E9FD2, #21759B);
+  border-color: #1B607F;
+  box-shadow: 0 1px 0 rgba(120, 200, 230, 0.6) inset;
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.register .button-primary.active, .register  .button-primary:active {
+  background-color: #2E9FD2;
+  background-image: linear-gradient(to bottom, #21759B, #2E9FD2);
+  border-color: #1B607F;
+  box-shadow: 0 1px 0 rgba(120, 200, 230, 0.6) inset;
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.register .button-highlight:hover {
+    background-color: #88BD32;
+    background-image: linear-gradient(to bottom, #B2DB42 0px, #88BD32 100%);
+    background-repeat: repeat-x;
+}
+.register .button-highlight:active {
+    background: none repeat scroll 0 0 #88BD32;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.register .button-light {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF 0px, #F5F5F5 100%);
+    background-repeat: repeat-x;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #5D8C00;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.register .button-light:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.register .button-light:active {
+    background: none repeat scroll 0 0 #F5F5F5;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.register .button-flat {
+    background: none repeat scroll 0 0 #333333;
+    border: 0 none;
+    box-shadow: none;
+    color: inherit;
+    text-shadow: none;
+}
+.register .button-flat:hover {
+    background: none repeat scroll 0 0 #333333;
+}
+.register .button-facebook {
+    background-color: #445D92;
+    background-image: linear-gradient(to bottom, #6480B7 0px, #445D92 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #364B76;
+    box-shadow: 0 1px 1px #8BA3CD inset;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1em;
+    padding: 0;
+    position: relative;
+    text-shadow: none;
+}
+.register .button-facebook:hover {
+    background-color: #374D7B;
+    background-image: linear-gradient(to bottom, #5871A3 0px, #374D7B 100%);
+    background-repeat: repeat-x;
+    box-shadow: none;
+    color: #DAE3F5;
+}
+.register .button-facebook:hover .icon-wrap {
+    border-right: 0 none;
+}
+.register .button-facebook .icon-wrap {
+    border-right: 1px solid #8BA3CD;
+    bottom: 0;
+    box-shadow: -1px 0 0 0 #364B76 inset;
+    height: 100%;
+    left: 0;
+    padding: 0 0.75em 0 1em;
+    position: absolute;
+    white-space: nowrap;
+}
+.register .button-facebook .icon-wrap:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.register .button-facebook .icon-wrap .icon-fb {
+    vertical-align: bottom;
+}
+.icon {
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-fb {
+    background-image: url("../images/icon-fb31x64.png");
+    height: 32px;
+    width: 16px;
+}
+
+.ajax-spinner {
+    background-image: url("../images/ajax-spinner.gif");
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    top: 25%;
+    z-index: 1;
+}
+
+.is-hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.alert {
+    background: #fcf8e3;
+    color: #1e1e1e;
+    margin-bottom: 1.25em;
+    padding: 1em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.alert-info {
+    background: #dee8ff;
+}
+
+.is-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.register label.has-error {
+    color: #f03c45;
+    margin-bottom: .25em;
+}
+
+.register input.has-error {
+    border-color: #f03c45;
+}

@@ -15,7 +15,7 @@
 							<div id="submitDiv">
 								<g:submitButton name="login" class="button button-primary button-large" style="" value="Entrar"/>
 								<p class="menu-separator"><span>o</span></p>
-								<a id="login-button-login-fb" class="button button-facebook js-facebook-login" href="j_spring_security_facebook_redirect">
+								<a id="login-button-login-fb" class="button button-facebook js-facebook-login" href="${resource(file: 'j_spring_security_facebook_redirect')}">
 							        <div class="icon-wrap">
 							          <i class="icon icon-fb"></i>
 							        </div>
@@ -86,7 +86,7 @@
 					<li class="menu-item ${params.controller == 'ride'&& params.action == 'buscar'?'current':''}"><g:link controller="ride" action="buscar">Buscar</g:link></li>
 					<li class="menu-item ${params.controller == 'main' && action == 'ayuda'?'current':''}"><g:link controller="ayuda">Ayuda</g:link></li>
 					<li class="menu-item ${params.controller == 'autobuses' && params.action == 'buscar'?'current':''}"><g:link controller="autobuses">Autobuses</g:link></li>
-					<li class="menu-item ${params.controller == 'usuario' && params.action == 'registrar'?'current':''}"><g:link controller="usuario" action="registrar" style="color: #FF9100;text-shadow:none;">Registrarse</g:link></li>
+					<li><a href="#" onclick="toggleDialog();" style="color: #FF9100;">Registrarse</a></li>
 				</ul>
 			</div>
 			<div class="right">
