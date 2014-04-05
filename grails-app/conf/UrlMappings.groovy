@@ -13,6 +13,7 @@ class UrlMappings {
             controller = 'sitemap'
             action = 'sitemap'
         }
+        "/robots.txt" (view: "/robots")
         "/login/$action?"(controller: "login")
 		"/logout/$action?"(controller: "logout")
 		"/index2"(controller: "main", action: "index2")
